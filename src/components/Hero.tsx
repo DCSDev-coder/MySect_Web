@@ -8,20 +8,23 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
   return (
-    <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#FAF7F2]">
+    <section
+      id="home"
+      className="relative min-h-screen min-h-[100dvh] w-full flex flex-col justify-center items-center pt-28 pb-12 sm:pt-32 sm:pb-16 overflow-hidden bg-[#FAF7F2]"
+    >
       {/* Background architectural visual subtle overlay matching corporate look from Image 3 */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#14181F_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center justify-center my-auto">
         {/* Top Eyebrow: Pure minimalist unboxed typography */}
-        <div className="inline-flex items-center justify-center mb-8 animate-hero-1">
+        <div className="inline-flex items-center justify-center mb-6 sm:mb-8 animate-hero-1">
           <span className="font-mono text-xs font-semibold tracking-[0.25em] uppercase text-slate-500">
             IN DEVELOPMENT
           </span>
         </div>
 
         {/* Main Headline: Inter with comfortable letter-spacing */}
-        <div className="max-w-4xl mx-auto space-y-5 animate-hero-2">
+        <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5 animate-hero-2">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
             Company matters.{' '}
             <span className="italic font-normal text-[#14181F] block sm:inline">
@@ -35,7 +38,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
         </div>
 
         {/* Action Buttons with opening animation */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-hero-3">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-hero-3 w-full sm:w-auto">
           {/* Main Action: Directly opens WhatsApp contact */}
           <a
             href={SITE_CONFIG.whatsappUrl}
@@ -60,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
         </div>
 
         {/* Powered by TM badge only in Roboto Mono */}
-        <div className="mt-14 pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4">
+        <div className="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4 w-full max-w-xs sm:max-w-md mx-auto">
           <span className="font-mono text-xs font-semibold tracking-widest text-slate-500 uppercase">
             powered by tm
           </span>

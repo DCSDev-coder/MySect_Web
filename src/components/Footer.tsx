@@ -9,11 +9,15 @@ export const Footer: React.FC = () => {
         {/* Main 4-Column Grid matching Image 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 text-xs">
           {/* Column 1: Brand & Description (4 cols) */}
-          <div className="lg:col-span-4 space-y-3">
-            <a href="#home" className="inline-block">
-              <span className="text-2xl font-black tracking-tight text-[#0038A8]">
-                MySect
-              </span>
+          <div className="lg:col-span-4 space-y-4">
+            <a href="#home" className="inline-block group" title="MySect - Back to Home">
+              <div className="bg-white px-3.5 py-2 rounded-xl shadow-xs inline-flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
+                <img
+                  src="/mysect_logo.png"
+                  alt="MySect - Your Secretary Company"
+                  className="h-8 sm:h-9 w-auto object-contain"
+                />
+              </div>
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
               Malaysia's intelligent corporate secretarial platform. Connecting companies and licensed secretaries with seamless compliance automation.
