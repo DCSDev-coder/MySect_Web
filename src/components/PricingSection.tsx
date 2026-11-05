@@ -1,67 +1,33 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
+import { ArrowRight, Sparkles, Check, Clock, ShieldCheck, Receipt, Layers } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 import { ScrollReveal } from './ScrollReveal';
 
 export const PricingSection: React.FC = () => {
-  const tiers = [
+  const launchPromises = [
     {
-      id: 'starter',
-      name: 'Starter Retainer',
-      tag: 'SOLO & BOOTSTRAPPED',
-      popular: false,
-      badge: 'Early Access',
-      description: 'Essential statutory maintenance for single-director Sdn Bhds and early-stage companies.',
-      features: [
-        'Named Licensed Company Secretary',
-        'Annual Return (AR) preparation & SSM lodgement',
-        'Registers of Members & Directors maintenance',
-        '2 routine Directors Circular Resolutions (DCR) / year',
-        '24/7 Certified True Copy (CTC) digital locker',
-        'SSM statutory deadline notifications'
-      ],
-      ctaText: 'Register Interest'
+      id: 'disbursements',
+      title: 'Zero Hidden Disbursement Markups',
+      description: 'Official SSM statutory filing fees and government charges will be passed through at 100% true cost with transparent itemized receipts.',
+      icon: <Receipt className="w-5 h-5 text-white" />
     },
     {
-      id: 'growth',
-      name: 'Growing Enterprise',
-      tag: 'MOST POPULAR',
-      popular: true,
-      badge: 'Early-Bird Rates',
-      description: 'Comprehensive secretarial & board governance for active SMEs with investors and team members.',
-      features: [
-        'Dedicated senior corporate secretarial manager',
-        'Unlimited routine Directors Circular Resolutions (DCR)',
-        'AGM document orchestration & minute book archiving',
-        'Corporate bank account facility opening resolutions',
-        'Beneficial Ownership (BO) ongoing verification & register',
-        'Share allotment & transfer statutory lodgements',
-        'Priority same-day resolution dispatch'
-      ],
-      ctaText: 'Register for Early-Bird'
+      id: 'resolutions',
+      title: 'Routine Resolutions Included',
+      description: 'Standard Directors Circular Resolutions (DCR) and annual meeting paperwork bundled into monthly retainers without surprise drafting bills.',
+      icon: <Layers className="w-5 h-5 text-white" />
     },
     {
-      id: 'firm',
-      name: 'CoSec Multi-Entity',
-      tag: 'FOR PRACTITIONERS',
-      popular: false,
-      badge: 'Practice Tier',
-      description: 'Purpose-built workspace for licensed secretarial firms managing portfolios of client entities.',
-      features: [
-        'Multi-company consolidated client dashboard',
-        'Automated SSM Form generation (Sections 14, 15, 68, 78)',
-        'Direct client digital signature portal',
-        'Automated cap table and dividend history logs',
-        'Bulk statutory filing queue & tracking',
-        'Dedicated practice onboarding & data migration'
-      ],
-      ctaText: 'Inquire for Practice Tier'
+      id: 'compliance',
+      title: 'Full Companies Act 2016 Guarantee',
+      description: 'All tiers include named licensed company secretarial coverage, statutory registers upkeep, and proactive SSM deadline alerts.',
+      icon: <ShieldCheck className="w-5 h-5 text-white" />
     }
   ];
 
   return (
     <section id="pricing" className="py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <ScrollReveal className="max-w-3xl mx-auto mb-16 text-center">
@@ -72,82 +38,89 @@ export const PricingSection: React.FC = () => {
             Transparent Pricing Plans
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed tracking-normal max-w-2xl mx-auto">
-            Simple, predictable packages with zero surprise disbursements for Malaysian businesses and CoSec firms. Tiered to support solo founders, scaling SMEs, and multi-entity practices.
+            Our flexible retainer tiers are currently being finalized for Malaysian solo founders, expanding SMEs, and licensed CoSec practices.
           </p>
         </ScrollReveal>
 
-        {/* 3-Tier Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          {tiers.map((tier, idx) => (
-            <ScrollReveal
-              key={tier.id}
-              delay={idx * 100}
-              className={`relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
-                tier.popular
-                  ? 'bg-white border-2 border-[#0038A8] shadow-xl shadow-[#0038A8]/10 hover:shadow-2xl hover:-translate-y-1.5'
-                  : 'bg-white border border-slate-200 shadow-md hover:shadow-xl hover:border-slate-300 hover:-translate-y-1'
-              }`}
-            >
-              {/* Top Banner Tag for Popular */}
-              {tier.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#0038A8] text-white text-[10px] font-mono font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5">
-                  <Sparkles className="w-3 h-3" />
-                  <span>{tier.tag}</span>
+        {/* Wide 2-Column Balanced Coming Soon Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          
+          {/* Left Column (7 cols): What to Expect in Our Pricing */}
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
+            {launchPromises.map((item, idx) => (
+              <ScrollReveal
+                key={item.id}
+                delay={idx * 80}
+                className="bg-[#FAF7F2] rounded-3xl p-6 sm:p-7 border border-[#E6E0D6] flex items-start gap-4 hover:border-[#0038A8]/40 hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-11 h-11 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#0038A8]/20 mt-0.5">
+                  {item.icon}
                 </div>
-              )}
-
-              <div>
-                {/* Header info */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-[#0038A8] bg-[#0038A8]/10 px-2.5 py-0.5 rounded-full border border-[#0038A8]/20">
-                    {tier.badge}
-                  </span>
-                  <div className="flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>Coming Soon</span>
-                  </div>
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#14181F] tracking-tight mb-2">
-                  {tier.name}
-                </h3>
-
-                <p className="text-xs text-slate-600 leading-relaxed mb-6">
-                  {tier.description}
-                </p>
-
-                {/* Feature checklist */}
-                <div className="pt-6 border-t border-slate-100 space-y-3">
-                  <p className="text-[11px] font-mono uppercase font-bold tracking-wider text-slate-400 mb-2">
-                    What's Included:
+                <div>
+                  <h3 className="text-base font-bold text-[#0B192C] mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+                    {item.description}
                   </p>
-                  {tier.features.map((feature, fIdx) => (
-                    <div key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                      <Check className="w-4 h-4 text-[#0038A8] shrink-0 mt-0.5" />
-                      <span className="leading-snug">{feature}</span>
-                    </div>
-                  ))}
                 </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Right Column (5 cols): Early-Bird Access Card */}
+          <ScrollReveal delay={150} className="lg:col-span-5 bg-white rounded-3xl p-7 sm:p-9 border-2 border-[#0038A8] shadow-xl shadow-[#0038A8]/10 flex flex-col justify-between relative overflow-hidden">
+            <div>
+              {/* Coming Soon Pill */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0038A8]/10 border border-[#0038A8]/20 text-[#0038A8] font-mono text-xs font-bold uppercase tracking-wider mb-5">
+                <Clock className="w-3.5 h-3.5" />
+                <span>Launching Soon</span>
               </div>
 
-              {/* Action Button */}
-              <div className="mt-8 pt-6 border-t border-slate-100">
-                <a
-                  href={SITE_CONFIG.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full py-3 px-5 rounded-full text-xs font-bold tracking-wide transition-all flex items-center justify-center gap-2 cursor-pointer ${
-                    tier.popular
-                      ? 'bg-[#0038A8] hover:bg-[#002D88] text-white shadow-lg shadow-[#0038A8]/25 hover:shadow-xl active:scale-95'
-                      : 'bg-slate-50 hover:bg-[#0038A8] hover:text-white text-[#14181F] border border-slate-200 hover:border-[#0038A8] active:scale-95'
-                  }`}
-                >
-                  <span>{tier.ctaText}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+              <h3 className="text-2xl font-extrabold text-[#14181F] tracking-tight leading-snug mb-3">
+                Lock In Exclusive Early-Bird Rates
+              </h3>
+
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Our retainer packages are currently not public while we calibrate options. Register your interest now to secure priority onboarding and launch rates.
+              </p>
+
+              {/* Perks list */}
+              <div className="pt-5 border-t border-slate-100 space-y-3">
+                <div className="flex items-center gap-2.5 text-xs text-slate-700">
+                  <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
+                  <span>Guaranteed founder early-bird pricing discount</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-slate-700">
+                  <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
+                  <span>Complimentary initial SSM compliance health check</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-slate-700">
+                  <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
+                  <span>Priority access to licensed secretarial team</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-slate-700">
+                  <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
+                  <span>No upfront payment or card required</span>
+                </div>
               </div>
-            </ScrollReveal>
-          ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="mt-8 pt-6 border-t border-slate-100">
+              <a
+                href={SITE_CONFIG.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 px-6 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#0038A8]/25 hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>Register Interest for Launch</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </ScrollReveal>
+
         </div>
 
         {/* Bottom Trust Guarantee Strip */}
@@ -158,11 +131,11 @@ export const PricingSection: React.FC = () => {
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
-            <span>Zero Hidden Disbursements & Disbursements Transparency</span>
+            <span>Zero Hidden Disbursements</span>
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
-            <span>256-Bit Bank-Grade Statutory Vault Encryption</span>
+            <span>256-Bit Bank-Grade Vault Security</span>
           </div>
         </ScrollReveal>
 
