@@ -39,7 +39,7 @@ export const WhyMySect: React.FC = () => {
   ];
 
   return (
-    <section id="why-mysect" className="py-24 bg-[#F7F3EE] border-b border-[#E6E0D6] relative">
+    <section id="why-mysect" className="py-24 bg-[#F7F3EE] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto mb-16">
