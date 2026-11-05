@@ -53,7 +53,7 @@ export const ContactSection: React.FC = () => {
             <div className="space-y-6 pt-2 font-sans">
               {/* Email */}
               <div className="flex items-center gap-3.5 group">
-                <Mail className="w-6 h-6 text-[#0055FF] shrink-0 group-hover:scale-110 transition-transform" />
+                <Mail className="w-6 h-6 text-white shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="text-xs font-medium text-slate-400">E-mail</p>
                   <a
@@ -67,7 +67,7 @@ export const ContactSection: React.FC = () => {
 
               {/* Phone number */}
               <div className="flex items-center gap-3.5 group">
-                <Phone className="w-6 h-6 text-[#0055FF] shrink-0 group-hover:scale-110 transition-transform" />
+                <Phone className="w-6 h-6 text-white shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="text-xs font-medium text-slate-400">Phone number</p>
                   <a
