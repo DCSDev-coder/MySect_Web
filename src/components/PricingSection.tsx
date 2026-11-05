@@ -47,7 +47,7 @@ export const PricingSection: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
-              <span>Unlimited standard board resolutions</span>
+              <span>Digital board resolutions (DCR)</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
@@ -55,7 +55,7 @@ export const PricingSection: React.FC = () => {
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
-              <span>Exclusive early-bird rates</span>
+              <span>SSM regulatory compliance lodgements</span>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export const PricingSection: React.FC = () => {
               className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#0038A8]/25 hover:shadow-xl transition-all cursor-pointer hover:-translate-y-0.5 active:scale-95"
             >
               <Sparkles className="w-4 h-4" />
-              <span>Register interest for early-bird rates</span>
+              <span>Register your interest</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
