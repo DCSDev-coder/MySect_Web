@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, MessageCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-interface NavbarProps {
-  onRegisterInterest: () => void;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
+export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -121,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
             </a>
           </nav>
 
-          {/* Action Buttons: WhatsApp Quick Link + Register Interest Button (phone number hidden) */}
+          {/* Direct WhatsApp Action Button (No options/modal) */}
           <div className="hidden md:flex items-center gap-3">
             <a
               href={SITE_CONFIG.whatsappUrl}
@@ -133,23 +129,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
               <MessageCircle className="w-4 h-4 text-emerald-600" />
               <span>WhatsApp Us</span>
             </a>
-            <button
-              onClick={onRegisterInterest}
+            <a
+              href={SITE_CONFIG.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white text-xs font-semibold tracking-wide shadow-sm shadow-[#0055FF]/25 hover:shadow-md hover:shadow-[#0055FF]/35 transition-all flex items-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Register your interest</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={onRegisterInterest}
+            <a
+              href={SITE_CONFIG.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-3.5 py-1.5 rounded-full bg-[#0055FF] text-white text-xs font-semibold"
             >
               Register
-            </button>
+            </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-800 hover:text-black focus:outline-none"
@@ -207,21 +207,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-2.5 text-xs font-bold text-slate-800 bg-white rounded-xl border border-[#E6E0D6] flex items-center justify-center gap-2"
-            >
-              <MessageCircle className="w-4 h-4 text-emerald-600" />
-              <span>Chat via WhatsApp</span>
-            </a>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onRegisterInterest();
-              }}
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 rounded-full bg-[#0055FF] text-white text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2"
             >
-              <span>Register your interest</span>
+              <MessageCircle className="w-4 h-4" />
+              <span>Register your interest via WhatsApp</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
         </div>
       )}

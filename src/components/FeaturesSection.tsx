@@ -12,12 +12,9 @@ import {
   Sparkles,
   ArrowRight
 } from 'lucide-react';
+import { SITE_CONFIG } from '../data/siteConfig';
 
-interface FeaturesSectionProps {
-  onRegisterInterest: () => void;
-}
-
-export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onRegisterInterest }) => {
+export const FeaturesSection: React.FC = () => {
   const [showMore, setShowMore] = useState(false);
 
   // Exact 6 core features from the user's uploaded screenshot
@@ -157,13 +154,15 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onRegisterInte
             <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showMore ? 'rotate-180' : ''}`} />
           </button>
 
-          <button
-            onClick={onRegisterInterest}
-            className="mt-2 text-xs font-semibold text-[#0055FF] hover:text-blue-400 flex items-center gap-1.5"
+          <a
+            href={SITE_CONFIG.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 text-xs font-semibold text-[#0055FF] hover:text-blue-400 flex items-center gap-1.5 transition-colors"
           >
-            <span>Want a customized demo for your firm? Register your interest</span>
+            <span>Want a customized demo for your firm? Register your interest via WhatsApp</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

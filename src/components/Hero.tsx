@@ -1,12 +1,12 @@
 import React from 'react';
 import { ArrowRight, Play, Shield, Lock, Cloud, Check } from 'lucide-react';
+import { SITE_CONFIG } from '../data/siteConfig';
 
 interface HeroProps {
-  onRegisterInterest: () => void;
   onOpenVideo: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onRegisterInterest, onOpenVideo }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
   return (
     <section id="home" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-[#FAF7F2]">
       {/* Background architectural visual subtle overlay matching corporate look from Image 3 */}
@@ -84,14 +84,16 @@ export const Hero: React.FC<HeroProps> = ({ onRegisterInterest, onOpenVideo }) =
 
         {/* Actions matching Image 2 & 1 */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          {/* Main Action: Register Interest -> phone number */}
-          <button
-            onClick={onRegisterInterest}
+          {/* Main Action: Directly opens WhatsApp contact (No options popup) */}
+          <a
+            href={SITE_CONFIG.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-bold text-sm tracking-wide shadow-lg shadow-[#0055FF]/25 hover:shadow-xl hover:shadow-[#0055FF]/35 transition-all flex items-center justify-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Register your interest</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </a>
 
           {/* Secondary Action: Meet MySect (Video) */}
           <button

@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { Check, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { SITE_CONFIG } from '../data/siteConfig';
 
-interface PricingSectionProps {
-  onRegisterInterest: () => void;
-}
-
-export const PricingSection: React.FC<PricingSectionProps> = ({ onRegisterInterest }) => {
+export const PricingSection: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(true);
 
   const plans = [
@@ -159,8 +156,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onRegisterIntere
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-[#F0EAE1]">
-                  <button
-                    onClick={onRegisterInterest}
+                  <a
+                    href={SITE_CONFIG.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full py-3 px-4 rounded-full font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer ${
                       plan.popular
                         ? 'bg-[#0055FF] hover:bg-[#0045D8] text-white shadow-md shadow-[#0055FF]/30'
@@ -169,7 +168,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onRegisterIntere
                   >
                     <span>{plan.cta}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </a>
                 </div>
               </div>
             );

@@ -2,11 +2,7 @@ import React from 'react';
 import { ArrowUp, MessageSquare, Mail } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-interface FooterProps {
-  onRegisterInterest: () => void;
-}
-
-export const Footer: React.FC<FooterProps> = ({ onRegisterInterest }) => {
+export const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -70,12 +66,14 @@ export const Footer: React.FC<FooterProps> = ({ onRegisterInterest }) => {
             <p className="text-[11px] text-slate-400 leading-relaxed">
               Register early access with our corporate secretarial desk today.
             </p>
-            <button
-              onClick={onRegisterInterest}
-              className="w-full py-2.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
+            <a
+              href={SITE_CONFIG.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center w-full py-2.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
             >
               Register your interest
-            </button>
+            </a>
           </div>
         </div>
 
