@@ -1,44 +1,44 @@
 import React from 'react';
-import { Scale, BookOpen, Sparkles, Globe, ShieldCheck, Zap } from 'lucide-react';
+import { Scale, FileCheck2, Sparkles, LayoutDashboard, Clock, Building2 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 export const WhyMySect: React.FC = () => {
   const whyCards = [
     {
-      id: 'act2016',
-      title: 'Companies Act 2016 Ready',
-      description: 'Every feature aligns with Malaysian statutory requirements. Registers, resolutions, and filings follow the exact format SSM expects.',
+      id: 'statutory-alignment',
+      title: 'Strict Companies Act 2016 Alignment',
+      description: 'Every register, resolution, and certificate is programmed to the exact statutory formats mandated by the Companies Commission of Malaysia (SSM).',
       icon: <Scale className="w-5 h-5 text-amber-400" />
     },
     {
-      id: 'records',
-      title: 'Complete Statutory Records',
-      description: 'Digital registers for directors, shareholders, secretaries, charges, and constitutions — all in one place, audit-ready.',
-      icon: <BookOpen className="w-5 h-5 text-amber-400" />
+      id: 'audit-vault',
+      title: 'Tamper-Proof Audit Vault',
+      description: 'All statutory records, board circulars, and official certifications are archived with time-stamped audit trails, immediately ready for auditor inspection.',
+      icon: <FileCheck2 className="w-5 h-5 text-amber-400" />
     },
     {
-      id: 'ai-drafting',
-      title: 'AI-Powered Drafting',
-      description: 'Generate resolutions, correspondence, and compliance documents in seconds. Smart suggestions keep you ahead of deadlines.',
+      id: 'smart-drafting',
+      title: 'Intelligent Document Drafting',
+      description: 'Draft complex board resolutions, officer change filings, and custom shareholder correspondence in minutes with pre-validated templates.',
       icon: <Sparkles className="w-5 h-5 text-amber-400" />
     },
     {
-      id: 'client-portal',
-      title: 'Client Portal',
-      description: 'Give your clients a professional, branded portal. They can view company status, track progress, and access documents 24/7.',
-      icon: <Globe className="w-5 h-5 text-amber-400" />
+      id: 'board-workspace',
+      title: 'Dedicated Board & Client Workspace',
+      description: 'Provide company directors, management, and investors with a modern portal to monitor compliance status and review records 24/7.',
+      icon: <LayoutDashboard className="w-5 h-5 text-amber-400" />
     },
     {
-      id: 'ssm-workflow',
-      title: 'SSM Filing Workflow',
-      description: 'Prepare forms, track submissions, and manage annual returns with guided checklists. Never miss a filing again.',
-      icon: <ShieldCheck className="w-5 h-5 text-amber-400" />
+      id: 'deadline-guardian',
+      title: 'Predictive Compliance Deadlines',
+      description: 'Automated countdown alerts for Annual Returns (Section 68) and Financial Statements ensure your companies never incur late lodgement penalties.',
+      icon: <Clock className="w-5 h-5 text-amber-400" />
     },
     {
-      id: 'visibility',
-      title: 'Instant Visibility',
-      description: 'One dashboard shows every deadline, task, company, and team member. Know exactly where every company stands.',
-      icon: <Zap className="w-5 h-5 text-amber-400" />
+      id: 'portfolio-management',
+      title: 'Multi-Company Portfolio View',
+      description: 'Manage 10 or 1,000+ client entities from a single pane of glass. Track pending board approvals and regulatory milestones with zero friction.',
+      icon: <Building2 className="w-5 h-5 text-amber-400" />
     }
   ];
 
@@ -51,10 +51,10 @@ export const WhyMySect: React.FC = () => {
             WHY MYSECT
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B192C] tracking-normal leading-snug">
-            Not Just Another Admin Tool
+            Precision Infrastructure for Corporate Compliance
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto tracking-normal">
-            MySect is the only platform purpose-built for Malaysian Company Secretaries. Deep regulatory knowledge meets modern technology.
+            Where deep Malaysian statutory knowledge meets cloud automation. Built specifically for licensed corporate secretarial practices and ambitious enterprises.
           </p>
         </ScrollReveal>
 

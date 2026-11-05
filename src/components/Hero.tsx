@@ -36,7 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal tracking-normal">
-            The complete company secretarial platform. Manage compliance, statutory records, and filings in one powerful system. Connecting companies and their company secretaries.
+            The intelligent corporate governance platform connecting Malaysian businesses and licensed corporate secretaries. Streamline statutory registers, board approvals, and SSM compliance effortlessly.
           </p>
         </div>
 

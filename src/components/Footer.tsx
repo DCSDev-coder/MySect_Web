@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
               </span>
             </a>
             <p className="text-xs text-slate-500 leading-relaxed max-w-xs">
-              Modern Company Secretary platform built for Malaysian firms. Simple outside. Powerful inside.
+              Malaysia's intelligent corporate secretarial platform. Connecting companies and licensed secretaries with seamless compliance automation.
             </p>
           </div>
 
