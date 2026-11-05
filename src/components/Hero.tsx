@@ -19,9 +19,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Top Badge: Static clean badge in Roboto Mono */}
+        {/* Top Eyebrow: Pure minimalist unboxed typography */}
         <div className="inline-flex items-center justify-center mb-8 animate-hero-1">
-          <span className="font-mono text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1 rounded-full border border-[#D5CEC2] bg-white/80 text-slate-700 shadow-2xs">
+          <span className="font-mono text-xs font-semibold tracking-[0.25em] uppercase text-slate-500">
             IN DEVELOPMENT
           </span>
         </div>
