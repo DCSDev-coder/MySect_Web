@@ -35,13 +35,13 @@ export const ContactSection: React.FC = () => {
           <ScrollReveal variant="slide-left" className="lg:col-span-5 space-y-8">
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-white mb-3">
-                WE'RE HERE TO HELP YOU
+                HAVE QUESTIONS?
               </p>
               <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-tight">
-                Discuss Your Company Matters
+                Got Questions? We're Here to Help.
               </h2>
               <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed font-normal tracking-normal max-w-md">
-                Are you looking for streamlined secretarial solutions tailored to your company's compliance needs? Reach out to us.
+                Have questions about corporate governance, statutory compliance, or how MySect simplifies company matters? Reach out to us anytime.
               </p>
             </div>
 
@@ -51,10 +51,10 @@ export const ContactSection: React.FC = () => {
               <div className="flex items-center gap-3.5 group">
                 <Mail className="w-6 h-6 text-white shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-xs font-medium text-slate-400">E-mail</p>
+                  <p className="text-xs font-medium text-slate-400">Email us</p>
                   <a
                     href={`mailto:${SITE_CONFIG.contactEmail}`}
-                    className="text-base sm:text-lg font-bold text-white hover:text-[#0038A8] transition-colors"
+                    className="text-base sm:text-lg font-bold text-white hover:text-slate-200 transition-colors"
                   >
                     {SITE_CONFIG.contactEmail}
                   </a>
@@ -65,10 +65,10 @@ export const ContactSection: React.FC = () => {
               <div className="flex items-center gap-3.5 group">
                 <Phone className="w-6 h-6 text-white shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-xs font-medium text-slate-400">Phone number</p>
+                  <p className="text-xs font-medium text-slate-400">Call us</p>
                   <a
                     href={`tel:${SITE_CONFIG.phoneRaw}`}
-                    className="text-base sm:text-lg font-bold text-white hover:text-[#0038A8] transition-colors"
+                    className="text-base sm:text-lg font-bold text-white hover:text-slate-200 transition-colors"
                   >
                     {SITE_CONFIG.phoneDisplay}
                   </a>
@@ -79,9 +79,9 @@ export const ContactSection: React.FC = () => {
 
           {/* Right Column: Details Form on an Elevated Card with Slide-Right Animation */}
           <ScrollReveal variant="slide-right" delay={120} className="lg:col-span-7 bg-white text-[#14181F] rounded-3xl p-8 sm:p-10 shadow-2xl shadow-black/40 border border-slate-100 relative">
-            <h3 className="text-2xl font-bold text-[#14181F] mb-1">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-[#14181F] mb-1">Ask a Question</h3>
             <p className="text-xs sm:text-sm text-slate-500 mb-6 font-normal">
-              Fill in your inquiry below. Our secretarial team will review and respond promptly.
+              Send us your questions or inquiries below and our team will get back to you with answers shortly.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5 text-xs font-sans">
@@ -101,7 +101,7 @@ export const ContactSection: React.FC = () => {
 
               <div>
                 <label className="block font-semibold text-slate-700 text-xs mb-2">
-                  Email
+                  Email address
                 </label>
                 <input
                   type="email"
@@ -115,12 +115,12 @@ export const ContactSection: React.FC = () => {
 
               <div>
                 <label className="block font-semibold text-slate-700 text-xs mb-2">
-                  Subject / Inquiry Type
+                  Question / Subject
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Corporate Secretarial Retainer"
+                  placeholder="What is your question about?"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-base sm:text-sm"
@@ -129,12 +129,12 @@ export const ContactSection: React.FC = () => {
 
               <div>
                 <label className="block font-semibold text-slate-700 text-xs mb-2">
-                  Message
+                  Your question
                 </label>
                 <textarea
                   rows={4}
                   required
-                  placeholder="Tell us about your company, current secretarial setup, or questions..."
+                  placeholder="Type your question or inquiry here..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all leading-relaxed text-base sm:text-sm"
@@ -150,7 +150,7 @@ export const ContactSection: React.FC = () => {
                   <div className="w-8 h-8 rounded-full bg-white text-[#0038A8] flex items-center justify-center shrink-0 shadow-2xs">
                     <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                   </div>
-                  <span>Send Message</span>
+                  <span>Send Question</span>
                 </button>
               </div>
 
