@@ -54,45 +54,62 @@ export const WhyMySect: React.FC = () => {
           </p>
         </ScrollReveal>
 
-        {/* 4 Clean Interactive Bento Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pillars.map((item, idx) => (
-            <ScrollReveal
-              key={item.id}
-              delay={idx * 80}
-              className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
-            >
-              <div>
-                {/* Top Row: Icon Pod + Step Number */}
-                <div className="flex items-center justify-between mb-6">
-                  {/* Tilting squircle icon pod in rich dark blue */}
-                  <div className="w-14 h-14 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
-                    {item.icon}
+        {/* 4 Alternating Bento Cards for Rich Variation */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {pillars.map((item, idx) => {
+            const isFlipped = idx % 2 === 1; // Alternating variation!
+            return (
+              <ScrollReveal
+                key={item.id}
+                delay={idx * 80}
+                className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] transition-all duration-300 group hover:-translate-y-1.5 cursor-pointer relative overflow-hidden"
+              >
+                <div
+                  className={`flex flex-col sm:flex-row items-start ${
+                    isFlipped ? 'sm:flex-row-reverse' : ''
+                  } gap-6 justify-between`}
+                >
+                  {/* Box Column: Tilting squircle icon pod + Step watermark */}
+                  <div
+                    className={`flex sm:flex-col items-center sm:items-start justify-between w-full sm:w-auto shrink-0 ${
+                      isFlipped ? 'sm:items-end' : ''
+                    }`}
+                  >
+                    <div className="w-16 h-16 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
+                      {item.icon}
+                    </div>
+
+                    <span className="font-mono text-3xl font-black text-slate-200 group-hover:text-[#0038A8]/30 transition-colors select-none mt-4 hidden sm:block">
+                      {item.step}
+                    </span>
                   </div>
 
-                  {/* Step Watermark */}
-                  <span className="font-mono text-2xl font-black text-slate-300 group-hover:text-[#0038A8] transition-colors select-none">
-                    {item.step}
-                  </span>
+                  {/* Text Content Column: Tag, Title, Description */}
+                  <div className="flex-1">
+                    {/* Top Row on mobile: Tag + Step watermark */}
+                    <div className="flex items-center justify-between sm:justify-start gap-2 mb-3">
+                      <span className="inline-block font-mono text-[10px] uppercase font-bold tracking-wider text-[#0038A8] bg-[#0038A8]/10 px-2.5 py-0.5 rounded-full border border-[#0038A8]/20">
+                        {item.tag}
+                      </span>
+                      <span className="font-mono text-base font-bold text-slate-300 sm:hidden">
+                        {item.step}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
+                      {item.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-
-                {/* Category Micro-Tag */}
-                <span className="inline-block font-mono text-[10px] uppercase font-bold tracking-wider text-[#0038A8] bg-[#0038A8]/10 px-2.5 py-0.5 rounded-full border border-[#0038A8]/20 mb-3">
-                  {item.tag}
-                </span>
-
-                {/* Title */}
-                <h3 className="text-lg font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
-                  {item.description}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>
