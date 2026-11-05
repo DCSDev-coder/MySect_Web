@@ -6,9 +6,9 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#FAF7F2] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto bg-white rounded-[28px] sm:rounded-[36px] p-8 sm:p-12 lg:p-14 border border-[#E6E0D6] shadow-xl shadow-slate-900/5">
-        {/* Main 4-Column Grid matching reference */}
+    <footer className="w-full bg-white border-t border-[#E6E0D6] pt-16 pb-12 font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main 4-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 text-xs">
           {/* Column 1: Brand & Socials (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
@@ -164,8 +164,8 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar matching reference */}
-        <div className="pt-6 sm:pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             © {currentYear} MySect. All rights reserved.
           </div>
