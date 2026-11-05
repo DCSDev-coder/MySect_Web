@@ -94,8 +94,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           </button>
         </div>
 
-        {/* Powered by TM badge in Roboto Mono */}
-        <div className="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4 w-full max-w-xs sm:max-w-md mx-auto">
+        {/* Redesigned line & Powered by TM badge */}
+        <div className="mt-10 sm:mt-14 w-full max-w-xs sm:max-w-md mx-auto flex flex-col items-center animate-hero-4">
+          {/* Elegant tapered gradient hairline with architectural center diamond */}
+          <div className="relative w-full flex items-center justify-center mb-6 sm:mb-7">
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-[#D5CEC2] to-transparent" />
+            <div className="absolute w-1.5 h-1.5 rotate-45 bg-[#D5CEC2] border border-[#FAF7F2]" />
+          </div>
+
           <div className="inline-flex items-center gap-2 text-slate-500">
             <Zap className="w-3.5 h-3.5 text-slate-400 fill-slate-400" />
             <span className="font-mono text-xs font-semibold tracking-widest uppercase">

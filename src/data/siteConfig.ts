@@ -12,6 +12,9 @@ export const SITE_CONFIG = {
   // Contact email requested by user (placeholder until user provides exact address)
   contactEmail: 'contact@mysect.my',
 
+  // Location
+  location: 'Semenyih, Malaysia',
+
   // Video placeholder for "Meet MySect" (replace with your video URL, e.g. MP4 or YouTube embed)
   videoUrl: '',
 };

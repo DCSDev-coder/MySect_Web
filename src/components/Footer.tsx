@@ -5,6 +5,29 @@ import { SITE_CONFIG } from '../data/siteConfig';
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const navOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <footer className="w-full bg-white border-t border-[#E6E0D6] pt-16 pb-12 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +35,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 text-xs">
           {/* Column 1: Brand & Socials (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <a href="#home" className="inline-block group" title="MySect - Back to Home">
+            <a
+              href="#home"
+              onClick={scrollToTop}
+              className="inline-block group cursor-pointer"
+              title="MySect - Back to Home"
+            >
               <img
                 src="/mysect_logo.png"
                 alt="MySect - Your Secretary Company"
@@ -71,32 +99,47 @@ export const Footer: React.FC = () => {
             <h4 className="font-bold text-[#14181F] text-xs sm:text-sm mb-4">Quick Links</h4>
             <ul className="space-y-2.5 text-slate-600">
               <li>
-                <a href="#home" className="hover:text-[#0038A8] transition-colors">
-                  About Us
+                <a
+                  href="#home"
+                  onClick={scrollToTop}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
+                  Home
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
-                  Our Services
+                <a
+                  href="#features"
+                  onClick={(e) => scrollToSection(e, 'features')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
+                  Features
                 </a>
               </li>
               <li>
-                <a href="#why-mysect" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#why-mysect"
+                  onClick={(e) => scrollToSection(e, 'why-mysect')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   Why MySect
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#pricing"
+                  onClick={(e) => scrollToSection(e, 'pricing')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   Pricing Plans
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
-                  Client Portal
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#contact"
+                  onClick={(e) => scrollToSection(e, 'contact')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   Contact Us
                 </a>
               </li>
@@ -108,32 +151,56 @@ export const Footer: React.FC = () => {
             <h4 className="font-bold text-[#14181F] text-xs sm:text-sm mb-4">Our Services</h4>
             <ul className="space-y-2.5 text-slate-600">
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#features"
+                  onClick={(e) => scrollToSection(e, 'features')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   SSM Lodgements
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#features"
+                  onClick={(e) => scrollToSection(e, 'features')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   Board Approvals (DCR)
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#features"
+                  onClick={(e) => scrollToSection(e, 'features')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   Statutory Registers
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#features"
+                  onClick={(e) => scrollToSection(e, 'features')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   Cap Table & Shares
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#features"
+                  onClick={(e) => scrollToSection(e, 'features')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   AGM Orchestration
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-[#0038A8] transition-colors">
+                <a
+                  href="#features"
+                  onClick={(e) => scrollToSection(e, 'features')}
+                  className="hover:text-[#0038A8] transition-colors cursor-pointer"
+                >
                   Digital CTC Vault
                 </a>
               </li>
@@ -146,7 +213,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-3 text-slate-600">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
-                <span>Kuala Lumpur, Malaysia</span>
+                <span>{SITE_CONFIG.location}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-slate-400 shrink-0" />
