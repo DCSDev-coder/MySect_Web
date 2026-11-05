@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
             {currentYear} MySect. All rights reserved.
           </div>
           <div className="text-slate-500 inline-flex items-center gap-1.5">
-            <Zap className="w-3 h-3 text-[#0038A8] fill-[#0038A8]" />
+            <Zap className="w-3 h-3 text-slate-400 fill-slate-400" />
             <span>Powered by TM</span>
           </div>
           <div>
