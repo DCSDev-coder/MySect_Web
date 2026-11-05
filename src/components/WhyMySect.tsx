@@ -42,7 +42,7 @@ export const WhyMySect: React.FC = () => {
     <section id="why-mysect" className="py-24 bg-[#F7F3EE] border-b border-[#E6E0D6] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
-        <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
+        <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0038A8] mb-3">
             WHY MYSECT
           </p>
@@ -54,13 +54,14 @@ export const WhyMySect: React.FC = () => {
           </p>
         </ScrollReveal>
 
-        {/* 4 Clean Interactive Bento Cards */}
+        {/* 4 Clean Interactive Bento Cards with Spring Pop Animation */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((item, idx) => (
             <ScrollReveal
               key={item.id}
-              delay={idx * 80}
-              className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+              variant="pop-spring"
+              delay={idx * 70}
+              className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] active:scale-[0.98] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
             >
               <div>
                 {/* Top Row: Icon Pod + Step Number */}

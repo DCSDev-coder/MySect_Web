@@ -31,8 +31,8 @@ export const ContactSection: React.FC = () => {
         {/* items-center centers the left column vertically in the middle of the form card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Direct Info centered vertically */}
-          <ScrollReveal className="lg:col-span-5 space-y-8">
+          {/* Left Column: Direct Info centered vertically with Slide-Left Animation */}
+          <ScrollReveal variant="slide-left" className="lg:col-span-5 space-y-8">
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-white mb-3">
                 WE'RE HERE TO HELP YOU
@@ -77,8 +77,8 @@ export const ContactSection: React.FC = () => {
             </div>
           </ScrollReveal>
 
-          {/* Right Column: Details Form on an Elevated Card matching Image 2 */}
-          <ScrollReveal delay={150} className="lg:col-span-7 bg-white text-[#14181F] rounded-3xl p-8 sm:p-10 shadow-2xl shadow-black/40 border border-slate-100 relative">
+          {/* Right Column: Details Form on an Elevated Card with Slide-Right Animation */}
+          <ScrollReveal variant="slide-right" delay={120} className="lg:col-span-7 bg-white text-[#14181F] rounded-3xl p-8 sm:p-10 shadow-2xl shadow-black/40 border border-slate-100 relative">
             <h3 className="text-2xl font-bold text-[#14181F] mb-1">Send a Message</h3>
             <p className="text-xs sm:text-sm text-slate-500 mb-6 font-normal">
               Fill in your inquiry below. Our secretarial team will review and respond promptly.
@@ -95,7 +95,7 @@ export const ContactSection: React.FC = () => {
                   placeholder="Your name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-sm"
+                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-base sm:text-sm"
                 />
               </div>
 
@@ -109,7 +109,7 @@ export const ContactSection: React.FC = () => {
                   placeholder="name@company.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-sm"
+                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-base sm:text-sm"
                 />
               </div>
 
@@ -123,7 +123,7 @@ export const ContactSection: React.FC = () => {
                   placeholder="e.g. Corporate Secretarial Retainer"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-sm"
+                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-base sm:text-sm"
                 />
               </div>
 
@@ -137,7 +137,7 @@ export const ContactSection: React.FC = () => {
                   placeholder="Tell us about your company, current secretarial setup, or questions..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all leading-relaxed text-sm"
+                  className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0038A8]/20 focus:border-[#0038A8] focus:bg-white text-slate-900 placeholder-slate-400 transition-all leading-relaxed text-base sm:text-sm"
                 ></textarea>
               </div>
 

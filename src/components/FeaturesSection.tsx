@@ -110,8 +110,9 @@ export const FeaturesSection: React.FC = () => {
           {displayedFeatures.map((item, idx) => (
             <ScrollReveal
               key={item.id}
-              delay={idx < 6 ? idx * 60 : 0}
-              className="bg-[#102035] hover:bg-[#132742] p-7 rounded-2xl border border-[#1E3452] hover:border-[#0038A8]/60 transition-all duration-300 shadow-md hover:-translate-y-1.5 flex flex-col justify-between group"
+              variant="scale-up"
+              delay={idx < 6 ? idx * 50 : 0}
+              className="bg-[#102035] hover:bg-[#132742] active:scale-[0.98] p-7 rounded-2xl border border-[#1E3452] hover:border-[#0038A8]/60 transition-all duration-300 shadow-md hover:-translate-y-1.5 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Category Pill + Blue Icon Badge */}
