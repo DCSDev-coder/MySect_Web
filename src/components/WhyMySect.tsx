@@ -39,7 +39,7 @@ export const WhyMySect: React.FC = () => {
   ];
 
   return (
-    <section id="why-mysect" className="py-24 bg-[#F7F3EE] relative">
+    <section id="why-mysect" className="pt-24 pb-32 bg-[#F7F3EE] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto mb-16">
@@ -86,6 +86,12 @@ export const WhyMySect: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* Smooth gradient transition from cream to white dividing WhyMySect and Pricing */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-28 sm:h-36 bg-gradient-to-b from-transparent to-white pointer-events-none"
+        aria-hidden="true"
+      />
     </section>
   );
 };
