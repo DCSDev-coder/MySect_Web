@@ -142,18 +142,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <a
-              href={SITE_CONFIG.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors ${isDarkSection
-                ? 'bg-white text-[#0B192C] font-bold'
-                : 'bg-[#0038A8] text-white'
-                }`}
-            >
-              Register
-            </a>
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`p-2 focus:outline-none cursor-pointer transition-colors ${isDarkSection ? 'text-white hover:text-slate-200' : 'text-slate-800 hover:text-black'
