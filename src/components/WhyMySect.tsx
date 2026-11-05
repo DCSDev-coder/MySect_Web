@@ -1,94 +1,86 @@
 import React from 'react';
-import { Check, X, Shield, Clock, FileCheck, DollarSign, Smartphone } from 'lucide-react';
+import { Scale, BookOpen, Sparkles, Globe, ShieldCheck, Zap } from 'lucide-react';
 
 export const WhyMySect: React.FC = () => {
-  const comparisonRows = [
+  // Exact 6 cards from the user's uploaded "WHY MYSECT" screenshot
+  const whyCards = [
     {
-      feature: 'Signing Board Resolutions (DCR)',
-      traditional: 'Print physical papers, coordinate courier / dispatch runners, wait 3-7 days',
-      mysect: 'Instant legal digital signature on phone or laptop in 2 minutes',
-      icon: <Smartphone className="w-4 h-4 text-[#0055FF]" />
+      id: 'act2016',
+      title: 'Companies Act 2016 Ready',
+      description: 'Every feature aligns with Malaysian statutory requirements. Registers, resolutions, and filings follow the exact format SSM expects.',
+      icon: <Scale className="w-5 h-5 text-amber-400" />
     },
     {
-      feature: 'Statutory Registers & Share Records',
-      traditional: 'Physical hard-bound minute books stored in cabinet drawers with manual updates',
-      mysect: 'Cloud-synced digital registers with instant cap table and beneficial ownership tracking',
-      icon: <FileCheck className="w-4 h-4 text-[#0055FF]" />
+      id: 'records',
+      title: 'Complete Statutory Records',
+      description: 'Digital registers for directors, shareholders, secretaries, charges, and constitutions — all in one place, audit-ready.',
+      icon: <BookOpen className="w-5 h-5 text-amber-400" />
     },
     {
-      feature: 'SSM Annual Return Preparation',
-      traditional: 'Manual data re-entry into MyCoID, risk of typos and late lodgement penalties',
-      mysect: 'Auto-populated statutory fields directly generated with automated deadline countdowns',
-      icon: <Clock className="w-4 h-4 text-[#0055FF]" />
+      id: 'ai-drafting',
+      title: 'AI-Powered Drafting',
+      description: 'Generate resolutions, correspondence, and compliance documents in seconds. Smart suggestions keep you ahead of deadlines.',
+      icon: <Sparkles className="w-5 h-5 text-amber-400" />
     },
     {
-      feature: 'Certified True Copies (CTC) Retrieval',
-      traditional: 'Request via email, pay per certified copy, wait days for manual chops',
-      mysect: '24/7 Digital Vault with instant download of Section 14, 15, 17, and constitutions',
-      icon: <Shield className="w-4 h-4 text-[#0055FF]" />
+      id: 'client-portal',
+      title: 'Client Portal',
+      description: 'Give your clients a professional, branded portal. They can view company status, track progress, and access documents 24/7.',
+      icon: <Globe className="w-5 h-5 text-amber-400" />
     },
     {
-      feature: 'Disbursement & Admin Surcharges',
-      traditional: 'Surprise variable bills for phone calls, photocopying, binding, and couriers',
-      mysect: 'Clear transparent retainer pricing with zero surprise disbursement fees',
-      icon: <DollarSign className="w-4 h-4 text-[#0055FF]" />
+      id: 'ssm-workflow',
+      title: 'SSM Filing Workflow',
+      description: 'Prepare forms, track submissions, and manage annual returns with guided checklists. Never miss a filing again.',
+      icon: <ShieldCheck className="w-5 h-5 text-amber-400" />
+    },
+    {
+      id: 'visibility',
+      title: 'Instant Visibility',
+      description: 'One dashboard shows every deadline, task, company, and team member. Know exactly where every company stands.',
+      icon: <Zap className="w-5 h-5 text-amber-400" />
     }
   ];
 
   return (
-    <section id="why-mysect" className="py-24 bg-white border-y border-[#E6E0D6] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="why-mysect" className="py-24 bg-[#F7F3EE] border-b border-[#E6E0D6] relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header exactly as in the user's screenshot */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-full border border-[#0055FF]/20">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-600">
             WHY MYSECT
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#14181F] tracking-tight">
-            The Modern Alternative to Legacy Secretarial Systems
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B192C] tracking-tight leading-tight">
+            Not Just Another Admin Tool
           </h2>
-          <p className="mt-4 text-sm text-slate-600">
-            Traditional secretarial management wastes hours on repetitive paperwork and physical dispatch. Here is how MySect transforms corporate governance.
+          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            MySect is the only platform purpose-built for Malaysian Company Secretaries. Deep regulatory knowledge meets modern technology.
           </p>
         </div>
 
-        {/* Comparison Table */}
-        <div className="max-w-5xl mx-auto overflow-hidden rounded-3xl border border-[#E2D9CC] shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-12 bg-[#14181F] text-white font-bold text-xs uppercase tracking-wider">
-            <div className="md:col-span-4 p-4 sm:p-5 border-b md:border-b-0 md:border-r border-slate-800 flex items-center">
-              Statutory Requirement
-            </div>
-            <div className="md:col-span-4 p-4 sm:p-5 border-b md:border-b-0 md:border-r border-slate-800 text-slate-400 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-rose-500"></span>
-              Traditional CoSec
-            </div>
-            <div className="md:col-span-4 p-4 sm:p-5 bg-[#0055FF] text-white flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-              MySect Platform
-            </div>
-          </div>
-
-          <div className="divide-y divide-[#E6E0D6] bg-white text-xs">
-            {comparisonRows.map((row, idx) => (
-              <div key={idx} className="grid grid-cols-1 md:grid-cols-12 hover:bg-[#FAF7F2]/80 transition-colors">
-                {/* Feature Name */}
-                <div className="md:col-span-4 p-4 sm:p-5 font-bold text-[#14181F] flex items-start gap-2.5">
-                  <div className="mt-0.5 shrink-0">{row.icon}</div>
-                  <span>{row.feature}</span>
+        {/* 6 Cards in 3x2 Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyCards.map((card) => (
+            <div
+              key={card.id}
+              className="bg-white p-7 rounded-2xl border border-[#E6E0D6] shadow-sm hover:shadow-md hover:border-[#D5CEC2] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+            >
+              <div>
+                {/* Dark Navy Icon Box with Amber Icon matching screenshot */}
+                <div className="w-11 h-11 rounded-xl bg-[#0B192C] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform shadow-xs">
+                  {card.icon}
                 </div>
 
-                {/* Traditional CoSec */}
-                <div className="md:col-span-4 p-4 sm:p-5 text-slate-600 border-t md:border-t-0 md:border-l border-[#E6E0D6] flex items-start gap-2 bg-rose-50/20">
-                  <X className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
-                  <span className="leading-relaxed">{row.traditional}</span>
-                </div>
+                <h3 className="text-base font-bold text-[#0B192C] mb-2 group-hover:text-[#0055FF] transition-colors">
+                  {card.title}
+                </h3>
 
-                {/* MySect */}
-                <div className="md:col-span-4 p-4 sm:p-5 text-[#14181F] border-t md:border-t-0 md:border-l border-[#E6E0D6] flex items-start gap-2 bg-[#0055FF]/5 font-medium">
-                  <Check className="w-4 h-4 text-[#0055FF] shrink-0 mt-0.5" />
-                  <span className="leading-relaxed text-[#14181F] font-semibold">{row.mysect}</span>
-                </div>
+                <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                  {card.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

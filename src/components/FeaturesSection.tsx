@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
+  User, 
+  Users, 
   BookOpen, 
-  FileCheck2, 
-  FileSpreadsheet, 
-  ArrowRight, 
+  FileText, 
+  Calendar, 
+  ClipboardCheck, 
+  ChevronDown, 
   ShieldCheck, 
-  Lock, 
-  Smartphone, 
-  Zap,
-  CheckCircle2,
-  ExternalLink
+  Landmark, 
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 
 interface FeaturesSectionProps {
@@ -17,244 +18,152 @@ interface FeaturesSectionProps {
 }
 
 export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onRegisterInterest }) => {
+  const [showMore, setShowMore] = useState(false);
 
-  // The 3 Floating Elevated Cards matching Image 3 & Image 1
-  const floatingCards = [
+  // Exact 6 core features from the user's uploaded screenshot
+  const coreFeatures = [
+    {
+      id: 'officers',
+      title: 'Director & Officer Management',
+      description: 'Full profiles, appointment history, and cessation tracking for all officers',
+      icon: <User className="w-5 h-5 text-amber-400" />
+    },
+    {
+      id: 'shareholders',
+      title: 'Shareholders & Share Capital',
+      description: 'Manage share allotments, transfers, and maintain capital structure',
+      icon: <Users className="w-5 h-5 text-amber-400" />
+    },
     {
       id: 'registers',
-      icon: <BookOpen className="w-8 h-8 text-[#0055FF]" />,
-      title: 'Statutory Registers & Share Capital',
-      description: 'Comprehensive digital maintenance of Register of Members (Section 50), Directors (Section 51), and Charges (Section 352). Real-time cap table updates and share allotment tracking.',
-      bullets: [
-        'Register of Members & Beneficial Ownership (BO)',
-        'Share allotment & transfer tracking (Section 78/105)',
-        'Full historical audit trail of all equity changes'
-      ]
+      title: 'Statutory Registers',
+      description: 'Digital registers for directors, members, secretaries, and charges',
+      icon: <BookOpen className="w-5 h-5 text-amber-400" />
     },
     {
       id: 'resolutions',
-      icon: <FileCheck2 className="w-8 h-8 text-[#0055FF]" />,
-      title: 'Meeting & Resolution Management',
-      description: 'Draft, circulate, and execute Directors Circular Resolutions (DCR), AGM notices, and EGM minutes. Legally binding digital signatures under the Malaysian Digital Signature Act 1997.',
-      bullets: [
-        'Automated pre-filled resolution templates',
-        'One-click e-signing for directors anywhere in the world',
-        'Built-in voting quorum & minute book archiving'
-      ]
+      title: 'Resolution Register',
+      description: 'Record, track, and manage all company resolutions with full history',
+      icon: <FileText className="w-5 h-5 text-amber-400" />
+    },
+    {
+      id: 'meetings',
+      title: 'Meeting Management',
+      description: 'Plan AGMs, EGMs, and board meetings with attendance tracking',
+      icon: <Calendar className="w-5 h-5 text-amber-400" />
     },
     {
       id: 'ssm-forms',
-      icon: <FileSpreadsheet className="w-8 h-8 text-[#0055FF]" />,
-      title: 'SSM Form Preparation & Annual Returns',
-      description: 'Eliminate duplicate data entry. Seamlessly populate Section 14, 15, 17, 68, and 78 forms with smart compliance deadline countdowns to prevent late lodgement penalties.',
-      bullets: [
-        'Automated Annual Return (Section 68) calculation',
-        'Direct alignment with SSM MyCoID directives',
-        'Automatic deadline alert calendar via email/WhatsApp'
-      ]
+      title: 'SSM Form Preparation',
+      description: 'Prepare and track SSM statutory forms with guided workflows',
+      icon: <ClipboardCheck className="w-5 h-5 text-amber-400" />
     }
   ];
 
-  // The 4 Core Capabilities matching Image 3's middle grid
-  const focusPillars = [
+  // Additional features revealed on clicking "View More Features"
+  const extendedFeatures = [
     {
-      icon: <Zap className="w-6 h-6 text-[#0055FF]" />,
-      title: 'Automated Compliance Engine',
-      summary: 'Proactively tracks statutory deadlines for Annual Returns, Financial Statements, and tax submissions under Companies Act 2016.'
+      id: 'bo-register',
+      title: 'Beneficial Ownership (BO) Compliance',
+      description: 'Fully compliant with SSM Beneficial Ownership reporting directives and statutory registers',
+      icon: <ShieldCheck className="w-5 h-5 text-amber-400" />
     },
     {
-      icon: <Lock className="w-6 h-6 text-[#0055FF]" />,
-      title: 'Encrypted Document Vault',
-      summary: 'Bank-grade 256-bit encrypted cloud storage for Certified True Copies (CTCs), statutory forms, constitution, and historical lodgements.'
+      id: 'bank-resolutions',
+      title: 'Bank Facility Resolution Generator',
+      description: 'Standardized templates for CIMB, Maybank, RHB, and Alliance corporate bank accounts',
+      icon: <Landmark className="w-5 h-5 text-amber-400" />
     },
     {
-      icon: <Smartphone className="w-6 h-6 text-[#0055FF]" />,
-      title: 'Client & Director Portal',
-      summary: 'Give company directors, shareholders, and auditors instant secure access to view filings and sign resolutions right from their smartphone.'
-    },
-    {
-      icon: <ShieldCheck className="w-6 h-6 text-[#0055FF]" />,
-      title: 'E-Invoicing & Accounting Bridge',
-      summary: 'Connects secretarial compliance directly with corporate bookkeeping, LHDN e-invoicing compliance, and auditor workpapers.'
-    }
-  ];
-
-  // The 3 Showcase modules matching bottom of Image 3
-  const moduleShowcases = [
-    {
-      title: 'Digital Registers & Beneficial Ownership',
-      category: 'Statutory Core',
-      description: 'Maintain the required Register of Beneficial Ownership (BO) and statutory books in total compliance with the latest SSM Guidelines and Companies (Amendment) Act 2024.',
-      highlight: 'Compliant with SSM BO Reporting'
-    },
-    {
-      title: 'One-Click Bank Resolution Fast-Track',
-      category: 'Banking & Governance',
-      description: 'Generate standardized board resolutions for opening corporate bank accounts with CIMB, Maybank, RHB, and Alliance Bank with instantaneous digital director signatures.',
-      highlight: 'Turnaround in under 15 minutes'
-    },
-    {
-      title: 'Unified CoSec Multi-Company Dashboard',
-      category: 'Firms & Secretarial Practices',
-      description: 'Designed for corporate secretarial practices managing 50 to 5,000+ client companies. Switch between client entities with zero friction and manage lodgements in batch.',
-      highlight: 'Multi-Tenant Enterprise Architecture'
+      id: 'digital-vault',
+      title: 'Certified True Copy (CTC) Vault',
+      description: 'Encrypted cloud document locker for instant Section 14, 15, and 17 certificate retrieval',
+      icon: <Sparkles className="w-5 h-5 text-amber-400" />
     }
   ];
 
   return (
-    <section id="features" className="relative pb-24 bg-[#FAF7F2]">
-      {/* 1. THREE FLOATING CARDS (Signature layout from Image 3) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {floatingCards.map((card) => (
+    <section id="features" className="py-24 bg-[#0B192C] text-white relative overflow-hidden">
+      {/* Subtle ambient lighting */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-96 bg-[#0055FF]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header exactly as in the user's screenshot */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
+            FEATURES
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Everything a Malaysian COSEC Firm Needs
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
+            From statutory registers to SSM filings -- every compliance requirement handled in one platform.
+          </p>
+        </div>
+
+        {/* 6 Feature Cards in 3x2 Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {coreFeatures.map((item) => (
             <div
-              key={card.id}
-              className="bg-white rounded-3xl p-8 border border-[#E2D9CC] shadow-xl shadow-slate-900/5 hover:shadow-2xl hover:shadow-[#0055FF]/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group"
+              key={item.id}
+              className="bg-[#102035] hover:bg-[#132742] p-7 rounded-2xl border border-[#1E3452] hover:border-amber-400/40 transition-all duration-300 shadow-md hover:-translate-y-1 flex flex-col justify-between group"
             >
               <div>
-                {/* Icon in distinctive soft circular frame */}
-                <div className="w-16 h-16 rounded-2xl bg-[#0055FF]/10 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-[#0055FF] transition-all">
-                  <div className="group-hover:text-white transition-colors">
-                    {card.icon}
-                  </div>
+                {/* Amber Icon Badge */}
+                <div className="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                  {item.icon}
                 </div>
 
-                <h3 className="text-xl font-bold text-[#14181F] mb-3 group-hover:text-[#0055FF] transition-colors leading-snug">
-                  {card.title}
+                <h3 className="text-base font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                  {item.title}
                 </h3>
 
-                <p className="text-xs text-slate-600 leading-relaxed mb-6 font-normal">
-                  {card.description}
+                <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                  {item.description}
                 </p>
-
-                <div className="space-y-2 pt-4 border-t border-[#F0EAE1] text-xs">
-                  {card.bullets.map((bullet, bIdx) => (
-                    <div key={bIdx} className="flex items-start gap-2 text-slate-700">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0055FF] shrink-0 mt-0.5" />
-                      <span>{bullet}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-8 pt-4">
-                <button
-                  onClick={onRegisterInterest}
-                  className="w-full py-2.5 px-4 rounded-full bg-[#F4EFEA] hover:bg-[#0055FF] text-slate-800 hover:text-white text-xs font-semibold tracking-wide transition-all flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>Explore Module</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
               </div>
             </div>
           ))}
-        </div>
-      </div>
 
-      {/* 2. OUR COSEC PLATFORM FOCUS (Middle 4-column layout from Image 3) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-full border border-[#0055FF]/20">
-            OUR PLATFORM FOCUS
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#14181F] tracking-tight">
-            Designed for Modern Governance & Speed
-          </h2>
-          <p className="mt-3 text-sm text-slate-600">
-            Built from the ground up for Malaysian statutory requirements under the Companies Act 2016.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {focusPillars.map((pillar, pIdx) => (
+          {/* Extended Features when expanded */}
+          {showMore && extendedFeatures.map((item) => (
             <div
-              key={pIdx}
-              className="bg-white/80 backdrop-blur-xs rounded-2xl p-6 border border-[#E6E0D6] shadow-xs hover:border-[#0055FF]/40 hover:bg-white transition-all group flex flex-col justify-between"
+              key={item.id}
+              className="bg-[#102035] hover:bg-[#132742] p-7 rounded-2xl border border-[#1E3452] hover:border-amber-400/40 transition-all duration-300 shadow-md flex flex-col justify-between animate-in fade-in duration-300 group"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-[#E6E0D6] flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                  {pillar.icon}
+                <div className="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center mb-5">
+                  {item.icon}
                 </div>
-                <h4 className="text-sm font-bold text-[#14181F] mb-2 group-hover:text-[#0055FF] transition-colors">
-                  {pillar.title}
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {pillar.summary}
+                <h3 className="text-base font-bold text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                  {item.description}
                 </p>
               </div>
-
-              <div className="mt-6 pt-3 border-t border-[#F0EAE1]">
-                <button
-                  onClick={onRegisterInterest}
-                  className="text-xs font-semibold text-[#0055FF] hover:text-[#0045D8] flex items-center gap-1 group-hover:gap-1.5 transition-all"
-                >
-                  <span>Learn more</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* 3. CORE SYSTEM MODULES (Showcase cards matching bottom of Image 3) */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-full border border-[#0055FF]/20">
-            MODULE HIGHLIGHTS
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#14181F] tracking-tight">
-            Key Secretarial Capabilities
-          </h2>
-          <p className="mt-3 text-sm text-slate-600">
-            Empowering company secretaries and management teams with robust corporate digital infrastructure.
-          </p>
-        </div>
+        {/* View More Features Toggle matching screenshot */}
+        <div className="mt-12 text-center flex flex-col items-center justify-center gap-4">
+          <button
+            type="button"
+            onClick={() => setShowMore(!showMore)}
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors cursor-pointer py-2 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10"
+          >
+            <span>{showMore ? 'View Less Features' : 'View More Features'}</span>
+            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showMore ? 'rotate-180' : ''}`} />
+          </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {moduleShowcases.map((mod, mIdx) => (
-            <div
-              key={mIdx}
-              className="bg-white rounded-3xl overflow-hidden border border-[#E2D9CC] shadow-md hover:shadow-xl transition-all flex flex-col justify-between group"
-            >
-              {/* Card visual banner */}
-              <div className="h-44 bg-gradient-to-br from-[#14181F] via-slate-800 to-[#0A1A3D] p-6 text-white flex flex-col justify-between relative overflow-hidden">
-                <div className="absolute right-0 top-0 w-48 h-48 bg-[#0055FF]/20 rounded-full blur-2xl pointer-events-none"></div>
-                <div className="relative z-10 flex items-center justify-between">
-                  <span className="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/20">
-                    {mod.category}
-                  </span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                </div>
-                <div className="relative z-10">
-                  <span className="text-[11px] font-semibold text-sky-300 block">Feature</span>
-                  <h4 className="text-base font-bold text-white tracking-tight">{mod.title}</h4>
-                </div>
-              </div>
-
-              {/* Card Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <div className="inline-block text-[11px] font-bold text-[#0055FF] bg-[#0055FF]/10 px-2.5 py-0.5 rounded-full mb-3">
-                    {mod.highlight}
-                  </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {mod.description}
-                  </p>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-[#F0EAE1]">
-                  <button
-                    onClick={onRegisterInterest}
-                    className="w-full py-2.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white text-xs font-semibold tracking-wide transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-sm shadow-[#0055FF]/20"
-                  >
-                    <span>Request Demonstration</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+          <button
+            onClick={onRegisterInterest}
+            className="mt-2 text-xs font-semibold text-[#0055FF] hover:text-blue-400 flex items-center gap-1.5"
+          >
+            <span>Want a customized demo for your firm? Register your interest</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
         </div>
       </div>
     </section>

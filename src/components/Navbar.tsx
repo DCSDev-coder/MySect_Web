@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Phone } from 'lucide-react';
+import { Menu, X, ArrowRight, MessageCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
 interface NavbarProps {
@@ -15,7 +15,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Track current section for active indicator
       const sections = ['home', 'features', 'why-mysect', 'pricing', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
@@ -62,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo matching Image 2 */}
+          {/* Brand Logo */}
           <a
             href="#home"
             onClick={(e) => scrollToSection(e, 'home')}
@@ -122,15 +121,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
             </a>
           </nav>
 
-          {/* Action Button: Register Interest */}
+          {/* Action Buttons: WhatsApp Quick Link + Register Interest Button (phone number hidden) */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href={`tel:${SITE_CONFIG.phoneRaw}`}
-              className="text-xs font-semibold text-slate-700 hover:text-[#0055FF] px-3 py-2 flex items-center gap-1.5 transition-colors"
-              title="Call Specialist"
+              href={SITE_CONFIG.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-semibold text-slate-700 hover:text-emerald-600 px-3 py-2 flex items-center gap-1.5 transition-colors"
+              title="Chat on WhatsApp"
             >
-              <Phone className="w-3.5 h-3.5" />
-              <span>{SITE_CONFIG.phoneDisplay}</span>
+              <MessageCircle className="w-4 h-4 text-emerald-600" />
+              <span>WhatsApp Us</span>
             </a>
             <button
               onClick={onRegisterInterest}
@@ -203,11 +204,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onRegisterInterest }) => {
 
           <div className="pt-3 border-t border-[#E6E0D6] space-y-2">
             <a
-              href={`tel:${SITE_CONFIG.phoneRaw}`}
+              href={SITE_CONFIG.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full text-center py-2.5 text-xs font-bold text-slate-800 bg-white rounded-xl border border-[#E6E0D6] flex items-center justify-center gap-2"
             >
-              <Phone className="w-3.5 h-3.5 text-[#0055FF]" />
-              <span>Call: {SITE_CONFIG.phoneDisplay}</span>
+              <MessageCircle className="w-4 h-4 text-emerald-600" />
+              <span>Chat via WhatsApp</span>
             </a>
             <button
               onClick={() => {

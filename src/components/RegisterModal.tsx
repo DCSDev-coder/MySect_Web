@@ -36,11 +36,11 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose })
             Register Your Interest
           </h3>
           <p className="text-xs text-slate-600 leading-relaxed max-w-xs mx-auto">
-            Connect directly with our corporate secretarial team via phone or WhatsApp.
+            Connect directly with our corporate secretarial team via WhatsApp or telephone.
           </p>
         </div>
 
-        {/* Direct Phone / WhatsApp Options */}
+        {/* Action Options (Phone Number Hidden) */}
         <div className="space-y-3">
           <a
             href={SITE_CONFIG.whatsappUrl}
@@ -54,8 +54,8 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose })
               </div>
               <div className="text-left">
                 <p className="text-xs font-bold uppercase tracking-wider text-blue-100">Recommended</p>
-                <p className="text-sm font-extrabold">WhatsApp Specialist</p>
-                <p className="text-xs text-blue-100 font-mono">{SITE_CONFIG.phoneDisplay}</p>
+                <p className="text-sm font-extrabold">Chat on WhatsApp</p>
+                <p className="text-xs text-blue-100">Direct connection to compliance desk</p>
               </div>
             </div>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -71,7 +71,8 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose })
               </div>
               <div className="text-left">
                 <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Direct Voice Call</p>
-                <p className="text-sm font-extrabold text-[#14181F] font-mono">{SITE_CONFIG.phoneDisplay}</p>
+                <p className="text-sm font-extrabold text-[#14181F]">Call Corporate Hotline</p>
+                <p className="text-xs text-slate-500">Immediate specialist assistance</p>
               </div>
             </div>
             <ArrowRight className="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform" />
@@ -81,7 +82,7 @@ export const RegisterModal: React.FC<RegisterModalProps> = ({ isOpen, onClose })
         {/* Assurance */}
         <div className="mt-6 pt-5 border-t border-[#E6E0D6] flex items-center justify-center gap-2 text-xs text-slate-500">
           <ShieldCheck className="w-4 h-4 text-emerald-600" />
-          <span>No spam guarantee • Instant response during business hours</span>
+          <span>Priority response during Malaysian business hours</span>
         </div>
       </div>
     </div>
