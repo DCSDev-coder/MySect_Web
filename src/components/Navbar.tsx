@@ -47,6 +47,15 @@ export const Navbar: React.FC = () => {
     }
   };
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
@@ -55,30 +64,24 @@ export const Navbar: React.FC = () => {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between">
-          {/* Brand Logo */}
-          <a
-            href="#home"
-            onClick={(e) => scrollToSection(e, 'home')}
-            className="flex items-center gap-2 group cursor-pointer"
-          >
-            <span className="text-2xl font-black tracking-tight text-[#0055FF]">
-              MySect
-            </span>
-          </a>
-
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#14181F]/80">
+          {/* 1. Far Left End: Brand Logo (clicking takes user to home/top) */}
+          <div className="flex-1 flex justify-start">
             <a
               href="#home"
-              onClick={(e) => scrollToSection(e, 'home')}
-              className={`hover:text-[#0055FF] transition-colors relative py-1 ${
-                activeSection === 'home' ? 'text-[#0055FF] font-semibold' : ''
-              }`}
+              onClick={scrollToTop}
+              title="MySect - Back to Home"
+              className="flex items-center gap-2 group cursor-pointer"
             >
-              Home
+              <span className="text-2xl font-black tracking-tight text-[#0055FF]">
+                MySect
+              </span>
             </a>
+          </div>
+
+          {/* 2. Dead Center: Navigation Links (Home removed, centered in middle) */}
+          <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium text-[#14181F]/80">
             <a
               href="#features"
               onClick={(e) => scrollToSection(e, 'features')}
@@ -117,8 +120,8 @@ export const Navbar: React.FC = () => {
             </a>
           </nav>
 
-          {/* Direct Action Button */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* 3. Far Right End: Action Button (Register your interest directly) */}
+          <div className="hidden md:flex flex-1 justify-end items-center gap-3">
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
@@ -155,13 +158,6 @@ export const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#FAF7F2] border-b border-[#E6E0D6] px-4 pt-4 pb-6 space-y-3 shadow-xl animate-in slide-in-from-top-2">
           <div className="flex flex-col space-y-2 text-sm font-medium text-slate-800">
-            <a
-              href="#home"
-              onClick={(e) => scrollToSection(e, 'home')}
-              className="px-3 py-2 rounded-xl hover:bg-white/80"
-            >
-              Home
-            </a>
             <a
               href="#features"
               onClick={(e) => scrollToSection(e, 'features')}

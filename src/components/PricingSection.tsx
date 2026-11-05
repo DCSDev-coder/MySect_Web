@@ -71,10 +71,6 @@ export const PricingSection: React.FC = () => {
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
-
-          <p className="mt-4 text-[11px] font-sans text-slate-400">
-            Early registrants get priority onboarding and grandfathered pricing.
-          </p>
         </ScrollReveal>
       </div>
     </section>

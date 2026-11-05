@@ -7,6 +7,7 @@ import { PricingSection } from './components/PricingSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { VideoModal } from './components/VideoModal';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export function App() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -35,6 +36,9 @@ export function App() {
 
       {/* Footer matching Image 2 */}
       <Footer />
+
+      {/* Floating Scroll To Top Arrow */}
+      <ScrollToTop />
 
       {/* Meet MySect Video Modal */}
       <VideoModal
