@@ -87,7 +87,7 @@ export const WhyMySect: React.FC = () => {
         </div>
       </div>
 
-      {/* Redesigned Multi-Ribbon Corporate Wave: 3 rhythmic layers + subtle brand hairline */}
+      {/* Multi-Ribbon Corporate Wave: Pure Cream & White Tones */}
       <div className="w-full overflow-hidden leading-none bg-[#F7F3EE] -mb-[1px]" aria-hidden="true">
         <svg
           className="block w-full h-20 sm:h-28 lg:h-36 text-white"
@@ -97,20 +97,13 @@ export const WhyMySect: React.FC = () => {
           preserveAspectRatio="none"
         >
           <defs>
-            <linearGradient id="waveBrandAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#0038A8" stopOpacity="0" />
-              <stop offset="25%" stopColor="#0038A8" stopOpacity="0.4" />
-              <stop offset="50%" stopColor="#2563EB" stopOpacity="0.55" />
-              <stop offset="75%" stopColor="#0038A8" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#0038A8" stopOpacity="0" />
-            </linearGradient>
             <linearGradient id="waveBackShade" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="#EDE6DC" stopOpacity="0.75" />
               <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.9" />
             </linearGradient>
           </defs>
 
-          {/* Layer 1: Warm architectural back contour (Warm sand to soft white) */}
+          {/* Layer 1: Warm architectural back contour (Warm cream sand to soft white) */}
           <path
             d="M0,45 C180,15 360,80 540,40 C720,5 900,75 1080,35 C1240,5 1360,65 1440,40 L1440,120 L0,120 Z"
             fill="url(#waveBackShade)"
@@ -120,22 +113,13 @@ export const WhyMySect: React.FC = () => {
           <path
             d="M0,65 C220,95 400,25 600,65 C800,100 980,25 1160,60 C1280,85 1380,35 1440,55 L1440,120 L0,120 Z"
             fill="white"
-            fillOpacity="0.7"
+            fillOpacity="0.6"
           />
 
-          {/* Layer 3: Foreground crisp solid wave flowing seamlessly into white Pricing section */}
+          {/* Layer 3: Foreground crisp solid white wave flowing into white Pricing section */}
           <path
             d="M0,35 C200,70 380,10 580,48 C780,82 960,18 1160,52 C1280,72 1380,28 1440,38 L1440,120 L0,120 Z"
             fill="white"
-          />
-
-          {/* Corporate Accent Hairline: Tracing the front wave crest with a glowing brand blue tint */}
-          <path
-            d="M0,35 C200,70 380,10 580,48 C780,82 960,18 1160,52 C1280,72 1380,28 1440,38"
-            stroke="url(#waveBrandAccent)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            fill="none"
           />
         </svg>
       </div>
