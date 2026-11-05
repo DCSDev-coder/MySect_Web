@@ -141,8 +141,8 @@ export const ContactSection: React.FC = () => {
                 ></textarea>
               </div>
 
-              {/* Submit Pill Button matching Image 2 */}
-              <div className="pt-2">
+              {/* Submit Pill Button moved to right */}
+              <div className="pt-2 flex justify-end">
                 <button
                   type="submit"
                   className="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-bold text-sm tracking-wide shadow-lg shadow-[#0038A8]/30 hover:shadow-xl transition-all cursor-pointer active:scale-95"
