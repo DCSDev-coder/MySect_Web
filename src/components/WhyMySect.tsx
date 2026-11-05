@@ -64,17 +64,12 @@ export const WhyMySect: React.FC = () => {
               className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] active:scale-[0.98] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
             >
               <div>
-                {/* Top Row: Icon Pod + Step Number */}
-                <div className="flex items-center justify-between mb-6">
+                {/* Icon Pod */}
+                <div className="mb-6">
                   {/* Tilting squircle icon pod in rich dark blue */}
                   <div className="w-14 h-14 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
                     {item.icon}
                   </div>
-
-                  {/* Step Watermark */}
-                  <span className="font-mono text-2xl font-black text-slate-300 group-hover:text-[#0038A8] transition-colors select-none">
-                    {item.step}
-                  </span>
                 </div>
 
                 {/* Title */}
