@@ -91,16 +91,16 @@ export const FeaturesSection: React.FC = () => {
           <span className="font-mono text-xs font-bold uppercase tracking-widest text-amber-400">
             FEATURES
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
             Everything a Malaysian COSEC Firm Needs
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto tracking-normal">
             From statutory registers to SSM filings, every compliance requirement handled in one platform.
           </p>
         </ScrollReveal>
 
         {/* Feature Cards Grid (All cards rendered identically with same font & styling) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedFeatures.map((item, idx) => (
             <ScrollReveal
               key={item.id}
@@ -113,11 +113,11 @@ export const FeaturesSection: React.FC = () => {
                   {item.icon}
                 </div>
 
-                <h3 className="text-base font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                <h3 className="text-base font-bold text-white mb-2.5 tracking-normal group-hover:text-amber-300 transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                <p className="text-xs sm:text-[13px] text-slate-300 leading-relaxed font-normal tracking-normal">
                   {item.description}
                 </p>
               </div>

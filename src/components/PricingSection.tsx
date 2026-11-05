@@ -12,10 +12,10 @@ export const PricingSection: React.FC = () => {
           <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
             PRICING
           </span>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14181F] tracking-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14181F] tracking-normal leading-snug">
             Transparent Pricing Plans
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed tracking-normal">
             Simple, predictable packages with zero surprise disbursements for Malaysian businesses and CoSec firms.
           </p>
         </ScrollReveal>
@@ -30,11 +30,11 @@ export const PricingSection: React.FC = () => {
             <span>Coming Soon</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14181F] tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14181F] tracking-normal leading-snug">
             Plans & Pricing Launching Shortly
           </h3>
 
-          <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto">
+          <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto tracking-normal">
             We are fine-tuning our flexible tier options for solo founders, active SMEs, and multi-entity secretarial firms.
           </p>
 

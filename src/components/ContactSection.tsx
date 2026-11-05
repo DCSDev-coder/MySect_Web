@@ -38,10 +38,10 @@ export const ContactSection: React.FC = () => {
               <span className="font-mono text-xs font-bold uppercase tracking-widest text-amber-400">
                 CONTACT US
               </span>
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
                 Let's discuss your company matters
               </h2>
-              <p className="mt-4 text-sm text-slate-300 leading-relaxed">
+              <p className="mt-4 text-sm text-slate-300 leading-relaxed tracking-normal">
                 Whether you need advice on corporate secretarial retainers, statutory compliance, or multi-entity setup across Malaysia.
               </p>
             </div>

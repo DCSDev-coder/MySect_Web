@@ -26,16 +26,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           </span>
         </div>
 
-        {/* Main Headline: Inter with elegant italic contrast */}
-        <div className="max-w-4xl mx-auto space-y-4 animate-hero-2">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-[#14181F]">
+        {/* Main Headline: Inter with comfortable letter-spacing */}
+        <div className="max-w-4xl mx-auto space-y-5 animate-hero-2">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
             Company matters.{' '}
             <span className="italic font-normal text-[#14181F] block sm:inline">
               Made simpler.
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-1 font-normal">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal tracking-normal">
             The complete company secretarial platform. Manage compliance, statutory records, and filings in one powerful system. Connecting companies and their company secretaries.
           </p>
         </div>
