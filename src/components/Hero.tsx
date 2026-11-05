@@ -9,10 +9,12 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
   const fullText = 'Made simpler.';
   const [displayedText, setDisplayedText] = useState('');
+  const [isItalic, setIsItalic] = useState(false);
 
   useEffect(() => {
     let charIndex = 0;
     let timer: ReturnType<typeof setTimeout>;
+    let italicTimer: ReturnType<typeof setTimeout>;
 
     // One-time typing animation on page load, no looping
     const startDelay = setTimeout(() => {
@@ -22,6 +24,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           charIndex++;
           if (charIndex <= fullText.length) {
             timer = setTimeout(typeNextChar, 95);
+          } else {
+            // Typing complete: transition from normal to italic
+            italicTimer = setTimeout(() => {
+              setIsItalic(true);
+            }, 200);
           }
         }
       };
@@ -31,6 +38,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
     return () => {
       clearTimeout(startDelay);
       clearTimeout(timer);
+      clearTimeout(italicTimer);
     };
   }, []);
   return (
@@ -55,7 +63,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5 animate-hero-2">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
             Company matters.{' '}
-            <span className="italic font-normal text-[#14181F] inline-block">
+            <span
+              className={`font-normal text-[#14181F] inline-block transition-[font-style] duration-300 ${
+                isItalic ? 'italic' : 'not-italic'
+              }`}
+            >
               <span>{displayedText}</span>
               <span
                 className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-[#14181F] ml-1.5 align-baseline animate-cursor"
