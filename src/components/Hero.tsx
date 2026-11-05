@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Zap } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
 interface HeroProps {
@@ -62,11 +62,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           </button>
         </div>
 
-        {/* Powered by TM badge only in Roboto Mono */}
+        {/* Powered by TM badge in Roboto Mono */}
         <div className="mt-10 sm:mt-14 pt-6 sm:pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4 w-full max-w-xs sm:max-w-md mx-auto">
-          <span className="font-mono text-xs font-semibold tracking-widest text-slate-500 uppercase">
-            powered by tm
-          </span>
+          <div className="inline-flex items-center gap-2 text-slate-500">
+            <Zap className="w-3.5 h-3.5 text-[#0038A8] fill-[#0038A8]" />
+            <span className="font-mono text-xs font-semibold tracking-widest uppercase">
+              powered by tm
+            </span>
+          </div>
         </div>
       </div>
     </section>

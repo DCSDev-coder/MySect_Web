@@ -1,4 +1,5 @@
 import React from 'react';
+import { Zap } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -107,8 +108,9 @@ export const Footer: React.FC = () => {
           <div>
             {currentYear} MySect. All rights reserved.
           </div>
-          <div className="text-slate-500">
-            Powered by TM
+          <div className="text-slate-500 inline-flex items-center gap-1.5">
+            <Zap className="w-3 h-3 text-[#0038A8] fill-[#0038A8]" />
+            <span>Powered by TM</span>
           </div>
           <div>
             Made in Malaysia
