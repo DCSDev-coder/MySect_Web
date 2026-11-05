@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play, Zap } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
@@ -7,6 +7,31 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
+  const fullText = 'Made simpler.';
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout>;
+    let charIndex = 0;
+
+    const startTimeout = setTimeout(() => {
+      const typeNextChar = () => {
+        if (charIndex <= fullText.length) {
+          setDisplayedText(fullText.slice(0, charIndex));
+          charIndex++;
+          if (charIndex <= fullText.length) {
+            timeoutId = setTimeout(typeNextChar, 85);
+          }
+        }
+      };
+      typeNextChar();
+    }, 350);
+
+    return () => {
+      clearTimeout(startTimeout);
+      clearTimeout(timeoutId);
+    };
+  }, []);
   return (
     <section
       id="home"
@@ -28,7 +53,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
             Company matters.{' '}
             <span className="italic font-normal text-[#14181F] block sm:inline">
-              Made simpler.
+              <span>{displayedText}</span>
+              <span
+                className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-[#0038A8] ml-1 align-baseline animate-pulse"
+                aria-hidden="true"
+              />
             </span>
           </h1>
 
