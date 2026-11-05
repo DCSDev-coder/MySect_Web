@@ -29,7 +29,7 @@ export const ContactSection: React.FC = () => {
     <section id="contact" className="py-24 bg-[#0B192C] text-white border-t border-[#1E3452] relative overflow-hidden">
       {/* Subtle ambient lighting */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#0055FF]/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#0055FF]/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* items-center centers the left column vertically in the middle of the form card */}
@@ -38,7 +38,7 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Direct Info centered vertically */}
           <ScrollReveal className="lg:col-span-5 space-y-8">
             <div>
-              <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-amber-400 mb-3">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0055FF] mb-3">
                 WE'RE HERE TO HELP YOU
               </p>
               <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-tight">

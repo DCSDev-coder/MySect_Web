@@ -213,12 +213,12 @@ export const CompanyNameSearchModal: React.FC<CompanyNameSearchModalProps> = ({
             )}
 
             {searchResult.status === 'taken' && (
-              <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950 space-y-2">
+              <div className="p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950 space-y-2">
                 <div className="flex items-start gap-2">
-                  <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                  <AlertCircle className="w-4 h-4 text-[#0055FF] shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold">{searchResult.companyName}</p>
-                    <p className="text-[11px] text-amber-800 mt-0.5">{searchResult.message}</p>
+                    <p className="text-[11px] text-slate-700 mt-0.5">{searchResult.message}</p>
                   </div>
                 </div>
               </div>

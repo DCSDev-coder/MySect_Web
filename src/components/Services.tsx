@@ -22,7 +22,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
       case 'FileCheck': return <FileCheck className="w-6 h-6 text-sky-600" />;
       case 'MapPin': return <MapPin className="w-6 h-6 text-emerald-600" />;
       case 'Calculator': return <Calculator className="w-6 h-6 text-violet-600" />;
-      case 'ShieldAlert': return <ShieldAlert className="w-6 h-6 text-amber-600" />;
+      case 'ShieldAlert': return <ShieldAlert className="w-6 h-6 text-[#0055FF]" />;
       case 'TrendingUp': return <TrendingUp className="w-6 h-6 text-rose-600" />;
       default: return <Building2 className="w-6 h-6 text-indigo-600" />;
     }

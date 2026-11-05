@@ -23,42 +23,42 @@ export const FeaturesSection: React.FC = () => {
       category: 'Governance',
       title: 'Directorship & Officer Records',
       description: 'Maintain complete officer appointment histories, statutory qualification screening, and cessation records under Section 196.',
-      icon: <UserCheck className="w-5 h-5 text-amber-400" />
+      icon: <UserCheck className="w-5 h-5 text-[#0055FF]" />
     },
     {
       id: 'shareholders',
       category: 'Equity Matrix',
       title: 'Dynamic Capital & Cap Table',
       description: 'Real-time cap table visibility, share allotments (Section 78), transfers (Section 105), and paid-up capital tracking.',
-      icon: <PieChart className="w-5 h-5 text-amber-400" />
+      icon: <PieChart className="w-5 h-5 text-[#0055FF]" />
     },
     {
       id: 'registers',
       category: 'Statutory Core',
       title: 'Digital Registers & Beneficial Ownership',
       description: 'Automated Register of Members (Section 50), Register of Charges (Section 352), and latest SSM Beneficial Ownership registers.',
-      icon: <BookMarked className="w-5 h-5 text-amber-400" />
+      icon: <BookMarked className="w-5 h-5 text-[#0055FF]" />
     },
     {
       id: 'resolutions',
       category: 'Authorizations',
       title: 'Board Resolution Engine',
       description: 'Draft, circulate, and sign Directors Circular Resolutions (DCR) with legally binding e-signatures under the Digital Signature Act 1997.',
-      icon: <FileCheck className="w-5 h-5 text-amber-400" />
+      icon: <FileCheck className="w-5 h-5 text-[#0055FF]" />
     },
     {
       id: 'meetings',
       category: 'Shareholder Ops',
       title: 'AGM & Minute Book Orchestration',
       description: 'Automate notice circulation, proxy tracking, minute book archiving, and statutory AGM compliance calendars.',
-      icon: <CalendarRange className="w-5 h-5 text-amber-400" />
+      icon: <CalendarRange className="w-5 h-5 text-[#0055FF]" />
     },
     {
       id: 'ssm-forms',
       category: 'SSM Lodgements',
       title: 'Automated Statutory Lodgements',
       description: 'Pre-populate Sections 14, 15, 17, 68, and 78 forms automatically without duplicate data re-entry or formatting errors.',
-      icon: <FileSpreadsheet className="w-5 h-5 text-amber-400" />
+      icon: <FileSpreadsheet className="w-5 h-5 text-[#0055FF]" />
     }
   ];
 
@@ -69,21 +69,21 @@ export const FeaturesSection: React.FC = () => {
       category: 'Regulatory',
       title: 'Beneficial Ownership (BO) Compliance',
       description: 'Full adherence to latest SSM Beneficial Ownership directives, notification obligations, and periodic verification schedules.',
-      icon: <ShieldCheck className="w-5 h-5 text-amber-400" />
+      icon: <ShieldCheck className="w-5 h-5 text-[#0055FF]" />
     },
     {
       id: 'bank-resolutions',
       category: 'Banking Bridge',
       title: 'Corporate Bank Facility Suite',
       description: 'Standardized resolution drafting for CIMB, Maybank, RHB, and Alliance corporate accounts with instant digital director sign-off.',
-      icon: <Building2 className="w-5 h-5 text-amber-400" />
+      icon: <Building2 className="w-5 h-5 text-[#0055FF]" />
     },
     {
       id: 'digital-vault',
       category: 'Document Vault',
       title: 'Certified True Copy (CTC) Vault',
       description: 'Bank-grade 256-bit encrypted locker for 24/7 access to Sections 14, 15, 17, constitutions, and official filing receipts.',
-      icon: <Lock className="w-5 h-5 text-amber-400" />
+      icon: <Lock className="w-5 h-5 text-[#0055FF]" />
     }
   ];
 
@@ -97,7 +97,7 @@ export const FeaturesSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-amber-400 mb-3">
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0055FF] mb-3">
             PLATFORM MODULES
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
@@ -114,20 +114,20 @@ export const FeaturesSection: React.FC = () => {
             <ScrollReveal
               key={item.id}
               delay={idx < 6 ? idx * 60 : 0}
-              className="bg-[#102035] hover:bg-[#132742] p-7 rounded-2xl border border-[#1E3452] hover:border-amber-400/40 transition-all duration-300 shadow-md hover:-translate-y-1.5 flex flex-col justify-between group"
+              className="bg-[#102035] hover:bg-[#132742] p-7 rounded-2xl border border-[#1E3452] hover:border-[#0055FF]/50 transition-all duration-300 shadow-md hover:-translate-y-1.5 flex flex-col justify-between group"
             >
               <div>
-                {/* Category Pill + Amber Icon Badge */}
+                {/* Category Pill + Blue Icon Badge */}
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 border border-[#0055FF]/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
-                  <span className="font-mono text-[10px] uppercase font-semibold text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-400/20">
+                  <span className="font-mono text-[10px] uppercase font-semibold text-[#0055FF] bg-[#0055FF]/10 px-2 py-0.5 rounded-full border border-[#0055FF]/20">
                     {item.category}
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-white mb-2.5 tracking-normal group-hover:text-amber-300 transition-colors">
+                <h3 className="text-base font-bold text-white mb-2.5 tracking-normal group-hover:text-[#0055FF] transition-colors">
                   {item.title}
                 </h3>
 

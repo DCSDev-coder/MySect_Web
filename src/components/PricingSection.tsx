@@ -25,7 +25,7 @@ export const PricingSection: React.FC = () => {
           {/* Subtle background glow */}
           <div className="absolute top-0 right-1/2 translate-x-1/2 w-64 h-64 bg-[#0055FF]/5 rounded-full blur-2xl pointer-events-none"></div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 font-mono text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0055FF]/10 border border-[#0055FF]/20 text-[#0055FF] font-mono text-xs font-bold uppercase tracking-wider mb-6">
             <Clock className="w-3.5 h-3.5" />
             <span>Coming Soon</span>
           </div>
