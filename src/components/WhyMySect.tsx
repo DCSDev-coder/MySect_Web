@@ -46,13 +46,13 @@ export const WhyMySect: React.FC = () => {
           </p>
         </ScrollReveal>
 
-        {/* 4 Clean Spaced Cards matching the New Reference Design */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 4 Clean Columns with Side Dividing Lines (No Card Background) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {pillars.map((item, idx) => (
             <ScrollReveal
               key={item.id}
               delay={idx * 75}
-              className="bg-white p-7 sm:p-8 rounded-2xl border border-[#E6E0D6] shadow-xs hover:shadow-md hover:border-[#0055FF]/40 transition-all duration-300 text-center flex flex-col items-center group hover:-translate-y-1"
+              className="px-6 sm:px-8 py-8 lg:py-6 flex flex-col items-center text-center group border-b md:border-b-0 border-[#E2D9CC] last:border-b-0 md:even:border-l md:even:border-[#E2D9CC] md:[&:nth-child(-n+2)]:border-b md:[&:nth-child(-n+2)]:border-[#E2D9CC] lg:even:border-l-0 lg:[&:nth-child(-n+2)]:border-b-0 lg:border-r lg:border-[#E2D9CC] lg:last:border-r-0"
             >
               {/* Soft Light-Blue Circular Icon Badge matching Image */}
               <div className="w-14 h-14 rounded-full bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center mb-5 group-hover:bg-[#0055FF] group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-2xs">
