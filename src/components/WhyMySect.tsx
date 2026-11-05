@@ -47,7 +47,7 @@ export const WhyMySect: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono text-xs font-bold uppercase tracking-widest text-amber-600">
+          <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
             WHY MYSECT
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B192C] tracking-normal leading-snug">
