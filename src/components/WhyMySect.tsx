@@ -1,54 +1,42 @@
 import React from 'react';
-import { Scale, FileCheck2, Sparkles, LayoutDashboard, Clock, Building2 } from 'lucide-react';
+import { TrendingUp, Zap, Lightbulb, PieChart } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 export const WhyMySect: React.FC = () => {
-  const whyCards = [
+  const pillars = [
     {
-      id: 'statutory-alignment',
-      title: 'Strict Companies Act 2016 Alignment',
-      description: 'Every register, resolution, and certificate is programmed to the exact statutory formats mandated by the Companies Commission of Malaysia (SSM).',
-      icon: <Scale className="w-5 h-5 text-amber-400" />
+      id: 'growth',
+      title: 'Growth',
+      description: 'Scale your secretarial practice or corporate group effortlessly. Manage hundreds of client entities without operational bottlenecks.',
+      icon: <TrendingUp className="w-12 h-12 stroke-[1.6] text-[#0055FF]" />
     },
     {
-      id: 'audit-vault',
-      title: 'Tamper-Proof Audit Vault',
-      description: 'All statutory records, board circulars, and official certifications are archived with time-stamped audit trails, immediately ready for auditor inspection.',
-      icon: <FileCheck2 className="w-5 h-5 text-amber-400" />
+      id: 'efficiency',
+      title: 'Efficiency',
+      description: 'Eliminate repetitive paperwork with automated board circulars, instant statutory register updates, and pre-populated SSM filings.',
+      icon: <Zap className="w-12 h-12 stroke-[1.6] text-[#0055FF]" />
     },
     {
-      id: 'smart-drafting',
-      title: 'Intelligent Document Drafting',
-      description: 'Draft complex board resolutions, officer change filings, and custom shareholder correspondence in minutes with pre-validated templates.',
-      icon: <Sparkles className="w-5 h-5 text-amber-400" />
+      id: 'innovation',
+      title: 'Innovation',
+      description: 'Intelligent document drafting, automated annual return countdowns, and legally binding digital signatures under Malaysian law.',
+      icon: <Lightbulb className="w-12 h-12 stroke-[1.6] text-[#0055FF]" />
     },
     {
-      id: 'board-workspace',
-      title: 'Dedicated Board & Client Workspace',
-      description: 'Provide company directors, management, and investors with a modern portal to monitor compliance status and review records 24/7.',
-      icon: <LayoutDashboard className="w-5 h-5 text-amber-400" />
-    },
-    {
-      id: 'deadline-guardian',
-      title: 'Predictive Compliance Deadlines',
-      description: 'Automated countdown alerts for Annual Returns (Section 68) and Financial Statements ensure your companies never incur late lodgement penalties.',
-      icon: <Clock className="w-5 h-5 text-amber-400" />
-    },
-    {
-      id: 'portfolio-management',
-      title: 'Multi-Company Portfolio View',
-      description: 'Manage 10 or 1,000+ client entities from a single pane of glass. Track pending board approvals and regulatory milestones with zero friction.',
-      icon: <Building2 className="w-5 h-5 text-amber-400" />
+      id: 'analysis',
+      title: 'Analysis',
+      description: 'Real-time cap table visibility, predictive compliance tracking, and bank-grade vault records ready for auditor inspection.',
+      icon: <PieChart className="w-12 h-12 stroke-[1.6] text-[#0055FF]" />
     }
   ];
 
   return (
     <section id="why-mysect" className="py-24 bg-[#F7F3EE] border-b border-[#E6E0D6] relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
           <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
-            WHY MYSECT
+            OUR STRATEGIC FOCUS
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B192C] tracking-normal leading-snug">
             Precision Infrastructure for Corporate Compliance
@@ -58,31 +46,44 @@ export const WhyMySect: React.FC = () => {
           </p>
         </ScrollReveal>
 
-        {/* 6 Cards in 3x2 Grid with Staggered Scroll Reveal */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {whyCards.map((card, idx) => (
-            <ScrollReveal
-              key={card.id}
-              delay={idx * 75}
-              className="bg-white p-7 rounded-2xl border border-[#E6E0D6] shadow-sm hover:shadow-md hover:border-[#D5CEC2] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5"
-            >
-              <div>
-                {/* Dark Navy Icon Box with Amber Icon */}
-                <div className="w-11 h-11 rounded-xl bg-[#0B192C] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-xs">
-                  {card.icon}
+        {/* 4 Focus Columns matching Image 2 Layout */}
+        <ScrollReveal delay={100} className="bg-white rounded-3xl border border-[#E6E0D6] shadow-sm overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#EFEAE2]">
+            {pillars.map((item) => (
+              <div
+                key={item.id}
+                className="p-8 sm:p-10 flex flex-col items-center text-center justify-between group hover:bg-[#FAF7F2]/60 transition-colors duration-300"
+              >
+                <div>
+                  {/* Clean Centered Icon matching Image 2 */}
+                  <div className="w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </div>
+
+                  {/* Centered Title */}
+                  <h3 className="text-xl font-bold text-[#0B192C] mb-3 tracking-normal group-hover:text-[#0055FF] transition-colors">
+                    {item.title}
+                  </h3>
+
+                  {/* Centered Descriptive Text */}
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal tracking-normal">
+                    {item.description}
+                  </p>
                 </div>
 
-                <h3 className="text-base font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0055FF] transition-colors">
-                  {card.title}
-                </h3>
-
-                <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
-                  {card.description}
-                </p>
+                {/* Clean "Learn More" Outline Button matching Image 2 */}
+                <div className="mt-8 pt-2 w-full flex justify-center">
+                  <a
+                    href="#features"
+                    className="inline-flex items-center justify-center px-6 py-2 rounded-md border border-[#D5CEC2] bg-white text-xs font-semibold text-slate-700 hover:text-white hover:bg-[#0055FF] hover:border-[#0055FF] transition-all duration-200 shadow-2xs hover:shadow-sm cursor-pointer active:scale-95"
+                  >
+                    Learn More
+                  </a>
+                </div>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
