@@ -9,29 +9,34 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
   const fullText = 'Made simpler.';
   const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>;
-    let charIndex = 0;
+    let timer: ReturnType<typeof setTimeout>;
 
-    const startTimeout = setTimeout(() => {
-      const typeNextChar = () => {
-        if (charIndex <= fullText.length) {
-          setDisplayedText(fullText.slice(0, charIndex));
-          charIndex++;
-          if (charIndex <= fullText.length) {
-            timeoutId = setTimeout(typeNextChar, 85);
-          }
-        }
-      };
-      typeNextChar();
-    }, 350);
+    if (!isDeleting && displayedText === fullText) {
+      // Completed typing: hold for 2.6 seconds so user reads it comfortably
+      timer = setTimeout(() => {
+        setIsDeleting(true);
+      }, 2600);
+    } else if (isDeleting && displayedText === '') {
+      // Completed deleting: short breath before typing starts from 'M'
+      timer = setTimeout(() => {
+        setIsDeleting(false);
+      }, 450);
+    } else {
+      // Natural typing (105ms) vs deletion (45ms)
+      const speed = isDeleting ? 45 : 105;
+      timer = setTimeout(() => {
+        const nextText = isDeleting
+          ? fullText.slice(0, displayedText.length - 1)
+          : fullText.slice(0, displayedText.length + 1);
+        setDisplayedText(nextText);
+      }, speed);
+    }
 
-    return () => {
-      clearTimeout(startTimeout);
-      clearTimeout(timeoutId);
-    };
-  }, []);
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting]);
   return (
     <section
       id="home"
@@ -52,10 +57,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5 animate-hero-2">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
             Company matters.{' '}
-            <span className="italic font-normal text-[#14181F] block sm:inline">
+            <span className="italic font-normal text-[#14181F] inline-block">
               <span>{displayedText}</span>
               <span
-                className="inline-block w-[3px] sm:w-[4px] h-[0.82em] bg-[#0038A8] ml-1 align-baseline animate-pulse"
+                className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-[#14181F] ml-1.5 align-baseline animate-cursor"
                 aria-hidden="true"
               />
             </span>
