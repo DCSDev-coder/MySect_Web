@@ -19,49 +19,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Top Badges with opening animation */}
-        <div className="inline-flex flex-wrap items-center justify-center gap-2 mb-8 animate-hero-1">
-          <span className="text-[11px] font-sans font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
+        {/* Top Badge: IN DEVELOPMENT only */}
+        <div className="inline-flex items-center justify-center mb-8 animate-hero-1">
+          <span className="text-[11px] font-sans font-semibold tracking-wider uppercase px-3.5 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
             IN DEVELOPMENT
-          </span>
-          <span className="text-[11px] font-sans font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-[#0055FF]/20 bg-[#0055FF]/5 text-[#0055FF] shadow-2xs flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF] animate-pulse"></span>
-            PURPOSE-BUILT FOR MALAYSIAN COSEC FIRMS
           </span>
         </div>
 
-        {/* Main Headline in Lora with editorial cursive accent */}
-        <div className="max-w-4xl mx-auto space-y-3 animate-hero-2">
+        {/* Main Headline in Lora */}
+        <div className="max-w-4xl mx-auto space-y-4 animate-hero-2">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-serif text-[#14181F] tracking-tight leading-[1.12]">
             Company matters.{' '}
-            <span className="italic font-normal inline-flex items-center gap-2 text-[#14181F]">
+            <span className="italic font-normal text-[#14181F]">
               Made simpler.
-              {/* Custom SVG Document with Blue Checkmark */}
-              <svg 
-                className="w-8 h-8 sm:w-11 sm:h-11 inline-block text-[#0055FF] stroke-current shrink-0 -translate-y-1" 
-                viewBox="0 0 36 40" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  d="M4 8C4 5.79086 5.79086 4 8 4H20L28 12V32C28 34.2091 26.2091 36 24 36H8C5.79086 36 4 34.2091 4 32V8Z" 
-                  strokeWidth="2.5" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                />
-                <path d="M20 4V12H28" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M12 22L16 26L22 18" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M31 10L35 8" strokeWidth="2" strokeLinecap="round" />
-                <path d="M32 18L36 18" strokeWidth="2" strokeLinecap="round" />
-              </svg>
             </span>
           </h1>
 
-          <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-[#0055FF] tracking-tight pt-2">
-            Your COSEC Command Centre
-          </p>
-
-          <p className="text-base sm:text-lg font-sans text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal">
+          <p className="text-base sm:text-lg font-sans text-slate-600 max-w-2xl mx-auto leading-relaxed pt-1 font-normal">
             The complete company secretarial platform. Manage compliance, statutory records, and filings in one powerful system. Connecting companies and their company secretaries.
           </p>
         </div>
