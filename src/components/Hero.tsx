@@ -21,27 +21,27 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Top Badge: IN DEVELOPMENT only */}
         <div className="inline-flex items-center justify-center mb-8 animate-hero-1">
-          <span className="text-[11px] font-sans font-semibold tracking-wider uppercase px-3.5 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
+          <span className="text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
             IN DEVELOPMENT
           </span>
         </div>
 
-        {/* Main Headline in Lora */}
+        {/* Main Headline: Plus Jakarta Sans + Instrument Serif */}
         <div className="max-w-4xl mx-auto space-y-4 animate-hero-2">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-serif text-[#14181F] tracking-tight leading-[1.12]">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-[#14181F]">
             Company matters.{' '}
-            <span className="italic font-normal text-[#14181F]">
+            <span className="font-editorial italic font-normal text-[1.08em] text-[#14181F] block sm:inline">
               Made simpler.
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg font-sans text-slate-600 max-w-2xl mx-auto leading-relaxed pt-1 font-normal">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-1 font-normal">
             The complete company secretarial platform. Manage compliance, statutory records, and filings in one powerful system. Connecting companies and their company secretaries.
           </p>
         </div>
 
         {/* Action Buttons with opening animation */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-hero-3 font-sans">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-hero-3">
           {/* Main Action: Directly opens WhatsApp contact */}
           <a
             href={SITE_CONFIG.whatsappUrl}
@@ -66,7 +66,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
         </div>
 
         {/* Powered by TM badge only */}
-        <div className="mt-14 pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4 font-sans">
+        <div className="mt-14 pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4">
           <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
             powered by tm
           </span>

@@ -9,13 +9,13 @@ export const PricingSection: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-sans font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
             PRICING
           </span>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#14181F] tracking-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14181F] tracking-tight">
             Transparent Pricing Plans
           </h2>
-          <p className="mt-4 text-sm sm:text-base font-sans text-slate-600 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
             Simple, predictable packages with zero surprise disbursements for Malaysian businesses and CoSec firms.
           </p>
         </ScrollReveal>
@@ -25,21 +25,21 @@ export const PricingSection: React.FC = () => {
           {/* Subtle background glow */}
           <div className="absolute top-0 right-1/2 translate-x-1/2 w-64 h-64 bg-[#0055FF]/5 rounded-full blur-2xl pointer-events-none"></div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-sans font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-bold uppercase tracking-wider mb-6">
             <Clock className="w-3.5 h-3.5" />
             <span>Coming Soon</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#14181F] tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14181F] tracking-tight">
             Plans & Pricing Launching Shortly
           </h3>
 
-          <p className="mt-3 text-xs sm:text-sm font-sans text-slate-600 leading-relaxed max-w-lg mx-auto">
+          <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto">
             We are fine-tuning our flexible tier options for solo founders, active SMEs, and multi-entity secretarial firms.
           </p>
 
           {/* Teaser Feature Checkmarks */}
-          <div className="mt-8 pt-6 border-t border-[#F0EAE1] grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs font-sans text-slate-700 max-w-md mx-auto">
+          <div className="mt-8 pt-6 border-t border-[#F0EAE1] grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs text-slate-700 max-w-md mx-auto">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0055FF] shrink-0" />
               <span>Zero hidden disbursement fees</span>

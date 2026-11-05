@@ -84,13 +84,13 @@ export const FeaturesSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-sans font-bold uppercase tracking-widest text-amber-400">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
             FEATURES
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
             Everything a Malaysian COSEC Firm Needs
           </h2>
-          <p className="mt-4 text-sm sm:text-base font-sans text-slate-300 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
             From statutory registers to SSM filings, every compliance requirement handled in one platform.
           </p>
         </ScrollReveal>
@@ -109,11 +109,11 @@ export const FeaturesSection: React.FC = () => {
                   {item.icon}
                 </div>
 
-                <h3 className="text-base font-serif font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                <h3 className="text-base font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
                   {item.title}
                 </h3>
 
-                <p className="text-xs font-sans text-slate-300 leading-relaxed font-normal">
+                <p className="text-xs text-slate-300 leading-relaxed font-normal">
                   {item.description}
                 </p>
               </div>

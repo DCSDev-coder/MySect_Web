@@ -35,13 +35,13 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Contact Information with Scroll Reveal */}
           <ScrollReveal className="lg:col-span-5 space-y-8">
             <div>
-              <span className="text-xs font-sans font-bold uppercase tracking-widest text-amber-400">
+              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
                 CONTACT US
               </span>
-              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
                 Let's discuss your company matters
               </h2>
-              <p className="mt-4 text-sm font-sans text-slate-300 leading-relaxed">
+              <p className="mt-4 text-sm text-slate-300 leading-relaxed">
                 Whether you need advice on corporate secretarial retainers, statutory compliance, or multi-entity setup across Malaysia.
               </p>
             </div>
@@ -103,8 +103,8 @@ export const ContactSection: React.FC = () => {
 
           {/* Right Column: Send Email Form with Scroll Reveal */}
           <ScrollReveal delay={150} className="lg:col-span-7 bg-[#102035] rounded-3xl p-8 border border-[#1E3452] shadow-2xl">
-            <h3 className="text-xl font-serif font-bold text-white mb-1">Send an Email to MySect</h3>
-            <p className="text-xs font-sans text-slate-300 mb-6">
+            <h3 className="text-xl font-bold text-white mb-1">Send an Email to MySect</h3>
+            <p className="text-xs text-slate-300 mb-6">
               Fill in your message below. Clicking send will open your email client pre-addressed to our compliance team.
             </p>
 

@@ -47,13 +47,13 @@ export const WhyMySect: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-sans font-bold uppercase tracking-widest text-amber-600">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-600">
             WHY MYSECT
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#0B192C] tracking-tight leading-tight">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B192C] tracking-tight leading-tight">
             Not Just Another Admin Tool
           </h2>
-          <p className="mt-4 text-sm sm:text-base font-sans text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
             MySect is the only platform purpose-built for Malaysian Company Secretaries. Deep regulatory knowledge meets modern technology.
           </p>
         </ScrollReveal>
@@ -72,11 +72,11 @@ export const WhyMySect: React.FC = () => {
                   {card.icon}
                 </div>
 
-                <h3 className="text-base font-serif font-bold text-[#0B192C] mb-2 group-hover:text-[#0055FF] transition-colors">
+                <h3 className="text-base font-bold text-[#0B192C] mb-2 group-hover:text-[#0055FF] transition-colors">
                   {card.title}
                 </h3>
 
-                <p className="text-xs font-sans text-slate-600 leading-relaxed font-normal">
+                <p className="text-xs text-slate-600 leading-relaxed font-normal">
                   {card.description}
                 </p>
               </div>
