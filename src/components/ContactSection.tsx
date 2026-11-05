@@ -49,13 +49,11 @@ export const ContactSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Direct Email & Phone Number (Seamless, No Card Background) */}
+            {/* Direct Email & Phone Number (Seamless, No Container / Border) */}
             <div className="space-y-6 pt-2 font-sans">
               {/* Email */}
-              <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-2xl bg-[#0055FF] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#0055FF]/30 group-hover:scale-105 transition-transform">
-                  <Mail className="w-6 h-6 stroke-[2]" />
-                </div>
+              <div className="flex items-center gap-3.5 group">
+                <Mail className="w-6 h-6 text-[#0055FF] shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="text-xs font-medium text-slate-400">E-mail</p>
                   <a
@@ -68,15 +66,13 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Phone number */}
-              <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-2xl bg-[#0284C7] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#0284C7]/30 group-hover:scale-105 transition-transform">
-                  <Phone className="w-6 h-6 stroke-[2]" />
-                </div>
+              <div className="flex items-center gap-3.5 group">
+                <Phone className="w-6 h-6 text-[#0055FF] shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="text-xs font-medium text-slate-400">Phone number</p>
                   <a
                     href={`tel:${SITE_CONFIG.phoneRaw}`}
-                    className="text-base sm:text-lg font-bold text-white hover:text-[#0284C7] transition-colors"
+                    className="text-base sm:text-lg font-bold text-white hover:text-[#0055FF] transition-colors"
                   >
                     {SITE_CONFIG.phoneDisplay}
                   </a>
