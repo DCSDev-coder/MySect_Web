@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
-import { SITE_CONFIG } from '../data/siteConfig';
+import { Check, Clock } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 export const PricingSection: React.FC = () => {
@@ -40,37 +39,15 @@ export const PricingSection: React.FC = () => {
           </p>
 
           {/* Teaser Feature Checkmarks */}
-          <div className="mt-8 pt-6 border-t border-[#F0EAE1] grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs text-slate-700 max-w-md mx-auto">
+          <div className="mt-8 pt-6 border-t border-[#F0EAE1] flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs text-slate-700">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
               <span>Zero hidden disbursement fees</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
-              <span>Digital board resolutions (DCR)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
               <span>24/7 Digital Statutory Vault</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
-              <span>SSM regulatory compliance lodgements</span>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="mt-10">
-            <a
-              href={SITE_CONFIG.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#0038A8]/25 hover:shadow-xl transition-all cursor-pointer hover:-translate-y-0.5 active:scale-95"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Register your interest</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
           </div>
         </ScrollReveal>
       </div>
