@@ -4,9 +4,10 @@ export const SITE_CONFIG = {
   heroTitle: 'Company matters. Made simpler.',
   heroSubtitle: 'The intelligent corporate governance platform connecting Malaysian businesses and licensed corporate secretaries. Streamline statutory registers, board approvals, and SSM compliance effortlessly.',
   
-  // WhatsApp destination URL for Register Interest (phone number is hidden from UI)
+  // WhatsApp destination URL for Register Interest
   whatsappUrl: 'https://wa.me/60126946907?text=Hi%20MySect,%20I%20would%20like%20to%20register%20my%20interest%20in%20the%20platform.',
   phoneRaw: '+60126946907',
+  phoneDisplay: '+60 12-694 6907',
 
   // Contact email requested by user (placeholder until user provides exact address)
   contactEmail: 'contact@mysect.my',
