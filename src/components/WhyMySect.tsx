@@ -97,22 +97,6 @@ export const WhyMySect: React.FC = () => {
                 Where deep Malaysian statutory knowledge meets modern cloud technology. Purpose-built for corporate secretarial practices and growing enterprises.
               </p>
             </div>
-
-            {/* Core Value Pillars */}
-            <div className="pt-6 space-y-3.5 border-t border-[#E6E0D6] text-xs text-slate-700">
-              <div className="flex items-center gap-2.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#0038A8] shrink-0" />
-                <span className="font-medium">100% Companies Act 2016 statutory alignment</span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#0038A8] shrink-0" />
-                <span className="font-medium">Direct lodgement pre-population for SSM forms</span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#0038A8] shrink-0" />
-                <span className="font-medium">Encrypted digital vault for certified true copies</span>
-              </div>
-            </div>
           </ScrollReveal>
 
         </div>
