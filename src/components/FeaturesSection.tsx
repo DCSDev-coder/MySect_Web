@@ -115,14 +115,11 @@ export const FeaturesSection: React.FC = () => {
               className="bg-[#102035] hover:bg-[#132742] active:scale-[0.98] p-7 rounded-2xl border border-[#1E3452] hover:border-[#0038A8]/60 transition-all duration-300 shadow-md hover:-translate-y-1.5 flex flex-col justify-between group cursor-pointer"
             >
               <div>
-                {/* Category Pill + Blue Icon Badge */}
-                <div className="flex items-center justify-between mb-5">
+                {/* Blue Icon Badge */}
+                <div className="mb-5">
                   <div className="w-10 h-10 rounded-xl bg-[#0038A8] text-white flex items-center justify-center shadow-md shadow-[#0038A8]/20 group-hover:scale-110 group-hover:bg-[#002D88] transition-all">
                     {item.icon}
                   </div>
-                  <span className="font-mono text-[10px] uppercase font-semibold text-white/90 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/15">
-                    {item.category}
-                  </span>
                 </div>
 
                 <h3 className="text-base font-bold text-white mb-2.5 tracking-normal transition-colors">

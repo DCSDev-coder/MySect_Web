@@ -77,11 +77,6 @@ export const WhyMySect: React.FC = () => {
                   </span>
                 </div>
 
-                {/* Category Micro-Tag */}
-                <span className="inline-block font-mono text-[10px] uppercase font-bold tracking-wider text-[#0038A8] bg-[#0038A8]/10 px-2.5 py-0.5 rounded-full border border-[#0038A8]/20 mb-3">
-                  {item.tag}
-                </span>
-
                 {/* Title */}
                 <h3 className="text-lg font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
                   {item.title}
