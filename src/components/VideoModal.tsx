@@ -38,9 +38,6 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
             <Maximize2 className="w-4 h-4" />
           </div>
           <div>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-slate-400 block">
-              FULLSCREEN CINEMA PREVIEW
-            </span>
             <h3 className="text-sm sm:text-base font-bold text-white tracking-normal">
               Meet MySect: Company matters. Made simpler.
             </h3>
