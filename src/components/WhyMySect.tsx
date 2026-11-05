@@ -43,10 +43,7 @@ export const WhyMySect: React.FC = () => {
   ];
 
   return (
-    <section id="why-mysect" className="py-24 bg-[#F7F3EE] border-b border-[#E6E0D6] relative overflow-hidden">
-      {/* Subtle ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#0055FF]/5 rounded-full blur-3xl pointer-events-none"></div>
-
+    <section id="why-mysect" className="py-24 bg-[#F7F3EE] border-b border-[#E6E0D6] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
@@ -67,11 +64,8 @@ export const WhyMySect: React.FC = () => {
             <ScrollReveal
               key={item.id}
               delay={idx * 80}
-              className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-[#0055FF]/15 hover:border-[#0055FF]/60 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+              className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0055FF] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
             >
-              {/* Subtle hover gradient wash */}
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#0055FF]/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500 pointer-events-none"></div>
-
               <div>
                 {/* Top Row: Playful Icon Pod + Step Number */}
                 <div className="flex items-center justify-between mb-6">

@@ -11,12 +11,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
     <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#FAF7F2]">
       {/* Background architectural visual subtle overlay matching corporate look from Image 3 */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#14181F_1px,transparent_1px)] [background-size:20px_20px]"></div>
-      
-      {/* Soft warm gradient highlights */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none -z-10">
-        <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#0055FF]/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-10 right-1/4 w-[400px] h-[400px] bg-[#0055FF]/5 rounded-full blur-3xl"></div>
-      </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Top Eyebrow: Pure minimalist unboxed typography */}
