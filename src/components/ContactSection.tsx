@@ -69,14 +69,14 @@ export const ContactSection: React.FC = () => {
 
               {/* Phone number */}
               <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-2xl bg-[#0055FF] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#0055FF]/30 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-[#0284C7] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#0284C7]/30 group-hover:scale-105 transition-transform">
                   <Phone className="w-6 h-6 stroke-[2]" />
                 </div>
                 <div>
                   <p className="text-xs font-medium text-slate-400">Phone number</p>
                   <a
                     href={`tel:${SITE_CONFIG.phoneRaw}`}
-                    className="text-base sm:text-lg font-bold text-white hover:text-[#0055FF] transition-colors"
+                    className="text-base sm:text-lg font-bold text-white hover:text-[#0284C7] transition-colors"
                   >
                     {SITE_CONFIG.phoneDisplay}
                   </a>
@@ -95,12 +95,12 @@ export const ContactSection: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-5 text-xs font-sans">
               <div>
                 <label className="block font-semibold text-slate-700 text-xs mb-2">
-                  Name
+                  Your name
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Jason Lee"
+                  placeholder="Your name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0055FF]/20 focus:border-[#0055FF] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-sm"
@@ -114,7 +114,7 @@ export const ContactSection: React.FC = () => {
                 <input
                   type="email"
                   required
-                  placeholder="jason@company.com"
+                  placeholder="name@company.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#0055FF]/20 focus:border-[#0055FF] focus:bg-white text-slate-900 placeholder-slate-400 transition-all text-sm"
