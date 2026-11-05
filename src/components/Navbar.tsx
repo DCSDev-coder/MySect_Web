@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, MessageCircle } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
 export const Navbar: React.FC = () => {
@@ -117,18 +117,8 @@ export const Navbar: React.FC = () => {
             </a>
           </nav>
 
-          {/* Direct WhatsApp Action Button (No options/modal) */}
+          {/* Direct Action Button */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href={SITE_CONFIG.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-semibold text-slate-700 hover:text-emerald-600 px-3 py-2 flex items-center gap-1.5 transition-colors"
-              title="Chat on WhatsApp"
-            >
-              <MessageCircle className="w-4 h-4 text-emerald-600" />
-              <span>WhatsApp Us</span>
-            </a>
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
@@ -202,7 +192,7 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          <div className="pt-3 border-t border-[#E6E0D6] space-y-2">
+          <div className="pt-3 border-t border-[#E6E0D6]">
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
@@ -210,8 +200,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 rounded-full bg-[#0055FF] text-white text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Register your interest via WhatsApp</span>
+              <span>Register your interest</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

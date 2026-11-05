@@ -9,10 +9,8 @@ import {
   ChevronDown, 
   ShieldCheck, 
   Landmark, 
-  Sparkles,
-  ArrowRight
+  Sparkles
 } from 'lucide-react';
-import { SITE_CONFIG } from '../data/siteConfig';
 
 export const FeaturesSection: React.FC = () => {
   const [showMore, setShowMore] = useState(false);
@@ -85,7 +83,7 @@ export const FeaturesSection: React.FC = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-96 bg-[#0055FF]/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header exactly as in the user's screenshot */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
             FEATURES
@@ -94,7 +92,7 @@ export const FeaturesSection: React.FC = () => {
             Everything a Malaysian COSEC Firm Needs
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            From statutory registers to SSM filings -- every compliance requirement handled in one platform.
+            From statutory registers to SSM filings, every compliance requirement handled in one platform.
           </p>
         </div>
 
@@ -144,25 +142,15 @@ export const FeaturesSection: React.FC = () => {
         </div>
 
         {/* View More Features Toggle matching screenshot */}
-        <div className="mt-12 text-center flex flex-col items-center justify-center gap-4">
+        <div className="mt-12 text-center flex flex-col items-center justify-center">
           <button
             type="button"
             onClick={() => setShowMore(!showMore)}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors cursor-pointer py-2 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors cursor-pointer py-2.5 px-5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10"
           >
             <span>{showMore ? 'View Less Features' : 'View More Features'}</span>
             <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showMore ? 'rotate-180' : ''}`} />
           </button>
-
-          <a
-            href={SITE_CONFIG.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 text-xs font-semibold text-[#0055FF] hover:text-blue-400 flex items-center gap-1.5 transition-colors"
-          >
-            <span>Want a customized demo for your firm? Register your interest via WhatsApp</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
         </div>
       </div>
     </section>

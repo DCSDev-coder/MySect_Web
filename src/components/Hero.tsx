@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play, Shield, Lock, Cloud, Check } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
 interface HeroProps {
@@ -8,7 +8,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
   return (
-    <section id="home" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-[#FAF7F2]">
+    <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#FAF7F2]">
       {/* Background architectural visual subtle overlay matching corporate look from Image 3 */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#14181F_1px,transparent_1px)] [background-size:20px_20px]"></div>
       
@@ -66,22 +66,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           </p>
         </div>
 
-        {/* 3 Core Points from Image 1 */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs sm:text-sm font-medium text-slate-700">
-          <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF]"></span>
-            <span>Statutory registers & share capital</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF]"></span>
-            <span>Meeting & resolution management</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF]"></span>
-            <span>SSM form preparation & annual returns</span>
-          </div>
-        </div>
-
         {/* Actions matching Image 2 & 1 */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           {/* Main Action: Directly opens WhatsApp contact (No options popup) */}
@@ -107,24 +91,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           </button>
         </div>
 
-        {/* Trust Badges Bar matching Image 1 & 2 footer */}
-        <div className="mt-16 pt-8 border-t border-[#E6E0D6] flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs font-semibold text-slate-500">
-          <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4 text-[#0055FF]" />
-            <span>SSM Compliant</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Lock className="w-4 h-4 text-[#0055FF]" />
-            <span>256-bit Encrypted</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Cloud className="w-4 h-4 text-[#0055FF]" />
-            <span>24/7 Cloud Access</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Check className="w-4 h-4 text-emerald-600" />
-            <span>Designed & Developed in Malaysia</span>
-          </div>
+        {/* Powered by TM badge only */}
+        <div className="mt-14 pt-8 border-t border-[#E6E0D6] flex items-center justify-center">
+          <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+            powered by tm
+          </span>
         </div>
       </div>
     </section>
