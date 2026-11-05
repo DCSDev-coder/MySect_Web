@@ -35,7 +35,7 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Contact Information with Scroll Reveal */}
           <ScrollReveal className="lg:col-span-5 space-y-8">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-amber-400">
                 CONTACT US
               </span>
               <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">

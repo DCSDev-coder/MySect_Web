@@ -19,18 +19,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Top Badge: IN DEVELOPMENT only */}
+        {/* Top Badge: IN DEVELOPMENT in Roboto Mono */}
         <div className="inline-flex items-center justify-center mb-8 animate-hero-1">
-          <span className="text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
+          <span className="font-mono text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
             IN DEVELOPMENT
           </span>
         </div>
 
-        {/* Main Headline: Plus Jakarta Sans + Instrument Serif */}
+        {/* Main Headline: Inter with elegant italic contrast */}
         <div className="max-w-4xl mx-auto space-y-4 animate-hero-2">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-[#14181F]">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-[#14181F]">
             Company matters.{' '}
-            <span className="font-editorial italic font-normal text-[1.08em] text-[#14181F] block sm:inline">
+            <span className="italic font-normal text-[#14181F] block sm:inline">
               Made simpler.
             </span>
           </h1>
@@ -65,9 +65,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
           </button>
         </div>
 
-        {/* Powered by TM badge only */}
+        {/* Powered by TM badge only in Roboto Mono */}
         <div className="mt-14 pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4">
-          <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+          <span className="font-mono text-xs font-semibold tracking-widest text-slate-500 uppercase">
             powered by tm
           </span>
         </div>

@@ -100,8 +100,8 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar matching Image 2 */}
-        <div className="pt-8 border-t border-[#EAE4D9] flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+        {/* Bottom Bar matching Image 2 in Roboto Mono */}
+        <div className="pt-8 border-t border-[#EAE4D9] flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono text-slate-500">
           <div>
             {currentYear} MySect. All rights reserved.
           </div>
