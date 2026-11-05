@@ -50,9 +50,6 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
           className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all duration-200 cursor-pointer border border-white/10 active:scale-95"
           aria-label="Close fullscreen video"
         >
-          <span className="text-xs font-mono font-medium hidden sm:inline text-slate-300 group-hover:text-white">
-            ESC to close
-          </span>
           <X className="w-5 h-5 text-white" />
         </button>
       </div>
