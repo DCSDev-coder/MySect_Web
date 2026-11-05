@@ -12,7 +12,7 @@ export const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 20);
 
       const sections = ['home', 'features', 'why-mysect', 'pricing', 'contact'];
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 80;
 
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -56,11 +56,22 @@ export const Navbar: React.FC = () => {
     });
   };
 
+  const isDarkSection = isScrolled && (activeSection === 'features' || activeSection === 'contact');
+
+  const navLinks = [
+    { id: 'features', label: 'Features' },
+    { id: 'why-mysect', label: 'Why MySect' },
+    { id: 'pricing', label: 'Pricing' },
+    { id: 'contact', label: 'Contact Us' }
+  ];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-transparent backdrop-blur-md border-b border-slate-900/5 py-3.5 shadow-2xs'
+          ? isDarkSection
+            ? 'bg-[#0B192C]/85 backdrop-blur-md border-b border-white/10 py-3.5 shadow-md shadow-black/20'
+            : 'bg-[#FAF7F2]/85 backdrop-blur-md border-b border-[#E6E0D6] py-3.5 shadow-2xs'
           : 'bg-transparent py-5 border-b border-transparent'
       }`}
     >
@@ -74,50 +85,39 @@ export const Navbar: React.FC = () => {
               title="MySect - Back to Home"
               className="flex items-center gap-2 group cursor-pointer"
             >
-              <span className="text-2xl font-black tracking-tight text-[#0038A8]">
+              <span
+                className={`text-2xl font-black tracking-tight transition-colors duration-300 ${
+                  isDarkSection ? 'text-white' : 'text-[#0038A8]'
+                }`}
+              >
                 MySect
               </span>
             </a>
           </div>
 
-          {/* 2. Dead Center: Navigation Links */}
-          <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium text-[#14181F]/80">
-            <a
-              href="#features"
-              onClick={(e) => scrollToSection(e, 'features')}
-              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
-                activeSection === 'features' ? 'text-[#0038A8] font-semibold' : ''
-              }`}
-            >
-              Features
-            </a>
-            <a
-              href="#why-mysect"
-              onClick={(e) => scrollToSection(e, 'why-mysect')}
-              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
-                activeSection === 'why-mysect' ? 'text-[#0038A8] font-semibold' : ''
-              }`}
-            >
-              Why MySect
-            </a>
-            <a
-              href="#pricing"
-              onClick={(e) => scrollToSection(e, 'pricing')}
-              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
-                activeSection === 'pricing' ? 'text-[#0038A8] font-semibold' : ''
-              }`}
-            >
-              Pricing
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => scrollToSection(e, 'contact')}
-              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
-                activeSection === 'contact' ? 'text-[#0038A8] font-semibold' : ''
-              }`}
-            >
-              Contact Us
-            </a>
+          {/* 2. Dead Center: Navigation Links (Adapts dynamically between dark and light sections) */}
+          <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.id;
+              return (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => scrollToSection(e, link.id)}
+                  className={`transition-colors duration-200 relative py-1 ${
+                    isActive
+                      ? isDarkSection
+                        ? 'text-white font-bold'
+                        : 'text-[#0038A8] font-bold'
+                      : isDarkSection
+                        ? 'text-slate-300 hover:text-white'
+                        : 'text-slate-700 hover:text-[#0038A8]'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </nav>
 
           {/* 3. Far Right End: Action Button */}
@@ -126,7 +126,11 @@ export const Navbar: React.FC = () => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white text-xs font-semibold tracking-wide shadow-sm shadow-[#0038A8]/25 hover:shadow-md hover:shadow-[#0038A8]/35 transition-all flex items-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+              className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0 ${
+                isDarkSection
+                  ? 'bg-white hover:bg-slate-100 text-[#0B192C] font-bold shadow-md shadow-black/25 hover:shadow-lg'
+                  : 'bg-[#0038A8] hover:bg-[#002D88] text-white shadow-sm shadow-[#0038A8]/25 hover:shadow-md hover:shadow-[#0038A8]/35'
+              }`}
             >
               <span>Register your interest</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -139,13 +143,19 @@ export const Navbar: React.FC = () => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3.5 py-1.5 rounded-full bg-[#0038A8] text-white text-xs font-semibold"
+              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+                isDarkSection
+                  ? 'bg-white text-[#0B192C] font-bold'
+                  : 'bg-[#0038A8] text-white'
+              }`}
             >
               Register
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-800 hover:text-black focus:outline-none cursor-pointer"
+              className={`p-2 focus:outline-none cursor-pointer transition-colors ${
+                isDarkSection ? 'text-white hover:text-slate-200' : 'text-slate-800 hover:text-black'
+              }`}
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -156,45 +166,41 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E6E0D6] px-4 pt-4 pb-6 space-y-3 shadow-xl animate-in slide-in-from-top-2">
-          <div className="flex flex-col space-y-2 text-sm font-medium text-slate-800">
-            <a
-              href="#features"
-              onClick={(e) => scrollToSection(e, 'features')}
-              className="px-3 py-2 rounded-xl hover:bg-white/80"
-            >
-              Features
-            </a>
-            <a
-              href="#why-mysect"
-              onClick={(e) => scrollToSection(e, 'why-mysect')}
-              className="px-3 py-2 rounded-xl hover:bg-white/80"
-            >
-              Why MySect
-            </a>
-            <a
-              href="#pricing"
-              onClick={(e) => scrollToSection(e, 'pricing')}
-              className="px-3 py-2 rounded-xl hover:bg-white/80"
-            >
-              Pricing
-            </a>
-            <a
-              href="#contact"
-              onClick={(e) => scrollToSection(e, 'contact')}
-              className="px-3 py-2 rounded-xl hover:bg-white/80"
-            >
-              Contact Us
-            </a>
+        <div
+          className={`md:hidden border-b px-4 pt-4 pb-6 space-y-3 shadow-xl animate-in slide-in-from-top-2 ${
+            isDarkSection
+              ? 'bg-[#0B192C]/95 backdrop-blur-md border-[#1E3452] text-white'
+              : 'bg-[#FAF7F2]/95 backdrop-blur-md border-[#E6E0D6] text-slate-800'
+          }`}
+        >
+          <div className="flex flex-col space-y-2 text-sm font-medium">
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={(e) => scrollToSection(e, link.id)}
+                className={`px-3 py-2 rounded-xl transition-colors ${
+                  isDarkSection
+                    ? 'hover:bg-white/10 hover:text-white'
+                    : 'hover:bg-white/80 hover:text-[#0038A8]'
+                }`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
-          <div className="pt-3 border-t border-[#E6E0D6]">
+          <div className={`pt-3 border-t ${isDarkSection ? 'border-white/10' : 'border-[#E6E0D6]'}`}>
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-3 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2"
+              className={`w-full text-center py-3 rounded-full text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2 ${
+                isDarkSection
+                  ? 'bg-white text-[#0B192C] hover:bg-slate-100'
+                  : 'bg-[#0038A8] hover:bg-[#002D88] text-white'
+              }`}
             >
               <span>Register your interest</span>
               <ArrowRight className="w-3.5 h-3.5" />
