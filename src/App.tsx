@@ -1,88 +1,55 @@
 import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Services } from './components/Services';
-import { HowItWorks } from './components/HowItWorks';
-import { CostCalculator } from './components/CostCalculator';
-import { Comparison } from './components/Comparison';
-import { Pricing } from './components/Pricing';
-import { Testimonials } from './components/Testimonials';
-import { FAQ } from './components/FAQ';
+import { FeaturesSection } from './components/FeaturesSection';
+import { WhyMySect } from './components/WhyMySect';
+import { PricingSection } from './components/PricingSection';
+import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import { CompanyNameSearchModal } from './components/CompanyNameSearchModal';
-import { ConsultationModal } from './components/ConsultationModal';
+import { RegisterModal } from './components/RegisterModal';
+import { VideoModal } from './components/VideoModal';
 
 export function App() {
-  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
-  const [isNameSearchOpen, setIsNameSearchOpen] = useState(false);
-  const [prefilledCompanyName, setPrefilledCompanyName] = useState('');
-
-  const handleOpenConsultation = (companyName?: string) => {
-    if (companyName) {
-      setPrefilledCompanyName(companyName);
-    }
-    setIsConsultationOpen(true);
-  };
-
-  const handleSelectName = (name: string) => {
-    setPrefilledCompanyName(name);
-    setIsConsultationOpen(true);
-  };
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-900 selection:bg-indigo-600 selection:text-white">
-      {/* Top sticky navigation */}
-      <Navbar
-        onOpenConsultation={() => handleOpenConsultation()}
-        onOpenNameSearch={() => setIsNameSearchOpen(true)}
-      />
+    <div className="min-h-screen bg-[#FAF7F2] text-[#14181F] flex flex-col font-sans selection:bg-[#0055FF] selection:text-white">
+      {/* Sticky one-page navigation */}
+      <Navbar onRegisterInterest={() => setIsRegisterModalOpen(true)} />
 
       <main className="flex-1">
-        {/* Hero Section */}
+        {/* Section 1: Hero */}
         <Hero
-          onOpenConsultation={() => handleOpenConsultation()}
-          onOpenNameSearch={() => setIsNameSearchOpen(true)}
+          onRegisterInterest={() => setIsRegisterModalOpen(true)}
+          onOpenVideo={() => setIsVideoModalOpen(true)}
         />
 
-        {/* Services Showcase */}
-        <Services onOpenConsultation={() => handleOpenConsultation()} />
+        {/* Section 2: Features (Overlapping 3 Cards + 4 Focus Pillars + 3 Module Showcases) */}
+        <FeaturesSection onRegisterInterest={() => setIsRegisterModalOpen(true)} />
 
-        {/* 3-Step Process */}
-        <HowItWorks onOpenConsultation={() => handleOpenConsultation()} />
+        {/* Section 3: Why MySect (Traditional vs MySect Table) */}
+        <WhyMySect />
 
-        {/* Interactive Fee Simulator */}
-        <CostCalculator onOpenConsultation={() => handleOpenConsultation()} />
+        {/* Section 4: Pricing */}
+        <PricingSection onRegisterInterest={() => setIsRegisterModalOpen(true)} />
 
-        {/* Traditional vs MySect Table */}
-        <Comparison />
-
-        {/* Pricing Tiers */}
-        <Pricing onOpenConsultation={() => handleOpenConsultation()} />
-
-        {/* Customer Proof & Banking Partners */}
-        <Testimonials />
-
-        {/* Frequently Asked Questions */}
-        <FAQ />
+        {/* Section 5: Contact Us (Send email to user email + Phone link) */}
+        <ContactSection />
       </main>
 
-      {/* Footer */}
-      <Footer
-        onOpenConsultation={() => handleOpenConsultation()}
-        onOpenNameSearch={() => setIsNameSearchOpen(true)}
-      />
+      {/* Footer matching Image 2 */}
+      <Footer onRegisterInterest={() => setIsRegisterModalOpen(true)} />
 
       {/* Interactive Modals */}
-      <CompanyNameSearchModal
-        isOpen={isNameSearchOpen}
-        onClose={() => setIsNameSearchOpen(false)}
-        onSelectName={handleSelectName}
+      <RegisterModal
+        isOpen={isRegisterModalOpen}
+        onClose={() => setIsRegisterModalOpen(false)}
       />
 
-      <ConsultationModal
-        isOpen={isConsultationOpen}
-        onClose={() => setIsConsultationOpen(false)}
-        prefilledName={prefilledCompanyName}
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
       />
     </div>
   );
