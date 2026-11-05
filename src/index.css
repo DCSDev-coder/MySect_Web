@@ -147,6 +147,33 @@ html, body {
 .delay-600 { transition-delay: 600ms; }
 
 /* Entry animations for initial page load */
+@keyframes stampIn {
+  0% {
+    opacity: 0;
+    transform: scale(2.4) rotate(-10deg);
+    filter: blur(1.5px);
+  }
+  55% {
+    opacity: 0.95;
+    transform: scale(0.96) rotate(-2deg);
+    filter: blur(0px);
+  }
+  75% {
+    transform: scale(1.03) rotate(-2.5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-2deg);
+  }
+}
+
+.animate-stamp {
+  display: inline-flex;
+  transform-origin: center center;
+  animation: stampIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.12s both;
+  will-change: transform, opacity;
+}
+
 @keyframes heroFadeInUp {
   from {
     opacity: 0;
@@ -186,6 +213,7 @@ html, body {
 /* Accessible reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .reveal-item,
+  .animate-stamp,
   .animate-hero-1,
   .animate-hero-2,
   .animate-hero-3,

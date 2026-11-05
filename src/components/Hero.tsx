@@ -42,11 +42,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#14181F_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center justify-center my-auto">
-        {/* Top Eyebrow: Pure minimalist unboxed typography */}
-        <div className="inline-flex items-center justify-center mb-6 sm:mb-8 animate-hero-1">
-          <span className="font-mono text-xs font-semibold tracking-[0.25em] uppercase text-slate-500">
-            IN DEVELOPMENT
-          </span>
+        {/* Top Eyebrow: Official document stamp style */}
+        <div className="inline-flex items-center justify-center mb-6 sm:mb-8 animate-stamp select-none">
+          <div className="inline-flex items-center justify-center px-3 py-1 border border-slate-400/60 rounded-[3px] bg-slate-500/[0.04]">
+            <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-slate-500">
+              IN DEVELOPMENT
+            </span>
+          </div>
         </div>
 
         {/* Main Headline: Inter with comfortable letter-spacing */}
