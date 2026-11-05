@@ -27,12 +27,12 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
 
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-2xl bg-[#0055FF] text-white flex items-center justify-center shadow-lg shadow-[#0055FF]/30">
+          <div className="w-10 h-10 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/30">
             <Video className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#0055FF]/20 text-[#0055FF] border border-[#0055FF]/30">
+              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#0038A8]/20 text-white border border-[#0038A8]/30">
                 Official Presentation
               </span>
               <span className="text-xs text-slate-400">MySect Platform Overview</span>
@@ -53,24 +53,20 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
             />
           ) : (
             /* Video Placeholder Frame */
-            <div className="relative w-full h-full flex flex-col items-center justify-center text-center p-8 bg-gradient-to-br from-slate-900 via-slate-800/90 to-[#0A1020]">
-              {/* Decorative background grid and glow */}
-              <div className="absolute inset-0 bg-[radial-gradient(#0055FF_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none"></div>
-              <div className="absolute w-72 h-72 bg-[#0055FF]/15 rounded-full blur-3xl pointer-events-none"></div>
-
+            <div className="relative w-full h-full flex flex-col items-center justify-center text-center p-8 bg-[#0B192C]">
               {/* Big Play Button */}
-              <div className="relative z-10 w-20 h-20 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white flex items-center justify-center shadow-2xl shadow-[#0055FF]/50 transition-all transform hover:scale-110 cursor-pointer mb-5">
+              <div className="relative z-10 w-20 h-20 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white flex items-center justify-center shadow-2xl shadow-[#0038A8]/50 transition-all transform hover:scale-110 cursor-pointer mb-5">
                 <Play className="w-8 h-8 fill-white ml-1" />
               </div>
 
               {/* Status & instructions */}
               <div className="relative z-10 max-w-md space-y-2">
-                <span className="inline-block text-[11px] font-mono uppercase tracking-wider text-[#0055FF] bg-[#0055FF]/10 px-3 py-1 rounded-full border border-[#0055FF]/30">
+                <span className="inline-block text-[11px] font-mono uppercase tracking-wider text-white bg-[#0038A8]/30 px-3 py-1 rounded-full border border-[#0038A8]/40">
                   Video Slot Ready
                 </span>
                 <h4 className="text-lg font-bold text-white">Video will be embedded here</h4>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Provide your video URL (YouTube, Vimeo, or MP4) in <code className="text-sky-300 bg-slate-800 px-1.5 py-0.5 rounded font-mono">src/data/siteConfig.ts</code> to display your live showcase video.
+                  Provide your video URL (YouTube, Vimeo, or MP4) in <code className="text-slate-200 bg-slate-800 px-1.5 py-0.5 rounded font-mono">src/data/siteConfig.ts</code> to display your live showcase video.
                 </p>
               </div>
 
@@ -91,7 +87,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
             href={SITE_CONFIG.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-semibold transition-colors shrink-0"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-semibold transition-colors shrink-0"
           >
             <span>Register Interest via WhatsApp</span>
             <ExternalLink className="w-3.5 h-3.5" />

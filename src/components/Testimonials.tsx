@@ -59,9 +59,9 @@ export const Testimonials: React.FC = () => {
             >
               <div>
                 {/* 5 Stars */}
-                <div className="flex items-center gap-1 text-[#0055FF] mb-4">
+                <div className="flex items-center gap-1 text-[#0038A8] mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#0055FF]" />
+                    <Star key={i} className="w-4 h-4 fill-[#0038A8]" />
                   ))}
                 </div>
 

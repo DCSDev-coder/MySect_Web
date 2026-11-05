@@ -13,7 +13,7 @@ export function App() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#14181F] flex flex-col font-sans selection:bg-[#0055FF] selection:text-white">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#14181F] flex flex-col font-sans selection:bg-[#0038A8] selection:text-white">
       {/* Sticky one-page navigation */}
       <Navbar />
 

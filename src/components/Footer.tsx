@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
           {/* Column 1: Brand & Description (4 cols) */}
           <div className="lg:col-span-4 space-y-3">
             <a href="#home" className="inline-block">
-              <span className="text-2xl font-black tracking-tight text-[#0055FF]">
+              <span className="text-2xl font-black tracking-tight text-[#0038A8]">
                 MySect
               </span>
             </a>

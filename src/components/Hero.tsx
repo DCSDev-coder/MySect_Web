@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
             href={SITE_CONFIG.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-bold text-sm tracking-wide shadow-lg shadow-[#0055FF]/25 hover:shadow-xl hover:shadow-[#0055FF]/35 transition-all flex items-center justify-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-bold text-sm tracking-wide shadow-lg shadow-[#0038A8]/25 hover:shadow-xl hover:shadow-[#0038A8]/35 transition-all flex items-center justify-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Register your interest</span>
             <ArrowRight className="w-4 h-4" />

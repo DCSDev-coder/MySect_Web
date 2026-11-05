@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
               title="MySect - Back to Home"
               className="flex items-center gap-2 group cursor-pointer"
             >
-              <span className="text-2xl font-black tracking-tight text-[#0055FF]">
+              <span className="text-2xl font-black tracking-tight text-[#0038A8]">
                 MySect
               </span>
             </a>
@@ -85,8 +85,8 @@ export const Navbar: React.FC = () => {
             <a
               href="#features"
               onClick={(e) => scrollToSection(e, 'features')}
-              className={`hover:text-[#0055FF] transition-colors relative py-1 ${
-                activeSection === 'features' ? 'text-[#0055FF] font-semibold' : ''
+              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
+                activeSection === 'features' ? 'text-[#0038A8] font-semibold' : ''
               }`}
             >
               Features
@@ -94,8 +94,8 @@ export const Navbar: React.FC = () => {
             <a
               href="#why-mysect"
               onClick={(e) => scrollToSection(e, 'why-mysect')}
-              className={`hover:text-[#0055FF] transition-colors relative py-1 ${
-                activeSection === 'why-mysect' ? 'text-[#0055FF] font-semibold' : ''
+              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
+                activeSection === 'why-mysect' ? 'text-[#0038A8] font-semibold' : ''
               }`}
             >
               Why MySect
@@ -103,8 +103,8 @@ export const Navbar: React.FC = () => {
             <a
               href="#pricing"
               onClick={(e) => scrollToSection(e, 'pricing')}
-              className={`hover:text-[#0055FF] transition-colors relative py-1 ${
-                activeSection === 'pricing' ? 'text-[#0055FF] font-semibold' : ''
+              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
+                activeSection === 'pricing' ? 'text-[#0038A8] font-semibold' : ''
               }`}
             >
               Pricing
@@ -112,8 +112,8 @@ export const Navbar: React.FC = () => {
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, 'contact')}
-              className={`hover:text-[#0055FF] transition-colors relative py-1 ${
-                activeSection === 'contact' ? 'text-[#0055FF] font-semibold' : ''
+              className={`hover:text-[#0038A8] transition-colors relative py-1 ${
+                activeSection === 'contact' ? 'text-[#0038A8] font-semibold' : ''
               }`}
             >
               Contact Us
@@ -126,7 +126,7 @@ export const Navbar: React.FC = () => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white text-xs font-semibold tracking-wide shadow-sm shadow-[#0055FF]/25 hover:shadow-md hover:shadow-[#0055FF]/35 transition-all flex items-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+              className="px-5 py-2.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white text-xs font-semibold tracking-wide shadow-sm shadow-[#0038A8]/25 hover:shadow-md hover:shadow-[#0038A8]/35 transition-all flex items-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Register your interest</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -139,7 +139,7 @@ export const Navbar: React.FC = () => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3.5 py-1.5 rounded-full bg-[#0055FF] text-white text-xs font-semibold"
+              className="px-3.5 py-1.5 rounded-full bg-[#0038A8] text-white text-xs font-semibold"
             >
               Register
             </a>
@@ -194,7 +194,7 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-3 rounded-full bg-[#0055FF] text-white text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2"
+              className="w-full text-center py-3 rounded-full bg-[#0038A8] text-white text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2"
             >
               <span>Register your interest</span>
               <ArrowRight className="w-3.5 h-3.5" />

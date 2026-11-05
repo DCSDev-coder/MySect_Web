@@ -9,7 +9,7 @@ export const PricingSection: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="max-w-2xl mx-auto mb-12">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0055FF] mb-3">
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0038A8] mb-3">
             PRICING
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14181F] tracking-normal leading-snug">
@@ -22,7 +22,7 @@ export const PricingSection: React.FC = () => {
 
         {/* Coming Soon Card Frame with Scroll Reveal */}
         <ScrollReveal delay={150} className="max-w-2xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-[#E2D9CC] shadow-xl shadow-slate-900/5 relative overflow-hidden text-center hover:shadow-2xl transition-shadow duration-300">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0055FF]/10 border border-[#0055FF]/20 text-[#0055FF] font-mono text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0038A8]/10 border border-[#0038A8]/20 text-[#0038A8] font-mono text-xs font-bold uppercase tracking-wider mb-6">
             <Clock className="w-3.5 h-3.5" />
             <span>Coming Soon</span>
           </div>
@@ -38,19 +38,19 @@ export const PricingSection: React.FC = () => {
           {/* Teaser Feature Checkmarks */}
           <div className="mt-8 pt-6 border-t border-[#F0EAE1] grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs text-slate-700 max-w-md mx-auto">
             <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#0055FF] shrink-0" />
+              <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
               <span>Zero hidden disbursement fees</span>
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#0055FF] shrink-0" />
+              <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
               <span>Unlimited standard board resolutions</span>
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#0055FF] shrink-0" />
+              <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
               <span>24/7 Digital Statutory Vault</span>
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-[#0055FF] shrink-0" />
+              <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
               <span>Exclusive early-bird rates</span>
             </div>
           </div>
@@ -61,7 +61,7 @@ export const PricingSection: React.FC = () => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#0055FF]/25 hover:shadow-xl transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#0038A8]/25 hover:shadow-xl transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
             >
               <Sparkles className="w-4 h-4" />
               <span>Register interest for early-bird rates</span>
