@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, MessageSquare, CheckCircle2 } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
+import { ScrollReveal } from './ScrollReveal';
 
 export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -31,22 +32,22 @@ export const ContactSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Contact Information */}
-          <div className="lg:col-span-5 space-y-8">
+          {/* Left Column: Contact Information with Scroll Reveal */}
+          <ScrollReveal className="lg:col-span-5 space-y-8">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
+              <span className="text-xs font-sans font-bold uppercase tracking-widest text-amber-400">
                 CONTACT US
               </span>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
                 Let's discuss your company matters
               </h2>
-              <p className="mt-4 text-sm text-slate-300 leading-relaxed">
+              <p className="mt-4 text-sm font-sans text-slate-300 leading-relaxed">
                 Whether you need advice on corporate secretarial retainers, statutory compliance, or multi-entity setup across Malaysia.
               </p>
             </div>
 
-            {/* Direct Channel Cards (Phone number hidden from UI) */}
-            <div className="space-y-4">
+            {/* Direct Channel Cards */}
+            <div className="space-y-4 font-sans">
               {/* WhatsApp Card */}
               <a
                 href={SITE_CONFIG.whatsappUrl}
@@ -98,16 +99,16 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Right Column: Send Email Form */}
-          <div className="lg:col-span-7 bg-[#102035] rounded-3xl p-8 border border-[#1E3452] shadow-2xl">
-            <h3 className="text-xl font-bold text-white mb-1">Send an Email to MySect</h3>
-            <p className="text-xs text-slate-300 mb-6">
+          {/* Right Column: Send Email Form with Scroll Reveal */}
+          <ScrollReveal delay={150} className="lg:col-span-7 bg-[#102035] rounded-3xl p-8 border border-[#1E3452] shadow-2xl">
+            <h3 className="text-xl font-serif font-bold text-white mb-1">Send an Email to MySect</h3>
+            <p className="text-xs font-sans text-slate-300 mb-6">
               Fill in your message below. Clicking send will open your email client pre-addressed to our compliance team.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4 text-xs">
+            <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sans">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block font-bold text-slate-200 uppercase tracking-wider mb-1.5">
@@ -169,7 +170,7 @@ export const ContactSection: React.FC = () => {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-[#0055FF]/25 hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-[#0055FF]/25 hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Email</span>
@@ -183,7 +184,7 @@ export const ContactSection: React.FC = () => {
                 </div>
               )}
             </form>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -1,44 +1,45 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Check, Clock } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
+import { ScrollReveal } from './ScrollReveal';
 
 export const PricingSection: React.FC = () => {
   return (
     <section id="pricing" className="py-24 bg-[#FAF7F2] border-b border-[#E6E0D6] relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Section Header */}
-        <div className="max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
+        {/* Section Header with Scroll Reveal */}
+        <ScrollReveal className="max-w-2xl mx-auto mb-12">
+          <span className="text-xs font-sans font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
             PRICING
           </span>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14181F] tracking-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#14181F] tracking-tight">
             Transparent Pricing Plans
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base font-sans text-slate-600 leading-relaxed">
             Simple, predictable packages with zero surprise disbursements for Malaysian businesses and CoSec firms.
           </p>
-        </div>
+        </ScrollReveal>
 
-        {/* Coming Soon Card Frame */}
-        <div className="max-w-2xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-[#E2D9CC] shadow-xl shadow-slate-900/5 relative overflow-hidden text-center">
+        {/* Coming Soon Card Frame with Scroll Reveal */}
+        <ScrollReveal delay={150} className="max-w-2xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-[#E2D9CC] shadow-xl shadow-slate-900/5 relative overflow-hidden text-center hover:shadow-2xl transition-shadow duration-300">
           {/* Subtle background glow */}
           <div className="absolute top-0 right-1/2 translate-x-1/2 w-64 h-64 bg-[#0055FF]/5 rounded-full blur-2xl pointer-events-none"></div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-xs font-sans font-bold uppercase tracking-wider mb-6">
             <Clock className="w-3.5 h-3.5" />
             <span>Coming Soon</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14181F] tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#14181F] tracking-tight">
             Plans & Pricing Launching Shortly
           </h3>
 
-          <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto">
+          <p className="mt-3 text-xs sm:text-sm font-sans text-slate-600 leading-relaxed max-w-lg mx-auto">
             We are fine-tuning our flexible tier options for solo founders, active SMEs, and multi-entity secretarial firms.
           </p>
 
           {/* Teaser Feature Checkmarks */}
-          <div className="mt-8 pt-6 border-t border-[#F0EAE1] grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs text-slate-700 max-w-md mx-auto">
+          <div className="mt-8 pt-6 border-t border-[#F0EAE1] grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs font-sans text-slate-700 max-w-md mx-auto">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0055FF] shrink-0" />
               <span>Zero hidden disbursement fees</span>
@@ -63,7 +64,7 @@ export const PricingSection: React.FC = () => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#0055FF]/25 hover:shadow-xl transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#0055FF] hover:bg-[#0045D8] text-white font-sans font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#0055FF]/25 hover:shadow-xl transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
             >
               <Sparkles className="w-4 h-4" />
               <span>Register interest for early-bird rates</span>
@@ -71,10 +72,10 @@ export const PricingSection: React.FC = () => {
             </a>
           </div>
 
-          <p className="mt-4 text-[11px] text-slate-400">
+          <p className="mt-4 text-[11px] font-sans text-slate-400">
             Early registrants get priority onboarding and grandfathered pricing.
           </p>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

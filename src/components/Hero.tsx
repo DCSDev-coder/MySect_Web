@@ -19,24 +19,24 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Top Badges matching Image 1 & 2 */}
-        <div className="inline-flex flex-wrap items-center justify-center gap-2 mb-8">
-          <span className="text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
+        {/* Top Badges with opening animation */}
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 mb-8 animate-hero-1">
+          <span className="text-[11px] font-sans font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
             IN DEVELOPMENT
           </span>
-          <span className="text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-[#0055FF]/20 bg-[#0055FF]/5 text-[#0055FF] shadow-2xs flex items-center gap-1.5">
+          <span className="text-[11px] font-sans font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-[#0055FF]/20 bg-[#0055FF]/5 text-[#0055FF] shadow-2xs flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF] animate-pulse"></span>
             PURPOSE-BUILT FOR MALAYSIAN COSEC FIRMS
           </span>
         </div>
 
-        {/* Main Headline combining Image 1, 2, and 3 */}
-        <div className="max-w-4xl mx-auto space-y-3">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#14181F] tracking-tight leading-[1.08]">
+        {/* Main Headline in Lora with editorial cursive accent */}
+        <div className="max-w-4xl mx-auto space-y-3 animate-hero-2">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-serif text-[#14181F] tracking-tight leading-[1.12]">
             Company matters.{' '}
-            <span className="font-editorial font-normal inline-flex items-center gap-2 text-[#14181F]">
+            <span className="italic font-normal inline-flex items-center gap-2 text-[#14181F]">
               Made simpler.
-              {/* Custom SVG Document with Blue Checkmark matching Image 2 */}
+              {/* Custom SVG Document with Blue Checkmark */}
               <svg 
                 className="w-8 h-8 sm:w-11 sm:h-11 inline-block text-[#0055FF] stroke-current shrink-0 -translate-y-1" 
                 viewBox="0 0 36 40" 
@@ -57,18 +57,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
             </span>
           </h1>
 
-          <p className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0055FF] tracking-tight pt-2">
+          <p className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-[#0055FF] tracking-tight pt-2">
             Your COSEC Command Centre
           </p>
 
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal">
+          <p className="text-base sm:text-lg font-sans text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal">
             The complete company secretarial platform. Manage compliance, statutory records, and filings in one powerful system. Connecting companies and their company secretaries.
           </p>
         </div>
 
-        {/* Actions matching Image 2 & 1 */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          {/* Main Action: Directly opens WhatsApp contact (No options popup) */}
+        {/* Action Buttons with opening animation */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-hero-3 font-sans">
+          {/* Main Action: Directly opens WhatsApp contact */}
           <a
             href={SITE_CONFIG.whatsappUrl}
             target="_blank"
@@ -92,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
         </div>
 
         {/* Powered by TM badge only */}
-        <div className="mt-14 pt-8 border-t border-[#E6E0D6] flex items-center justify-center">
+        <div className="mt-14 pt-8 border-t border-[#E6E0D6] flex items-center justify-center animate-hero-4 font-sans">
           <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
             powered by tm
           </span>
