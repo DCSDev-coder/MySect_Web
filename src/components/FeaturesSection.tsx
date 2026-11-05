@@ -97,7 +97,7 @@ export const FeaturesSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0055FF] mb-3">
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-white mb-3">
             PLATFORM MODULES
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
@@ -122,7 +122,7 @@ export const FeaturesSection: React.FC = () => {
                   <div className="w-10 h-10 rounded-xl bg-[#0055FF]/10 border border-[#0055FF]/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
-                  <span className="font-mono text-[10px] uppercase font-semibold text-[#0055FF] bg-[#0055FF]/10 px-2 py-0.5 rounded-full border border-[#0055FF]/20">
+                  <span className="font-mono text-[10px] uppercase font-semibold text-white/90 bg-white/10 px-2.5 py-0.5 rounded-full border border-white/15">
                     {item.category}
                   </span>
                 </div>

@@ -38,7 +38,7 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Direct Info centered vertically */}
           <ScrollReveal className="lg:col-span-5 space-y-8">
             <div>
-              <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0055FF] mb-3">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-white mb-3">
                 WE'RE HERE TO HELP YOU
               </p>
               <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-tight">
