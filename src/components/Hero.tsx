@@ -9,34 +9,30 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
   const fullText = 'Made simpler.';
   const [displayedText, setDisplayedText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    let charIndex = 0;
     let timer: ReturnType<typeof setTimeout>;
 
-    if (!isDeleting && displayedText === fullText) {
-      // Completed typing: hold for 2.6 seconds so user reads it comfortably
-      timer = setTimeout(() => {
-        setIsDeleting(true);
-      }, 2600);
-    } else if (isDeleting && displayedText === '') {
-      // Completed deleting: short breath before typing starts from 'M'
-      timer = setTimeout(() => {
-        setIsDeleting(false);
-      }, 450);
-    } else {
-      // Natural typing (105ms) vs deletion (45ms)
-      const speed = isDeleting ? 45 : 105;
-      timer = setTimeout(() => {
-        const nextText = isDeleting
-          ? fullText.slice(0, displayedText.length - 1)
-          : fullText.slice(0, displayedText.length + 1);
-        setDisplayedText(nextText);
-      }, speed);
-    }
+    // One-time typing animation on page load, no looping
+    const startDelay = setTimeout(() => {
+      const typeNextChar = () => {
+        if (charIndex <= fullText.length) {
+          setDisplayedText(fullText.slice(0, charIndex));
+          charIndex++;
+          if (charIndex <= fullText.length) {
+            timer = setTimeout(typeNextChar, 95);
+          }
+        }
+      };
+      typeNextChar();
+    }, 350);
 
-    return () => clearTimeout(timer);
-  }, [displayedText, isDeleting]);
+    return () => {
+      clearTimeout(startDelay);
+      clearTimeout(timer);
+    };
+  }, []);
   return (
     <section
       id="home"
