@@ -4,7 +4,7 @@ import { ScrollReveal } from './ScrollReveal';
 
 export const PricingSection: React.FC = () => {
   return (
-    <section id="pricing" className="pt-16 sm:pt-20 pb-24 bg-white relative overflow-hidden">
+    <section id="pricing" className="pt-14 sm:pt-16 pb-24 bg-white relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal variant="fade-up" className="max-w-2xl mx-auto mb-12">

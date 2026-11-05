@@ -39,8 +39,8 @@ export const WhyMySect: React.FC = () => {
   ];
 
   return (
-    <section id="why-mysect" className="pt-24 pb-28 sm:pb-36 bg-[#F7F3EE] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="why-mysect" className="pt-24 pb-0 bg-[#F7F3EE] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-14 sm:mb-20">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0038A8] mb-3">
@@ -88,23 +88,23 @@ export const WhyMySect: React.FC = () => {
       </div>
 
       {/* Organic dual-layer wave transition from cream to white dividing WhyMySect and Pricing */}
-      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none" aria-hidden="true">
+      <div className="w-full overflow-hidden leading-none bg-[#F7F3EE] -mb-[1px]" aria-hidden="true">
         <svg
-          className="relative block w-full h-16 sm:h-24 lg:h-32 text-white"
-          viewBox="0 0 1440 120"
+          className="block w-full h-14 sm:h-20 lg:h-24 text-white"
+          viewBox="0 0 1440 90"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           {/* Subtle translucent back wave for depth */}
           <path
-            d="M0,50 C320,105 640,15 960,65 C1200,95 1360,40 1440,55 L1440,120 L0,120 Z"
+            d="M0,45 C320,85 640,15 960,55 C1200,80 1360,35 1440,45 L1440,90 L0,90 Z"
             fill="white"
             fillOpacity="0.45"
           />
           {/* Front crisp solid wave flowing into white Pricing section */}
           <path
-            d="M0,28 C240,82 480,18 720,52 C960,86 1200,24 1440,40 L1440,120 L0,120 Z"
+            d="M0,25 C240,65 480,15 720,45 C960,75 1200,20 1440,32 L1440,90 L0,90 Z"
             fill="white"
           />
         </svg>
