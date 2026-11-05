@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { 
-  UserCheck, 
-  PieChart, 
-  BookMarked, 
-  FileCheck, 
-  CalendarRange, 
-  FileSpreadsheet, 
-  ChevronDown, 
-  ShieldCheck, 
-  Building2, 
+import {
+  UserCheck,
+  PieChart,
+  BookMarked,
+  FileCheck,
+  CalendarRange,
+  FileSpreadsheet,
+  ChevronDown,
+  ShieldCheck,
+  Building2,
   Lock
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -98,7 +98,7 @@ export const FeaturesSection: React.FC = () => {
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-white mb-3">
-            PLATFORM MODULES
+            FEATURES
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
             The Operating System for Malaysian Corporate Governance
