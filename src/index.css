@@ -210,6 +210,61 @@ html, body {
   animation: cursorBlink 0.85s infinite;
 }
 
+/* Organic Floating Wave Parallax Animations */
+@keyframes waveSlow {
+  0% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+  50% {
+    transform: translate3d(-30px, 3px, 0) scaleY(1.05);
+  }
+  100% {
+    transform: translate3d(20px, -2px, 0) scaleY(0.97);
+  }
+}
+
+@keyframes waveMedium {
+  0% {
+    transform: translate3d(0, 0, 0) scaleY(1);
+  }
+  50% {
+    transform: translate3d(30px, -3px, 0) scaleY(0.95);
+  }
+  100% {
+    transform: translate3d(-20px, 2px, 0) scaleY(1.04);
+  }
+}
+
+@keyframes waveFast {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-15px, 2px, 0);
+  }
+  100% {
+    transform: translate3d(12px, -1px, 0);
+  }
+}
+
+.animate-wave-slow {
+  animation: waveSlow 14s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+
+.animate-wave-medium {
+  animation: waveMedium 10s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+
+.animate-wave-fast {
+  animation: waveFast 7s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+
 /* Accessible reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .reveal-item,
@@ -217,7 +272,10 @@ html, body {
   .animate-hero-1,
   .animate-hero-2,
   .animate-hero-3,
-  .animate-hero-4 {
+  .animate-hero-4,
+  .animate-wave-slow,
+  .animate-wave-medium,
+  .animate-wave-fast {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;

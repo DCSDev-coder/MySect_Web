@@ -87,11 +87,11 @@ export const WhyMySect: React.FC = () => {
         </div>
       </div>
 
-      {/* Multi-Ribbon Corporate Wave: Pure Cream & White Tones */}
+      {/* Animated Multi-Ribbon Corporate Wave: Pure Cream & White Tones */}
       <div className="w-full overflow-hidden leading-none bg-[#F7F3EE] -mb-[1px]" aria-hidden="true">
         <svg
-          className="block w-full h-20 sm:h-28 lg:h-36 text-white"
-          viewBox="0 0 1440 120"
+          className="block w-[calc(100%+120px)] -ml-[60px] h-20 sm:h-28 lg:h-36 text-white"
+          viewBox="-60 0 1560 120"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
@@ -103,24 +103,30 @@ export const WhyMySect: React.FC = () => {
             </linearGradient>
           </defs>
 
-          {/* Layer 1: Warm architectural back contour (Warm cream sand to soft white) */}
-          <path
-            d="M0,45 C180,15 360,80 540,40 C720,5 900,75 1080,35 C1240,5 1360,65 1440,40 L1440,120 L0,120 Z"
-            fill="url(#waveBackShade)"
-          />
+          {/* Layer 1: Warm architectural back contour (Slow gentle sway) */}
+          <g className="animate-wave-slow">
+            <path
+              d="M-60,45 C180,15 360,80 540,40 C720,5 900,75 1080,35 C1240,5 1360,65 1500,40 L1500,120 L-60,120 Z"
+              fill="url(#waveBackShade)"
+            />
+          </g>
 
-          {/* Layer 2: Middle fluid ribbon (Translucent white with subtle depth) */}
-          <path
-            d="M0,65 C220,95 400,25 600,65 C800,100 980,25 1160,60 C1280,85 1380,35 1440,55 L1440,120 L0,120 Z"
-            fill="white"
-            fillOpacity="0.6"
-          />
+          {/* Layer 2: Middle fluid ribbon (Counter-flowing translucent wave) */}
+          <g className="animate-wave-medium">
+            <path
+              d="M-60,65 C220,95 400,25 600,65 C800,100 980,25 1160,60 C1280,85 1380,35 1500,55 L1500,120 L-60,120 Z"
+              fill="white"
+              fillOpacity="0.6"
+            />
+          </g>
 
-          {/* Layer 3: Foreground crisp solid white wave flowing into white Pricing section */}
-          <path
-            d="M0,35 C200,70 380,10 580,48 C780,82 960,18 1160,52 C1280,72 1380,28 1440,38 L1440,120 L0,120 Z"
-            fill="white"
-          />
+          {/* Layer 3: Foreground crisp solid white wave (Subtle surface ripple) */}
+          <g className="animate-wave-fast">
+            <path
+              d="M-60,35 C200,70 380,10 580,48 C780,82 960,18 1160,52 C1280,72 1380,28 1500,38 L1500,120 L-60,120 Z"
+              fill="white"
+            />
+          </g>
         </svg>
       </div>
     </section>
