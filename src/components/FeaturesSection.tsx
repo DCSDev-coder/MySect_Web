@@ -97,10 +97,13 @@ export const FeaturesSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono text-xs font-bold uppercase tracking-widest text-amber-400">
-            PLATFORM MODULES
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
+          <div className="inline-flex items-center justify-center mb-3">
+            <span className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1.5 rounded-full bg-white/10 text-white border border-white/20 shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF] animate-pulse"></span>
+              <span>PLATFORM MODULES</span>
+            </span>
+          </div>
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
             The Operating System for Malaysian Corporate Governance
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto tracking-normal">

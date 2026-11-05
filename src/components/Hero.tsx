@@ -19,10 +19,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Top Badge: IN DEVELOPMENT in Roboto Mono */}
+        {/* Top Badge: Unified pill with electric blue indicator dot in Roboto Mono */}
         <div className="inline-flex items-center justify-center mb-8 animate-hero-1">
-          <span className="font-mono text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1 rounded-full border border-[#D5CEC2] bg-white/70 text-slate-700 shadow-2xs">
-            IN DEVELOPMENT
+          <span className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-[#D5CEC2] bg-white/80 text-slate-800 shadow-2xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF] animate-pulse"></span>
+            <span>IN DEVELOPMENT</span>
           </span>
         </div>
 

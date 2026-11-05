@@ -9,10 +9,13 @@ export const PricingSection: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="max-w-2xl mx-auto mb-12">
-          <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#0055FF] bg-[#0055FF]/10 px-3.5 py-1.5 rounded-full border border-[#0055FF]/20">
-            PRICING
-          </span>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14181F] tracking-normal leading-snug">
+          <div className="inline-flex items-center justify-center mb-3">
+            <span className="inline-flex items-center gap-2 font-mono text-[11px] font-semibold tracking-wider uppercase px-3.5 py-1.5 rounded-full bg-white/80 text-slate-800 border border-[#D5CEC2] shadow-2xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0055FF] animate-pulse"></span>
+              <span>PRICING</span>
+            </span>
+          </div>
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14181F] tracking-normal leading-snug">
             Transparent Pricing Plans
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed tracking-normal">
