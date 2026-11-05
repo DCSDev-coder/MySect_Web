@@ -5,7 +5,7 @@ import { ScrollReveal } from './ScrollReveal';
 
 export const PricingSection: React.FC = () => {
   return (
-    <section id="pricing" className="py-24 bg-[#FAF7F2] border-b border-[#E6E0D6] relative overflow-hidden">
+    <section id="pricing" className="py-24 bg-white border-b border-slate-200/80 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Section Header with Scroll Reveal */}
         <ScrollReveal className="max-w-2xl mx-auto mb-12">
@@ -21,7 +21,7 @@ export const PricingSection: React.FC = () => {
         </ScrollReveal>
 
         {/* Coming Soon Card Frame with Scroll Reveal */}
-        <ScrollReveal delay={150} className="max-w-2xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-[#E2D9CC] shadow-xl shadow-slate-900/5 relative overflow-hidden text-center hover:shadow-2xl transition-shadow duration-300">
+        <ScrollReveal delay={150} className="max-w-2xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl shadow-slate-900/5 relative overflow-hidden text-center hover:shadow-2xl hover:border-slate-300 transition-all duration-300">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0038A8]/10 border border-[#0038A8]/20 text-[#0038A8] font-mono text-xs font-bold uppercase tracking-wider mb-6">
             <Clock className="w-3.5 h-3.5" />
             <span>Coming Soon</span>
@@ -36,7 +36,7 @@ export const PricingSection: React.FC = () => {
           </p>
 
           {/* Teaser Feature Checkmarks */}
-          <div className="mt-8 pt-6 border-t border-[#F0EAE1] grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs text-slate-700 max-w-md mx-auto">
+          <div className="mt-8 pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-xs text-slate-700 max-w-md mx-auto">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#0038A8] shrink-0" />
               <span>Zero hidden disbursement fees</span>
