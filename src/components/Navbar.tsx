@@ -66,59 +66,69 @@ export const Navbar: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none transition-all duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-3.5 sm:pt-4">
-        {/* Floating Glass Capsule Navbar */}
+        {/* Floating Hybrid Glass Capsule */}
         <div
-          className={`pointer-events-auto rounded-full transition-all duration-300 px-4 sm:px-6 py-2.5 flex items-center justify-between border ${
+          className={`pointer-events-auto rounded-full transition-all duration-300 px-3.5 sm:px-5 py-2 flex items-center justify-between border ${
             isScrolled
               ? 'bg-white/95 backdrop-blur-md border-slate-300/80 shadow-xl shadow-slate-900/10'
               : 'bg-white/90 backdrop-blur-md border-slate-200/90 shadow-lg shadow-slate-900/5 hover:shadow-xl'
           }`}
         >
-          {/* Brand Logo with Icon */}
+          {/* Brand Logo with Monogram Seal (Concept 4 & 2) */}
           <div className="flex items-center">
             <a
               href="#home"
               onClick={scrollToTop}
               title="MySect - Back to Home"
-              className="flex items-center gap-2 group cursor-pointer"
+              className="flex items-center gap-2.5 group cursor-pointer"
             >
-              <div className="w-7 h-7 rounded-lg bg-[#0038A8] text-white flex items-center justify-center font-black text-xs tracking-tight shadow-xs group-hover:scale-105 group-hover:bg-[#002D88] transition-all">
+              <div className="w-8 h-8 rounded-xl bg-[#0038A8] text-white flex items-center justify-center font-black text-sm tracking-tight shadow-md shadow-[#0038A8]/20 group-hover:scale-105 group-hover:bg-[#002D88] transition-all">
                 M
               </div>
-              <span className="text-lg sm:text-xl font-black tracking-tight text-[#0038A8]">
-                MySect
-              </span>
+              <div className="flex items-baseline">
+                <span className="text-xl font-black tracking-tight text-[#0B192C]">
+                  My
+                </span>
+                <span className="text-xl font-black tracking-tight text-[#0038A8]">
+                  Sect
+                </span>
+              </div>
             </a>
           </div>
 
-          {/* Navigation Links with Floating Pill Highlights */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-1.5">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onClick={(e) => scrollToSection(e, link.id)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-normal transition-all ${
-                  activeSection === link.id
-                    ? 'bg-[#0038A8]/10 text-[#0038A8] font-bold'
-                    : 'text-slate-600 hover:text-[#0038A8] hover:bg-slate-100/80'
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
+          {/* Center Segmented Island Tab Bar (Concept 3) */}
+          <nav className="hidden md:flex items-center bg-[#FAF7F2] p-1 rounded-full border border-[#E6E0D6] shadow-inner">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.id;
+              return (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={(e) => scrollToSection(e, link.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-normal transition-all duration-200 ${
+                    isActive
+                      ? 'bg-white text-[#0038A8] font-bold shadow-xs border border-slate-200/60'
+                      : 'text-slate-600 hover:text-[#0B192C] hover:bg-white/60'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </nav>
 
-          {/* Right Action Button */}
+          {/* High-Contrast Action Pill with Circular Icon Pod (Concept 2 & 1) */}
           <div className="hidden md:flex items-center">
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white text-xs font-semibold tracking-wide shadow-sm shadow-[#0038A8]/25 hover:shadow-md transition-all flex items-center gap-1.5 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              className="pl-4 pr-1.5 py-1.5 rounded-full bg-[#0B192C] hover:bg-[#0038A8] text-white text-xs font-bold tracking-wide shadow-md shadow-black/10 hover:shadow-lg transition-all duration-300 flex items-center gap-2.5 group cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Register your interest</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <div className="w-6 h-6 rounded-full bg-white text-[#0B192C] group-hover:text-[#0038A8] flex items-center justify-center shrink-0 transition-colors shadow-2xs">
+                <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
+              </div>
             </a>
           </div>
 
@@ -128,7 +138,7 @@ export const Navbar: React.FC = () => {
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1.5 rounded-full bg-[#0038A8] text-white text-[11px] font-semibold tracking-wide"
+              className="px-3 py-1.5 rounded-full bg-[#0B192C] text-white text-[11px] font-bold tracking-wide"
             >
               Register
             </a>
@@ -145,30 +155,33 @@ export const Navbar: React.FC = () => {
         {/* Mobile Dropdown Drawer */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-2 pointer-events-auto bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-4 shadow-2xl animate-in slide-in-from-top-2 duration-200">
-            <div className="flex flex-col space-y-1 text-xs font-semibold text-slate-700">
-              {navLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={`#${link.id}`}
-                  onClick={(e) => scrollToSection(e, link.id)}
-                  className={`px-3 py-2 rounded-xl transition-colors ${
-                    activeSection === link.id
-                      ? 'bg-[#0038A8]/10 text-[#0038A8] font-bold'
-                      : 'hover:bg-slate-100 hover:text-[#0038A8]'
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ))}
+            <div className="bg-[#FAF7F2] p-1.5 rounded-xl border border-[#E6E0D6] flex flex-col space-y-1 text-xs font-semibold text-slate-700">
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.id;
+                return (
+                  <a
+                    key={link.id}
+                    href={`#${link.id}`}
+                    onClick={(e) => scrollToSection(e, link.id)}
+                    className={`px-3 py-2 rounded-lg transition-all ${
+                      isActive
+                        ? 'bg-white text-[#0038A8] font-bold shadow-xs'
+                        : 'hover:bg-white/60 hover:text-[#0B192C]'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </div>
 
-            <div className="pt-3 mt-2 border-t border-slate-100">
+            <div className="pt-3 mt-3 border-t border-slate-100">
               <a
                 href={SITE_CONFIG.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2"
+                className="w-full text-center py-2.5 rounded-full bg-[#0B192C] hover:bg-[#0038A8] text-white text-xs font-bold tracking-wide shadow-sm flex items-center justify-center gap-2"
               >
                 <span>Register your interest</span>
                 <ArrowRight className="w-3.5 h-3.5" />
