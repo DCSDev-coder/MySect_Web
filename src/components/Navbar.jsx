@@ -86,7 +86,7 @@ export const Navbar = () => {
               <img
                 src="/mysect_updated_vector-02.png"
                 alt="MySect"
-                className={`h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105 ${isDarkSection ? 'brightness-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]' : ''
+                className={`h-6 sm:h-7 w-auto object-contain transition-transform duration-200 group-hover:scale-105 ${isDarkSection ? 'brightness-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]' : ''
                   }`}
               />
             </a>
