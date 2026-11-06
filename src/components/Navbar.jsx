@@ -36,9 +36,8 @@ export const Navbar = () => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const navOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      const offsetPosition = elementPosition + window.pageYOffset;
 
       window.scrollTo({
         top: offsetPosition,
