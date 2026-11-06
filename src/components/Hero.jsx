@@ -25,8 +25,11 @@ export const Hero = ({ onOpenVideo }) => {
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
             <span className="block animate-hero-1">Company matters,</span>
-            <span className="italic font-normal text-[#14181F] inline-flex items-center align-baseline mt-1 sm:mt-2 animate-hero-2">
-              <span>Made simpler.</span>
+            <span className="inline-flex items-center align-baseline mt-1 sm:mt-2 animate-hero-2">
+              <span>Made </span>
+              <span className="font-serif italic font-normal text-[#14181F] ml-2 sm:ml-3.5 font-['Playfair_Display',Georgia,serif]">
+                simpler.
+              </span>
               <img
                 src="/verified_document_icon.png"
                 alt="Verified Document"
