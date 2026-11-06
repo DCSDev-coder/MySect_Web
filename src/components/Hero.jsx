@@ -52,7 +52,7 @@ export const Hero = ({ onOpenVideo }) => {
         {/* Main Headline: Inter with comfortable letter-spacing */}
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5 animate-hero-2">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
-            <span className="block">Company matters.</span>
+            <span className="block">Company matters,</span>
             <span className="italic font-normal text-[#14181F] inline-flex items-center align-baseline mt-1 sm:mt-2">
               <span>{displayedText}</span>
               <span
