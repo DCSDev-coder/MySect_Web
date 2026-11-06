@@ -1,36 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowRight, Play, Zap } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-
-
 export const Hero = ({ onOpenVideo }) => {
-  const fullText = 'Made simpler.';
-  const [displayedText, setDisplayedText] = useState('');
-
-  useEffect(() => {
-    let charIndex = 0;
-    let timer;
-
-    // One-time typing animation on page load, no looping
-    const startDelay = setTimeout(() => {
-      const typeNextChar = () => {
-        if (charIndex <= fullText.length) {
-          setDisplayedText(fullText.slice(0, charIndex));
-          charIndex++;
-          if (charIndex <= fullText.length) {
-            timer = setTimeout(typeNextChar, 95);
-          }
-        }
-      };
-      typeNextChar();
-    }, 350);
-
-    return () => {
-      clearTimeout(startDelay);
-      clearTimeout(timer);
-    };
-  }, []);
   return (
     <section
       id="home"
@@ -40,8 +12,8 @@ export const Hero = ({ onOpenVideo }) => {
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#14181F_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center justify-center my-auto">
-        {/* Top Eyebrow: Straight rounded pill badge matching Register your interest */}
-        <div className="inline-flex items-center justify-center mb-6 sm:mb-8 animate-hero-1 select-none">
+        {/* Top Eyebrow: Straight rounded pill badge with stamp-down impact */}
+        <div className="inline-flex items-center justify-center mb-6 sm:mb-8 animate-stamp select-none">
           <div className="inline-flex items-center justify-center px-4 sm:px-5 py-1 sm:py-1.5 border border-slate-400/80 rounded-full bg-transparent">
             <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-[#14181F]">
               IN DEVELOPMENT
@@ -49,31 +21,27 @@ export const Hero = ({ onOpenVideo }) => {
           </div>
         </div>
 
-        {/* Main Headline: Inter with comfortable letter-spacing */}
-        <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5 animate-hero-2">
+        {/* Main Headline: Smooth staggered entrance with icon sparkle pop */}
+        <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
-            <span className="block">Company matters,</span>
-            <span className="italic font-normal text-[#14181F] inline-flex items-center align-baseline mt-1 sm:mt-2">
-              <span>{displayedText}</span>
-              <span
-                className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-[#14181F] ml-1.5 align-baseline animate-cursor"
-                aria-hidden="true"
-              />
+            <span className="block animate-hero-1">Company matters,</span>
+            <span className="italic font-normal text-[#14181F] inline-flex items-center align-baseline mt-1 sm:mt-2 animate-hero-2">
+              <span>Made simpler.</span>
               <img
                 src="/verified_document_icon.png"
                 alt="Verified Document"
-                className="inline-block w-9 h-9 sm:w-13 sm:h-13 lg:w-16 lg:h-16 object-contain ml-2 sm:ml-3 align-middle select-none transition-transform hover:scale-105"
+                className="inline-block w-9 h-9 sm:w-13 sm:h-13 lg:w-16 lg:h-16 object-contain ml-2 sm:ml-3 align-middle select-none animate-icon-pop transition-transform hover:scale-105"
               />
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal tracking-normal">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal tracking-normal animate-hero-3">
             The intelligent corporate governance platform connecting Malaysian businesses and licensed corporate secretaries. Streamline statutory registers, board approvals and SSM compliance effortlessly.
           </p>
         </div>
 
         {/* Action Buttons with opening animation */}
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-hero-3 w-full sm:w-auto">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-hero-4 w-full sm:w-auto">
           {/* Main Action: Directly opens WhatsApp contact */}
           <a
             href={SITE_CONFIG.whatsappUrl}
