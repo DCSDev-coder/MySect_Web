@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Handshake, Smartphone, Workflow, Link2 } from 'lucide-react';
+import { Users, Workflow, Smartphone } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 export const WhyMySect: React.FC = () => {
@@ -11,28 +11,16 @@ export const WhyMySect: React.FC = () => {
       icon: <Users className="w-7 h-7 stroke-[2]" />
     },
     {
-      id: 'client-relationships',
-      title: 'Supports Existing Client Relationships',
-      description: 'Deepens engagement and strengthens practitioner-client trust without disrupting your existing secretarial advisory partnerships.',
-      icon: <Handshake className="w-7 h-7 stroke-[2]" />
-    },
-    {
-      id: 'dedicated-mobile-app',
-      title: 'Dedicated Mobile App',
-      description: 'Native mobile access for company directors and secretaries to review resolutions, track compliance status, and approve documents on the go.',
-      icon: <Smartphone className="w-7 h-7 stroke-[2]" />
-    },
-    {
       id: 'cosec-workflows',
       title: 'Designed Around Cosec Workflows',
       description: 'Purpose-built to mirror Malaysian secretarial practices, Companies Act 2016 lodgements, and statutory compliance lifecycles.',
       icon: <Workflow className="w-7 h-7 stroke-[2]" />
     },
     {
-      id: 'company-records',
-      title: 'Requests Linked to Company Records',
-      description: 'Every client inquiry, resolution, and filing is directly tied to verified company registers and statutory documentation.',
-      icon: <Link2 className="w-7 h-7 stroke-[2]" />
+      id: 'dedicated-mobile-app',
+      title: 'Dedicated Mobile App',
+      description: 'Native mobile access for company directors and secretaries to review resolutions, track compliance status, and approve documents on the go.',
+      icon: <Smartphone className="w-7 h-7 stroke-[2]" />
     }
   ];
 
@@ -52,42 +40,36 @@ export const WhyMySect: React.FC = () => {
           </p>
         </ScrollReveal>
 
-        {/* 5 Clean Interactive Bento Cards with Spring Pop Animation */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
-          {pillars.map((item, idx) => {
-            // First 3 cards span 2 columns on desktop (2 + 2 + 2 = 6)
-            // Last 2 cards span 3 columns on desktop (3 + 3 = 6) for perfect symmetry
-            const colSpanClass = idx < 3 ? 'lg:col-span-2' : 'lg:col-span-3';
-
-            return (
-              <ScrollReveal
-                key={item.id}
-                variant="pop-spring"
-                delay={idx * 70}
-                className={`${colSpanClass} bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] active:scale-[0.98] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden`}
-              >
-                <div>
-                  {/* Icon Pod */}
-                  <div className="mb-6">
-                    {/* Tilting squircle icon pod in rich corporate blue */}
-                    <div className="w-14 h-14 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
-                      {item.icon}
-                    </div>
+        {/* 3 Clean Interactive Bento Cards with Spring Pop Animation */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {pillars.map((item, idx) => (
+            <ScrollReveal
+              key={item.id}
+              variant="pop-spring"
+              delay={idx * 80}
+              className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] active:scale-[0.98] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+            >
+              <div>
+                {/* Icon Pod */}
+                <div className="mb-6">
+                  {/* Tilting squircle icon pod in rich corporate blue */}
+                  <div className="w-14 h-14 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
+                    {item.icon}
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-lg font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
-                    {item.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
-                    {item.description}
-                  </p>
                 </div>
-              </ScrollReveal>
-            );
-          })}
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
+                  {item.description}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
 
