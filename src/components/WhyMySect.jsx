@@ -26,8 +26,8 @@ export const WhyMySect = () => {
   ];
 
   return (
-    <section id="why-mysect" className="pt-24 pb-0 bg-[#F7F3EE] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-14 sm:mb-20">
+    <section id="why-mysect" className="py-24 bg-[#F7F3EE] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header with Scroll Reveal matching slide */}
         <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0038A8] mb-3">
@@ -80,7 +80,8 @@ export const WhyMySect = () => {
         </div>
       </div>
 
-      {/* Animated Multi-Ribbon Corporate Wave: Pure Cream & White Tones */}
+      {/* Animated Multi-Ribbon Corporate Wave (Commented out while Pricing is hidden) */}
+      {/*
       <div className="w-full overflow-hidden leading-none bg-[#F7F3EE] -mb-[1px]" aria-hidden="true">
         <svg
           className="block w-[calc(100%+120px)] -ml-[60px] h-20 sm:h-28 lg:h-36 text-white"
@@ -96,7 +97,6 @@ export const WhyMySect = () => {
             </linearGradient>
           </defs>
 
-          {/* Layer 1: Warm architectural back contour (Slow gentle sway) */}
           <g className="animate-wave-slow">
             <path
               d="M-60,45 C180,15 360,80 540,40 C720,5 900,75 1080,35 C1240,5 1360,65 1500,40 L1500,120 L-60,120 Z"
@@ -104,7 +104,6 @@ export const WhyMySect = () => {
             />
           </g>
 
-          {/* Layer 2: Middle fluid ribbon (Counter-flowing translucent wave) */}
           <g className="animate-wave-medium">
             <path
               d="M-60,65 C220,95 400,25 600,65 C800,100 980,25 1160,60 C1280,85 1380,35 1500,55 L1500,120 L-60,120 Z"
@@ -113,7 +112,6 @@ export const WhyMySect = () => {
             />
           </g>
 
-          {/* Layer 3: Foreground crisp solid white wave (Subtle surface ripple) */}
           <g className="animate-wave-fast">
             <path
               d="M-60,35 C200,70 380,10 580,48 C780,82 960,18 1160,52 C1280,72 1380,28 1500,38 L1500,120 L-60,120 Z"
@@ -122,6 +120,7 @@ export const WhyMySect = () => {
           </g>
         </svg>
       </div>
+      */}
     </section>
   );
 };
