@@ -1,52 +1,52 @@
 import React from 'react';
 import {
-  UserCheck,
-  PieChart,
-  BookMarked,
-  FileCheck,
-  CalendarRange,
-  FileSpreadsheet
+  FolderArchive,
+  Stamp,
+  Bot,
+  ShieldCheck,
+  PenLine,
+  Bell
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 export const FeaturesSection: React.FC = () => {
-  // 6 Actual MySect Core Features
+  // 6 Clear, User-Friendly Features
   const features = [
     {
-      id: 'officers',
-      title: 'Directorship & Officer Records',
-      description: 'Maintain complete officer appointment histories, statutory qualification screening, and cessation records under Section 196.',
-      icon: <UserCheck className="w-5 h-5 stroke-[2] text-white" />
+      id: 'store-documents',
+      title: 'Upload, View & Store Documents',
+      description: 'Easily upload, view, and organize all your company certificates, statutory registers, and official records in one place.',
+      icon: <FolderArchive className="w-5 h-5 stroke-[2] text-white" />
     },
     {
-      id: 'shareholders',
-      title: 'Dynamic Capital & Cap Table',
-      description: 'Real-time cap table visibility, share allotments (Section 78), transfers (Section 105), and paid-up capital tracking.',
-      icon: <PieChart className="w-5 h-5 stroke-[2] text-white" />
+      id: 'stamping',
+      title: 'Request Document Stamping',
+      description: 'Ask for certified true copy (CTC) endorsements and official document stamping with your licensed secretary in just a few clicks.',
+      icon: <Stamp className="w-5 h-5 stroke-[2] text-white" />
     },
     {
-      id: 'registers',
-      title: 'Digital Registers & Beneficial Ownership',
-      description: 'Automated Register of Members (Section 50), Register of Charges (Section 352), and latest SSM Beneficial Ownership registers.',
-      icon: <BookMarked className="w-5 h-5 stroke-[2] text-white" />
+      id: 'ai-assistant',
+      title: 'Chat with AI Document Assistant',
+      description: 'Chat with a smart AI chatbot that can read, analyze, and instantly answer questions about your uploaded company documents.',
+      icon: <Bot className="w-5 h-5 stroke-[2] text-white" />
     },
     {
-      id: 'resolutions',
-      title: 'Board Resolution Engine',
-      description: 'Draft, circulate, and sign Directors Circular Resolutions (DCR) with legally binding e-signatures under the Digital Signature Act 1997.',
-      icon: <FileCheck className="w-5 h-5 stroke-[2] text-white" />
+      id: 'security',
+      title: 'Safe & Secure Storage',
+      description: 'Your confidential company documents are kept safely with bank-grade encryption, privacy controls, and 24/7 protected access.',
+      icon: <ShieldCheck className="w-5 h-5 stroke-[2] text-white" />
     },
     {
-      id: 'meetings',
-      title: 'AGM & Minute Book Orchestration',
-      description: 'Automate notice circulation, proxy tracking, minute book archiving, and statutory AGM compliance calendars.',
-      icon: <CalendarRange className="w-5 h-5 stroke-[2] text-white" />
+      id: 'digital-signing',
+      title: 'Digital Resolutions & E-Signing',
+      description: 'Review, circulate, and sign board resolutions (DCR) digitally from any device without printing, scanning, or courier delays.',
+      icon: <PenLine className="w-5 h-5 stroke-[2] text-white" />
     },
     {
-      id: 'ssm-forms',
-      title: 'Automated Statutory Lodgements',
-      description: 'Pre-populate Sections 14, 15, 17, 68, and 78 forms automatically without duplicate data re-entry or formatting errors.',
-      icon: <FileSpreadsheet className="w-5 h-5 stroke-[2] text-white" />
+      id: 'tracking-alerts',
+      title: 'Real-Time Tracking & Alerts',
+      description: 'Track the status of your requests and receive automated deadline reminders for annual returns and statutory compliance.',
+      icon: <Bell className="w-5 h-5 stroke-[2] text-white" />
     }
   ];
 
@@ -59,10 +59,10 @@ export const FeaturesSection: React.FC = () => {
             FEATURES
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-normal leading-snug">
-            The Operating System for Malaysian Corporate Governance
+            Simple, Powerful Tools for Your Company Matters
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto tracking-normal">
-            Unified statutory registers, board governance, and SSM compliance workflows engineered for forward-thinking Malaysian firms.
+            From uploading files and asking for stamping to chatting with our smart AI assistant—everything is organized and kept securely in one place.
           </p>
         </ScrollReveal>
 
