@@ -3,164 +3,92 @@ import { Users, Handshake, Smartphone, Workflow, Link2 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 export const WhyMySect: React.FC = () => {
-  const satellitePills = [
+  const pillars = [
     {
       id: 'firm-client-views',
-      label: 'Connected firm and client views',
-      icon: <Users className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />,
-      // Matches lavender/purple pill from slide
-      desktopPosition: 'top-2 left-1/2 -translate-x-1/2',
-      style: 'bg-[#FAF5FF] border-2 border-[#E9D5FF] text-[#4A154B] hover:border-[#C084FC] hover:shadow-purple-500/15',
-      iconBg: 'bg-purple-100 text-purple-700'
+      title: 'Connected Firm and Client Views',
+      description: 'Shared, role-tailored interfaces providing seamless real-time visibility for both licensed secretarial firms and corporate clients.',
+      icon: <Users className="w-7 h-7 stroke-[2]" />
     },
     {
       id: 'client-relationships',
-      label: 'Supports existing client relationships',
-      icon: <Handshake className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />,
-      // Matches peach/orange pill from slide
-      desktopPosition: 'top-20 right-0 lg:right-4',
-      style: 'bg-[#FFF7ED] border-2 border-[#FED7AA] text-[#9A3412] hover:border-[#FB923C] hover:shadow-orange-500/15',
-      iconBg: 'bg-orange-100 text-orange-700'
+      title: 'Supports Existing Client Relationships',
+      description: 'Deepens engagement and strengthens practitioner-client trust without disrupting your existing secretarial advisory partnerships.',
+      icon: <Handshake className="w-7 h-7 stroke-[2]" />
     },
     {
-      id: 'mobile-app',
-      label: 'Dedicated mobile app',
-      icon: <Smartphone className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />,
-      // Matches solid navy/blue pill from slide
-      desktopPosition: 'bottom-4 right-0 lg:right-6',
-      style: 'bg-[#00227A] border-2 border-[#00227A] text-white hover:bg-[#001B61] hover:shadow-[#00227A]/30 shadow-lg',
-      iconBg: 'bg-white/15 text-white'
+      id: 'dedicated-mobile-app',
+      title: 'Dedicated Mobile App',
+      description: 'Native mobile access for company directors and secretaries to review resolutions, track compliance status, and approve documents on the go.',
+      icon: <Smartphone className="w-7 h-7 stroke-[2]" />
     },
     {
       id: 'cosec-workflows',
-      label: 'Designed around cosec workflows',
-      icon: <Workflow className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />,
-      // Matches warm yellow pill from slide
-      desktopPosition: 'bottom-4 left-0 lg:left-6',
-      style: 'bg-[#FEFCE8] border-2 border-[#FEF08A] text-[#854D0E] hover:border-[#FACC15] hover:shadow-amber-500/15',
-      iconBg: 'bg-amber-100 text-amber-800'
+      title: 'Designed Around Cosec Workflows',
+      description: 'Purpose-built to mirror Malaysian secretarial practices, Companies Act 2016 lodgements, and statutory compliance lifecycles.',
+      icon: <Workflow className="w-7 h-7 stroke-[2]" />
     },
     {
       id: 'company-records',
-      label: 'Requests linked to company records',
-      icon: <Link2 className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />,
-      // Matches sky blue pill from slide
-      desktopPosition: 'top-20 left-0 lg:left-4',
-      style: 'bg-[#F0F9FF] border-2 border-[#BAE6FD] text-[#0369A1] hover:border-[#38BDF8] hover:shadow-sky-500/15',
-      iconBg: 'bg-sky-100 text-sky-700'
+      title: 'Requests Linked to Company Records',
+      description: 'Every client inquiry, resolution, and filing is directly tied to verified company registers and statutory documentation.',
+      icon: <Link2 className="w-7 h-7 stroke-[2]" />
     }
   ];
 
   return (
-    <section id="why-mysect" className="pt-20 pb-6 sm:pb-10 bg-[#F7F3EE] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-6 sm:mb-10">
-        
-        {/* Subtle Brand Tagline Header */}
-        <ScrollReveal variant="fade-up" className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E6E0D6] shadow-2xs mb-2">
-            <span className="w-2 h-2 rounded-full bg-[#0038A8] animate-pulse"></span>
-            <span className="font-mono text-[11px] font-bold uppercase tracking-[0.25em] text-[#0038A8]">
-              Always Connected
-            </span>
-          </div>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-            A unified collaborative ecosystem built specifically for Malaysian corporate governance.
+    <section id="why-mysect" className="pt-24 pb-0 bg-[#F7F3EE] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-14 sm:mb-20">
+        {/* Section Header with Scroll Reveal matching slide */}
+        <ScrollReveal variant="fade-up" className="text-center max-w-3xl mx-auto mb-16">
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#0038A8] mb-3">
+            WHY MYSECT
+          </p>
+          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B192C] tracking-normal leading-snug">
+            Connecting cosec and corporate client in one platform.
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto tracking-normal">
+            Where deep Malaysian statutory knowledge meets modern cloud technology. Purpose-built to keep licensed corporate secretaries and company directors always connected.
           </p>
         </ScrollReveal>
 
-        {/* ============================================================ */}
-        {/* DESKTOP & TABLET: Interactive Orbital Hub-and-Spoke Constellation */}
-        {/* ============================================================ */}
-        <div className="hidden md:block relative w-full max-w-4xl lg:max-w-5xl mx-auto h-[500px] lg:h-[540px]">
-          {/* Subtle connecting radial spoke lines */}
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none z-0"
-            viewBox="0 0 1000 540"
-            fill="none"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            {/* Center coordinates: 500, 270 */}
-            <line x1="500" y1="270" x2="500" y2="40" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="4 4" />
-            <line x1="500" y1="270" x2="800" y2="150" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="4 4" />
-            <line x1="500" y1="270" x2="790" y2="460" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="4 4" />
-            <line x1="500" y1="270" x2="210" y2="460" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="4 4" />
-            <line x1="500" y1="270" x2="200" y2="150" stroke="#CBD5E1" strokeWidth="1.5" strokeDasharray="4 4" />
-          </svg>
+        {/* 5 Clean Interactive Bento Cards with Spring Pop Animation */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+          {pillars.map((item, idx) => {
+            // First 3 cards span 2 columns on desktop (2 + 2 + 2 = 6)
+            // Last 2 cards span 3 columns on desktop (3 + 3 = 6) for perfect symmetry
+            const colSpanClass = idx < 3 ? 'lg:col-span-2' : 'lg:col-span-3';
 
-          {/* Central Hub Circle with Dotted Boundary Ring */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center pointer-events-auto">
-            {/* Outer subtle glow ring */}
-            <div className="absolute -inset-4 rounded-full bg-white/40 blur-md pointer-events-none"></div>
-
-            {/* Main Dotted Orbital Circle */}
-            <div className="w-[310px] h-[310px] lg:w-[360px] lg:h-[360px] rounded-full border-2 border-dotted border-slate-400/70 bg-white/95 backdrop-blur-md shadow-xl shadow-slate-900/5 flex flex-col items-center justify-center p-6 text-center transition-all duration-300 hover:border-[#0038A8]/60 hover:shadow-2xl">
-              <h2 className="text-3xl lg:text-4xl font-black text-[#0B192C] tracking-tight leading-none mb-1">
-                Why
-              </h2>
-              <h2 className="text-3xl lg:text-4xl font-black text-[#0038A8] tracking-tight leading-none mb-3">
-                MySect?
-              </h2>
-              <p className="text-xs sm:text-sm lg:text-base text-slate-700 font-medium leading-relaxed max-w-[220px] lg:max-w-[260px]">
-                Connecting cosec and corporate client in one platform.
-              </p>
-            </div>
-          </div>
-
-          {/* 5 Orbiting Satellite Pills */}
-          {satellitePills.map((pill) => (
-            <div
-              key={pill.id}
-              className={`absolute ${pill.desktopPosition} z-20 group transition-all duration-300 hover:scale-105 active:scale-95`}
-            >
-              <div
-                className={`inline-flex items-center gap-3 px-6 py-3.5 lg:px-7 lg:py-4 rounded-full shadow-sm cursor-default transition-all duration-300 ${pill.style}`}
+            return (
+              <ScrollReveal
+                key={item.id}
+                variant="pop-spring"
+                delay={idx * 70}
+                className={`${colSpanClass} bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] active:scale-[0.98] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden`}
               >
-                <div className={`p-1.5 rounded-full ${pill.iconBg}`}>
-                  {pill.icon}
+                <div>
+                  {/* Icon Pod */}
+                  <div className="mb-6">
+                    {/* Tilting squircle icon pod in rich corporate blue */}
+                    <div className="w-14 h-14 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
+                      {item.icon}
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
+                    {item.description}
+                  </p>
                 </div>
-                <span className="font-bold text-sm lg:text-base tracking-normal whitespace-nowrap">
-                  {pill.label}
-                </span>
-              </div>
-            </div>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
-
-        {/* ============================================================ */}
-        {/* MOBILE: Clean Stacked Constellation Layout (< md screens) */}
-        {/* ============================================================ */}
-        <div className="md:hidden flex flex-col items-center">
-          {/* Mobile Center Hub Circle */}
-          <div className="w-72 h-72 rounded-full border-2 border-dotted border-slate-400/80 bg-white shadow-lg flex flex-col items-center justify-center p-6 text-center mb-8 relative">
-            <h2 className="text-3xl font-black text-[#0B192C] tracking-tight leading-none mb-1">
-              Why
-            </h2>
-            <h2 className="text-3xl font-black text-[#0038A8] tracking-tight leading-none mb-3">
-              MySect?
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed max-w-[200px]">
-              Connecting cosec and corporate client in one platform.
-            </p>
-          </div>
-
-          {/* Mobile Satellite Pills List */}
-          <div className="w-full max-w-sm space-y-3 px-2">
-            {satellitePills.map((pill) => (
-              <div
-                key={pill.id}
-                className={`w-full flex items-center gap-3.5 px-5 py-3.5 rounded-full shadow-xs transition-all active:scale-[0.98] ${pill.style}`}
-              >
-                <div className={`p-1.5 rounded-full shrink-0 ${pill.iconBg}`}>
-                  {pill.icon}
-                </div>
-                <span className="font-bold text-xs sm:text-sm tracking-normal">
-                  {pill.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </div>
 
       {/* Animated Multi-Ribbon Corporate Wave: Pure Cream & White Tones */}
