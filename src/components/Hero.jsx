@@ -52,18 +52,23 @@ export const Hero = ({ onOpenVideo }) => {
         {/* Main Headline: Inter with comfortable letter-spacing */}
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5 animate-hero-2">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
-            Company matters.{' '}
-            <span className="italic font-normal text-[#14181F] inline-block">
+            Company matters,{' '}
+            <span className="italic font-normal text-[#14181F] inline-flex items-center align-baseline">
               <span>{displayedText}</span>
               <span
                 className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-[#14181F] ml-1.5 align-baseline animate-cursor"
                 aria-hidden="true"
               />
+              <img
+                src="/verified_document_icon.png"
+                alt="Verified Document"
+                className="inline-block w-8 h-8 sm:w-11 sm:h-11 lg:w-13 lg:h-13 object-contain ml-2 sm:ml-3 align-middle select-none"
+              />
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed pt-2 font-normal tracking-normal">
-            The intelligent corporate governance platform connecting Malaysian businesses and licensed corporate secretaries. Streamline statutory registers, board approvals, and SSM compliance effortlessly.
+            The intelligent corporate governance platform connecting Malaysian businesses and licensed corporate secretaries. Streamline statutory registers, board approvals and SSM compliance effortlessly.
           </p>
         </div>
 
@@ -92,9 +97,9 @@ export const Hero = ({ onOpenVideo }) => {
           </button>
         </div>
 
-        {/* Redesigned line & Powered by TM badge */}
+        {/* Redesigned line & Powered by TM badge (commented out) */}
+        {/*
         <div className="mt-10 sm:mt-14 w-full max-w-xs sm:max-w-md mx-auto flex flex-col items-center animate-hero-4">
-          {/* Elegant tapered gradient hairline with architectural center diamond */}
           <div className="relative w-full flex items-center justify-center mb-6 sm:mb-7">
             <div className="w-full h-px bg-gradient-to-r from-transparent via-[#D5CEC2] to-transparent" />
             <div className="absolute w-1.5 h-1.5 rotate-45 bg-[#D5CEC2] border border-[#FAF7F2]" />
@@ -107,6 +112,7 @@ export const Hero = ({ onOpenVideo }) => {
             </span>
           </div>
         </div>
+        */}
       </div>
     </section>
   );
