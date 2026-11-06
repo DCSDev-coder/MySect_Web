@@ -84,9 +84,9 @@ export const Navbar = () => {
               className="flex items-center group cursor-pointer"
             >
               <img
-                src="/mysect_main_logo.png"
+                src="/mysect_updated_vector-02.png"
                 alt="MySect"
-                className={`h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105 ${isDarkSection ? 'brightness-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]' : ''
+                className={`h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105 ${isDarkSection ? 'brightness-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]' : ''
                   }`}
               />
             </a>

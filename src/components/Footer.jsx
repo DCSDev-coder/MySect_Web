@@ -41,9 +41,9 @@ export const Footer = () => {
               title="MySect: Back to Home"
             >
               <img
-                src="/mysect_logo.png"
+                src="/mysect_updated_vector-01.png"
                 alt="MySect: Your Secretary Company"
-                className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-12 sm:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </a>
             <p className="text-xs text-slate-500 leading-relaxed max-w-xs">
