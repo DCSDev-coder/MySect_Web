@@ -28,7 +28,7 @@ import { SITE_CONFIG } from '../data/siteConfig';
  * 5. Production Build Specifications:
  *    - Zero external video player dependencies for minimal bundle weight.
  *    - Complies with strict semantic tokens and design system color contrast requirements.
- * *************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+ * ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
  */
 
 export const VideoModal = ({ isOpen, onClose }) => {
@@ -49,7 +49,7 @@ export const VideoModal = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 md:p-8 animate-in fade-in duration-300 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 md:p-8 animate-in fade-in duration-300 overflow-y-auto"
       onClick={onClose}
     >
       {/* Centered Cohesive Cinema Dialog Card */}
@@ -79,7 +79,7 @@ export const VideoModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Video Player Container: Square on mobile, widescreen on desktop */}
-        <div className="w-full aspect-square sm:aspect-video rounded-2xl sm:rounded-3xl overflow-hidden bg-[#060D17] border border-white/10 shadow-2xl shadow-black relative flex items-center justify-center">
+        <div className="w-full aspect-video rounded-2xl sm:rounded-3xl overflow-hidden bg-[#060D17] border border-white/10 shadow-2xl shadow-black relative flex items-center justify-center">
           {SITE_CONFIG.videoUrl ? (
             SITE_CONFIG.videoUrl.endsWith('.mp4') || SITE_CONFIG.videoUrl.startsWith('/') ? (
               <video
