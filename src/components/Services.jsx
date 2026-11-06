@@ -11,12 +11,10 @@ import {
 } from 'lucide-react';
 import { SERVICES } from '../data/content';
 
-interface ServicesProps {
-  onOpenConsultation: () => void;
-}
 
-export const Services: React.FC<ServicesProps> = ({ onOpenConsultation }) => {
-  const getIcon = (iconName: string) => {
+
+export const Services = ({ onOpenConsultation }) => {
+  const getIcon = (iconName) => {
     switch (iconName) {
       case 'Building2': return <Building2 className="w-6 h-6 text-indigo-600" />;
       case 'FileCheck': return <FileCheck className="w-6 h-6 text-sky-600" />;

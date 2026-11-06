@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, Search } from 'lucide-react';
 import { FAQS } from '../data/content';
 
-export const FAQ: React.FC = () => {
+export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');

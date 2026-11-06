@@ -2,17 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play, Zap } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-interface HeroProps {
-  onOpenVideo: () => void;
-}
 
-export const Hero: React.FC<HeroProps> = ({ onOpenVideo }) => {
+
+export const Hero = ({ onOpenVideo }) => {
   const fullText = 'Made simpler.';
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
     let charIndex = 0;
-    let timer: ReturnType<typeof setTimeout>;
+    let timer;
 
     // One-time typing animation on page load, no looping
     const startDelay = setTimeout(() => {

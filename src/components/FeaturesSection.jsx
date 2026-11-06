@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
-export const FeaturesSection: React.FC = () => {
+export const FeaturesSection = () => {
   // 6 Clear, User-Friendly Features
   const features = [
     {

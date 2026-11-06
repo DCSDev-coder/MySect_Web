@@ -1,0 +1,45 @@
+/**
+ * MySect Design System: Component Styles
+ * ---------------------------------------
+ * Reusable styles for bento cards, buttons, badges, modals, forms, and feature pods.
+ */
+
+.bento-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-warm);
+  border-radius: 1rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.feature-pod-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background-color: #F0F4FC;
+  color: #0038A8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary-corp {
+  background-color: #0038A8;
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.625rem 1.25rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary-corp:hover {
+  background-color: #002D88;
+}
+
+.btn-primary-corp:active {
+  transform: scale(0.98);
+}

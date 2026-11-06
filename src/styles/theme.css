@@ -1,0 +1,46 @@
+/**
+ * MySect Design System: Theme Tokens & Typography
+ * ------------------------------------------------
+ * Color variables, typography scales, surfaces, borders, and brand elevation.
+ */
+
+:root {
+  --bg-cream: #FAF7F2;
+  --bg-card: #FFFFFF;
+  --bg-sand: #F3EFE8;
+  --text-primary: #14181F;
+  --text-muted: #5F6676;
+  --brand-blue: #0038A8;
+  --brand-blue-hover: #002D88;
+  --border-warm: #E6E0D6;
+  --ring-primary: rgba(0, 56, 168, 0.2);
+  --shadow-subtle: 0 1px 3px rgba(20, 24, 31, 0.05);
+  --shadow-card: 0 4px 12px rgba(20, 24, 31, 0.06);
+  --shadow-elevated: 0 12px 32px rgba(20, 24, 31, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.012em;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0;
+}
+
+.font-sans, .font-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono {
+  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, monospace;
+}

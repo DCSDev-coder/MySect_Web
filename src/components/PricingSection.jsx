@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Check, Lock } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
-export const PricingSection: React.FC = () => {
+export const PricingSection = () => {
   const [isRattling, setIsRattling] = useState(false);
 
   const handleLockClick = () => {

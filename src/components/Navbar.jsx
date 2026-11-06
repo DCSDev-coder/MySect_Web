@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-export const Navbar: React.FC = () => {
+export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const scrollToSection = (e, id) => {
     e.preventDefault();
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
     }
   };
 
-  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToTop = (e) => {
     e.preventDefault();
     setMobileMenuOpen(false);
     window.scrollTo({

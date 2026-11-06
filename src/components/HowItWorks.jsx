@@ -1,11 +1,9 @@
 import React from 'react';
 import { Smartphone, Building, ShieldCheck, ArrowRight, CheckCircle } from 'lucide-react';
 
-interface HowItWorksProps {
-  onOpenConsultation: () => void;
-}
 
-export const HowItWorks: React.FC<HowItWorksProps> = ({ onOpenConsultation }) => {
+
+export const HowItWorks = ({ onOpenConsultation }) => {
   const steps = [
     {
       step: '01',

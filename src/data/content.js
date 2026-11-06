@@ -1,39 +1,12 @@
-export interface PricingTier {
-  id: string;
-  name: string;
-  tagline: string;
-  priceMonthly: number;
-  priceAnnually: number;
-  popular?: boolean;
-  features: string[];
-  cta: string;
-}
+export 
 
-export interface ServiceItem {
-  id: string;
-  title: string;
-  tagline: string;
-  description: string;
-  iconName: string;
-  highlights: string[];
-}
+export 
 
-export interface TestimonialItem {
-  name: string;
-  role: string;
-  company: string;
-  avatar: string;
-  content: string;
-  highlight: string;
-}
+export 
 
-export interface FAQItem {
-  question: string;
-  answer: string;
-  category: 'incorporation' | 'secretarial' | 'accounting' | 'transfer';
-}
+export 
 
-export const SERVICES: ServiceItem[] = [
+export const SERVICES = [
   {
     id: 'incorporation',
     title: 'Sdn Bhd Incorporation',
@@ -114,7 +87,7 @@ export const SERVICES: ServiceItem[] = [
   }
 ];
 
-export const PRICING_TIERS: PricingTier[] = [
+export const PRICING_TIERS = [
   {
     id: 'dormant',
     name: 'Starter / Dormant',
@@ -170,7 +143,7 @@ export const PRICING_TIERS: PricingTier[] = [
   }
 ];
 
-export const TESTIMONIALS: TestimonialItem[] = [
+export const TESTIMONIALS = [
   {
     name: 'Ahmad Faiz',
     role: 'Co-founder & CEO',
@@ -197,7 +170,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
   }
 ];
 
-export const FAQS: FAQItem[] = [
+export const FAQS = [
   {
     question: 'What are the minimum requirements to register a Sdn Bhd in Malaysia?',
     answer: 'Under the Malaysian Companies Act 2016, you only need: (1) At least 1 director who is at least 18 years old and ordinarily resides in Malaysia, (2) At least 1 shareholder (individual or corporate, can be the same person as the director), (3) A minimum paid-up capital of RM1, (4) A local registered office address, and (5) A licensed Company Secretary appointed within 30 days of incorporation.',

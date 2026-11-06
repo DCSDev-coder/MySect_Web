@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { Check, Sparkles, ArrowRight } from 'lucide-react';
 import { PRICING_TIERS } from '../data/content';
 
-interface PricingProps {
-  onOpenConsultation: () => void;
-}
 
-export const Pricing: React.FC<PricingProps> = ({ onOpenConsultation }) => {
+
+export const Pricing = ({ onOpenConsultation }) => {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (

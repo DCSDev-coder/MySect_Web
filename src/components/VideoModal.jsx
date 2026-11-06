@@ -2,15 +2,12 @@ import React, { useEffect } from 'react';
 import { X, Play, Maximize2 } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-interface VideoModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
 
-export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
+
+export const VideoModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (!isOpen) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
     document.addEventListener('keydown', handleKeyDown);

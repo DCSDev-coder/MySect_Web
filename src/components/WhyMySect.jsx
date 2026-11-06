@@ -2,7 +2,7 @@ import React from 'react';
 import { Users, Workflow, Smartphone } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
-export const WhyMySect: React.FC = () => {
+export const WhyMySect = () => {
   const pillars = [
     {
       id: 'firm-client-views',

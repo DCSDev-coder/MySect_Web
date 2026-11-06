@@ -1,16 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export type RevealVariant = 'fade-up' | 'scale-up' | 'pop-spring' | 'slide-left' | 'slide-right';
-
-interface ScrollRevealProps {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-  threshold?: number;
-  variant?: RevealVariant;
-}
-
-export const ScrollReveal: React.FC<ScrollRevealProps> = ({
+export const ScrollReveal = ({
   children,
   className = '',
   delay = 0,
@@ -18,7 +8,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
   variant = 'fade-up',
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement>(null);
+  const elementRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

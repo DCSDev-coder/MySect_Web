@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check, X, Shield, Clock, FileText, DollarSign, Smartphone } from 'lucide-react';
 
-export const Comparison: React.FC = () => {
+export const Comparison = () => {
   const comparisonRows = [
     {
       feature: 'Signing Board Resolutions',

@@ -2,7 +2,7 @@ import React from 'react';
 import { Star, Building } from 'lucide-react';
 import { TESTIMONIALS } from '../data/content';
 
-export const Testimonials: React.FC = () => {
+export const Testimonials = () => {
   const bankPartners = [
     { name: 'CIMB Bank', badge: 'Fast-track BizChannel' },
     { name: 'Maybank', badge: 'Maybank2u Biz Partner' },

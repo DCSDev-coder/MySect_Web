@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { X, CheckCircle2, PhoneCall, Send, ShieldCheck } from 'lucide-react';
 
-interface ConsultationModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  prefilledName?: string;
-}
 
-export const ConsultationModal: React.FC<ConsultationModalProps> = ({
+
+export const ConsultationModal = ({
   isOpen,
   onClose,
   prefilledName = '',
@@ -25,7 +21,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
   };

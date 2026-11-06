@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { X, Search, CheckCircle2, AlertCircle, ShieldAlert, ArrowRight, Sparkles } from 'lucide-react';
 
-interface CompanyNameSearchModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onSelectName: (name: string) => void;
-}
 
-export const CompanyNameSearchModal: React.FC<CompanyNameSearchModalProps> = ({
+
+export const CompanyNameSearchModal = ({
   isOpen,
   onClose,
   onSelectName,
@@ -15,12 +11,7 @@ export const CompanyNameSearchModal: React.FC<CompanyNameSearchModalProps> = ({
   const [searchTerm, setSearchTerm] = useState('');
   const [industry, setIndustry] = useState('Technology & Software');
   const [isSearching, setIsSearching] = useState(false);
-  const [searchResult, setSearchResult] = useState<{
-    status: 'idle' | 'available' | 'restricted' | 'taken';
-    companyName: string;
-    message: string;
-    suggestions: string[];
-  }>({
+  const [searchResult, setSearchResult] = useState({
     status: 'idle',
     companyName: '',
     message: '',
@@ -31,7 +22,7 @@ export const CompanyNameSearchModal: React.FC<CompanyNameSearchModalProps> = ({
 
   const restrictedWords = ['ROYAL', 'DIRAJA', 'KERAJAAN', 'GOVERNMENT', 'ASEAN', 'BANK', 'TAKAFUL', 'INSURANCE', 'NATIONAL', 'FEDERATION'];
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e) => {
     e.preventDefault();
     const query = searchTerm.trim().toUpperCase();
     if (!query) return;

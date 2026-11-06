@@ -2,10 +2,10 @@ import React from 'react';
 import { MapPin, Mail, Phone } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const scrollToSection = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
     }
   };
 
-  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToTop = (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,

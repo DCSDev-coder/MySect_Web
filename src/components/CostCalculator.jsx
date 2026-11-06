@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Calculator, Check, ArrowRight } from 'lucide-react';
 
-interface CostCalculatorProps {
-  onOpenConsultation: () => void;
-}
 
-export const CostCalculator: React.FC<CostCalculatorProps> = ({ onOpenConsultation }) => {
+
+export const CostCalculator = ({ onOpenConsultation }) => {
   const [serviceType, setServiceType] = useState<'incorporation' | 'transfer'>('incorporation');
   const [billingCycle, setBillingCycle] = useState<'annual' | 'monthly'>('annual');
   const [directorCount, setDirectorCount] = useState<number>(1);

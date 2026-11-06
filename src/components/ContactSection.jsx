@@ -3,7 +3,7 @@ import { Mail, Phone, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 import { ScrollReveal } from './ScrollReveal';
 
-export const ContactSection: React.FC = () => {
+export const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,7 +12,7 @@ export const ContactSection: React.FC = () => {
   });
   const [sentNotice, setSentNotice] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     const subjectEncoded = encodeURIComponent(formData.subject || 'MySect Inquiry');
