@@ -47,7 +47,7 @@ export const Hero = ({ onOpenVideo }) => {
             href={SITE_CONFIG.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-bold text-sm tracking-wide shadow-lg shadow-[#0038A8]/25 hover:shadow-xl hover:shadow-[#0038A8]/35 transition-all flex items-center justify-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto h-12 px-7 rounded-full bg-[#0038A8] hover:bg-[#002D88] text-white font-bold text-sm tracking-wide shadow-lg shadow-[#0038A8]/25 hover:shadow-xl hover:shadow-[#0038A8]/35 transition-all flex items-center justify-center gap-2 cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Register your interest</span>
             <ArrowRight className="w-4 h-4" />
@@ -56,10 +56,10 @@ export const Hero = ({ onOpenVideo }) => {
           {/* Secondary Action: Meet MySect (Video) */}
           <button
             onClick={onOpenVideo}
-            className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white hover:bg-[#F3EFE8] text-slate-900 border border-[#D5CEC2] font-semibold text-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer shadow-2xs hover:-translate-y-0.5"
+            className="w-full sm:w-auto h-12 px-6 rounded-full bg-white hover:bg-[#F3EFE8] text-slate-900 border border-[#D5CEC2] font-semibold text-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer shadow-2xs hover:-translate-y-0.5"
           >
-            <div className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center">
-              <Play className="w-3 h-3 fill-white ml-0.5" />
+            <div className="w-5 h-5 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0">
+              <Play className="w-2.5 h-2.5 fill-white ml-0.5" />
             </div>
             <span>Meet MySect</span>
           </button>
