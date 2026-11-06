@@ -124,7 +124,7 @@ export const Footer = () => {
                   Why MySect
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#pricing"
                   onClick={(e) => scrollToSection(e, 'pricing')}
@@ -132,7 +132,7 @@ export const Footer = () => {
                 >
                   Pricing Plans
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#contact"

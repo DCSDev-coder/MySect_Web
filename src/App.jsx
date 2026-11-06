@@ -27,8 +27,8 @@ export function App() {
         {/* Section 3: Why MySect (Matches 2nd uploaded screenshot) */}
         <WhyMySect />
 
-        {/* Section 4: Pricing */}
-        <PricingSection />
+        {/* Section 4: Pricing (Commented out) */}
+        {/* <PricingSection /> */}
 
         {/* Section 5: Contact Us */}
         <ContactSection />

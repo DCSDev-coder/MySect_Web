@@ -11,7 +11,7 @@ export const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections = ['home', 'features', 'why-mysect', 'pricing', 'contact'];
+      const sections = ['home', 'features', 'why-mysect', /* 'pricing', */ 'contact'];
       const scrollPosition = window.scrollY + 80;
 
       for (const section of sections) {
@@ -60,7 +60,7 @@ export const Navbar = () => {
   const navLinks = [
     { id: 'features', label: 'Features' },
     { id: 'why-mysect', label: 'Why MySect' },
-    { id: 'pricing', label: 'Pricing' },
+    // { id: 'pricing', label: 'Pricing' },
     { id: 'contact', label: 'Contact Us' }
   ];
 
@@ -124,9 +124,9 @@ export const Navbar = () => {
             })}
           </nav>
 
-          {/* 3. Far Right End: Action Button */}
+          {/* 3. Far Right End: Action Button (Commented out) */}
           <div className="hidden md:flex flex-1 justify-end items-center gap-3">
-            <a
+            {/* <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -137,7 +137,7 @@ export const Navbar = () => {
             >
               <span>Register Now</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -193,7 +193,7 @@ export const Navbar = () => {
             })}
           </div>
 
-          <div className={`pt-3 border-t ${isDarkSection ? 'border-white/10' : 'border-[#E6E0D6]'}`}>
+          {/* <div className={`pt-3 border-t ${isDarkSection ? 'border-white/10' : 'border-[#E6E0D6]'}`}>
             <a
               href={SITE_CONFIG.whatsappUrl}
               target="_blank"
@@ -207,7 +207,7 @@ export const Navbar = () => {
               <span>Register Now</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
-          </div>
+          </div> */}
         </div>
       )}
     </header>
