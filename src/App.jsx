@@ -3,7 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { FeaturesSection } from './components/FeaturesSection';
 import { WhyMySect } from './components/WhyMySect';
-import { PricingSection } from './components/PricingSection';
+// import { PricingSection } from './components/PricingSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { VideoModal } from './components/VideoModal';

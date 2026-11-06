@@ -1,3 +1,5 @@
+// Pricing section component is commented out while pricing is disabled
+/*
 import React, { useState } from 'react';
 import { Check, Lock } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -119,3 +121,7 @@ export const PricingSection = () => {
     </section>
   );
 };
+
+*/
+
+export const PricingSection = () => null;
