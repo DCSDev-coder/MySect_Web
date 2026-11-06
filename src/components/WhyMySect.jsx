@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, Workflow, Smartphone } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
+import { SpotlightCard } from './SpotlightCard';
 
 export const WhyMySect = () => {
   const pillars = [
@@ -40,34 +41,40 @@ export const WhyMySect = () => {
           </p>
         </ScrollReveal>
 
-        {/* 3 Clean Interactive Bento Cards with Spring Pop Animation */}
+        {/* 3 Clean Interactive Bento Cards with Spring Pop & Cursor Spotlight */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {pillars.map((item, idx) => (
             <ScrollReveal
               key={item.id}
               variant="pop-spring"
               delay={idx * 80}
-              className="bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] active:scale-[0.98] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+              className="h-full"
             >
-              <div>
-                {/* Icon Pod */}
-                <div className="mb-6">
-                  {/* Tilting squircle icon pod in rich corporate blue */}
-                  <div className="w-14 h-14 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
-                    {item.icon}
+              <SpotlightCard
+                spotlightColor="rgba(0, 56, 168, 0.09)"
+                radius={360}
+                className="h-full bg-white rounded-3xl p-7 sm:p-8 border border-[#E6E0D6] shadow-xs hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#0038A8] active:scale-[0.98] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer"
+              >
+                <div>
+                  {/* Icon Pod */}
+                  <div className="mb-6">
+                    {/* Tilting squircle icon pod in rich corporate blue */}
+                    <div className="w-14 h-14 rounded-2xl bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/25 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#002D88] transition-all duration-300">
+                      {item.icon}
+                    </div>
                   </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
+                    {item.description}
+                  </p>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-lg font-bold text-[#0B192C] mb-2.5 tracking-normal group-hover:text-[#0038A8] transition-colors leading-snug">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal tracking-normal">
-                  {item.description}
-                </p>
-              </div>
+              </SpotlightCard>
             </ScrollReveal>
           ))}
         </div>

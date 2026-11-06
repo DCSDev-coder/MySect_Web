@@ -8,6 +8,7 @@ import {
   Bell
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
+import { SpotlightCard } from './SpotlightCard';
 
 export const FeaturesSection = () => {
   // 6 Clear, User-Friendly Features
@@ -66,31 +67,36 @@ export const FeaturesSection = () => {
           </p>
         </ScrollReveal>
 
-        {/* 6 Feature Cards Grid */}
+        {/* 6 Feature Cards Grid with Cursor Spotlight */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((item, idx) => (
             <ScrollReveal
               key={item.id}
               variant="scale-up"
               delay={idx * 50}
-              className="bg-[#102035] hover:bg-[#132742] active:scale-[0.98] p-7 rounded-2xl border border-[#1E3452] hover:border-[#0038A8]/60 transition-all duration-300 shadow-md hover:-translate-y-1.5 flex flex-col justify-between group cursor-pointer"
+              className="h-full"
             >
-              <div>
-                {/* Blue Icon Badge */}
-                <div className="mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#0038A8] text-white flex items-center justify-center shadow-md shadow-[#0038A8]/20 group-hover:scale-110 group-hover:bg-[#002D88] transition-all">
-                    {item.icon}
+              <SpotlightCard
+                spotlightColor="rgba(0, 102, 255, 0.22)"
+                className="h-full bg-[#102035] hover:bg-[#132742] active:scale-[0.98] p-7 rounded-2xl border border-[#1E3452] hover:border-[#0038A8]/60 transition-all duration-300 shadow-md hover:-translate-y-1.5 flex flex-col justify-between group cursor-pointer"
+              >
+                <div>
+                  {/* Blue Icon Badge */}
+                  <div className="mb-5">
+                    <div className="w-10 h-10 rounded-xl bg-[#0038A8] text-white flex items-center justify-center shadow-md shadow-[#0038A8]/20 group-hover:scale-110 group-hover:bg-[#002D88] transition-all">
+                      {item.icon}
+                    </div>
                   </div>
+
+                  <h3 className="text-base font-bold text-white mb-2.5 tracking-normal transition-colors">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-[13px] text-slate-300 leading-relaxed font-normal tracking-normal">
+                    {item.description}
+                  </p>
                 </div>
-
-                <h3 className="text-base font-bold text-white mb-2.5 tracking-normal transition-colors">
-                  {item.title}
-                </h3>
-
-                <p className="text-xs sm:text-[13px] text-slate-300 leading-relaxed font-normal tracking-normal">
-                  {item.description}
-                </p>
-              </div>
+              </SpotlightCard>
             </ScrollReveal>
           ))}
         </div>
