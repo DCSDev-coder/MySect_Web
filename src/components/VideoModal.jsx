@@ -58,13 +58,25 @@ export const VideoModal = ({ isOpen, onClose }) => {
       >
         <div className="w-full h-full max-h-[82vh] aspect-video rounded-2xl sm:rounded-3xl overflow-hidden bg-[#060D17] border border-white/10 shadow-2xl shadow-black relative flex items-center justify-center">
           {SITE_CONFIG.videoUrl ? (
-            <iframe
-              src={SITE_CONFIG.videoUrl}
-              title="Meet MySect Video"
-              className="w-full h-full border-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            SITE_CONFIG.videoUrl.endsWith('.mp4') || SITE_CONFIG.videoUrl.startsWith('/') ? (
+              <video
+                src={SITE_CONFIG.videoUrl}
+                controls
+                autoPlay
+                playsInline
+                className="w-full h-full object-contain bg-black"
+              >
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <iframe
+                src={SITE_CONFIG.videoUrl}
+                title="Meet MySect Video"
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            )
           ) : (
             /* Fullscreen Cinematic Video Stage */
             <div className="relative w-full h-full flex flex-col items-center justify-center text-center p-6 sm:p-12 bg-radial from-[#0e1d33] via-[#081220] to-[#040810]">

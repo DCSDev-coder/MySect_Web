@@ -15,6 +15,6 @@ export const SITE_CONFIG = {
   // Location
   location: 'Semenyih, Malaysia',
 
-  // Video placeholder for "Meet MySect" (replace with your video URL, e.g. MP4 or YouTube embed)
-  videoUrl: '',
+  // Video showcase for "Meet MySect"
+  videoUrl: '/wheres_my_company_document.mp4',
 };
