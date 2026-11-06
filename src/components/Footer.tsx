@@ -146,9 +146,9 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Our Services (2 cols) */}
+          {/* Column 3: Features matching main features section (2 cols) */}
           <div className="lg:col-span-2">
-            <h4 className="font-bold text-[#14181F] text-xs sm:text-sm mb-4">Our Services</h4>
+            <h4 className="font-bold text-[#14181F] text-xs sm:text-sm mb-4">Features</h4>
             <ul className="space-y-2.5 text-slate-600">
               <li>
                 <a
@@ -156,7 +156,7 @@ export const Footer: React.FC = () => {
                   onClick={(e) => scrollToSection(e, 'features')}
                   className="hover:text-[#0038A8] transition-colors cursor-pointer"
                 >
-                  SSM Lodgements
+                  Upload, View & Store
                 </a>
               </li>
               <li>
@@ -165,7 +165,7 @@ export const Footer: React.FC = () => {
                   onClick={(e) => scrollToSection(e, 'features')}
                   className="hover:text-[#0038A8] transition-colors cursor-pointer"
                 >
-                  Board Approvals (DCR)
+                  Document Stamping
                 </a>
               </li>
               <li>
@@ -174,7 +174,7 @@ export const Footer: React.FC = () => {
                   onClick={(e) => scrollToSection(e, 'features')}
                   className="hover:text-[#0038A8] transition-colors cursor-pointer"
                 >
-                  Statutory Registers
+                  AI Document Assistant
                 </a>
               </li>
               <li>
@@ -183,7 +183,7 @@ export const Footer: React.FC = () => {
                   onClick={(e) => scrollToSection(e, 'features')}
                   className="hover:text-[#0038A8] transition-colors cursor-pointer"
                 >
-                  Cap Table & Shares
+                  Safe & Secure Storage
                 </a>
               </li>
               <li>
@@ -192,7 +192,7 @@ export const Footer: React.FC = () => {
                   onClick={(e) => scrollToSection(e, 'features')}
                   className="hover:text-[#0038A8] transition-colors cursor-pointer"
                 >
-                  AGM Orchestration
+                  Digital Resolutions & Signing
                 </a>
               </li>
               <li>
@@ -201,7 +201,7 @@ export const Footer: React.FC = () => {
                   onClick={(e) => scrollToSection(e, 'features')}
                   className="hover:text-[#0038A8] transition-colors cursor-pointer"
                 >
-                  Digital CTC Vault
+                  Real-Time Tracking & Alerts
                 </a>
               </li>
             </ul>
