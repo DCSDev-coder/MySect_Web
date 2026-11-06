@@ -40,10 +40,10 @@ export const Hero = ({ onOpenVideo }) => {
       <div className="absolute inset-0 pointer-events-none opacity-[0.035] bg-[radial-gradient(#14181F_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center justify-center my-auto">
-        {/* Top Eyebrow: Official document stamp style */}
-        <div className="inline-flex items-center justify-center mb-6 sm:mb-8 animate-stamp select-none">
-          <div className="inline-flex items-center justify-center px-3 py-1 border border-slate-400/60 rounded-[3px] bg-slate-500/[0.04]">
-            <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-slate-500">
+        {/* Top Eyebrow: Straight rounded pill badge matching Register your interest */}
+        <div className="inline-flex items-center justify-center mb-6 sm:mb-8 animate-hero-1 select-none">
+          <div className="inline-flex items-center justify-center px-4 sm:px-5 py-1 sm:py-1.5 border border-slate-400/80 rounded-full bg-transparent">
+            <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-[#14181F]">
               IN DEVELOPMENT
             </span>
           </div>
@@ -52,8 +52,8 @@ export const Hero = ({ onOpenVideo }) => {
         {/* Main Headline: Inter with comfortable letter-spacing */}
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-5 animate-hero-2">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-normal leading-[1.18] text-[#14181F]">
-            Company matters,{' '}
-            <span className="italic font-normal text-[#14181F] inline-flex items-center align-baseline">
+            <span className="block">Company matters.</span>
+            <span className="italic font-normal text-[#14181F] inline-flex items-center align-baseline mt-1 sm:mt-2">
               <span>{displayedText}</span>
               <span
                 className="inline-block w-[3px] sm:w-[4px] h-[0.85em] bg-[#14181F] ml-1.5 align-baseline animate-cursor"
@@ -62,7 +62,7 @@ export const Hero = ({ onOpenVideo }) => {
               <img
                 src="/verified_document_icon.png"
                 alt="Verified Document"
-                className="inline-block w-8 h-8 sm:w-11 sm:h-11 lg:w-13 lg:h-13 object-contain ml-2 sm:ml-3 align-middle select-none"
+                className="inline-block w-9 h-9 sm:w-13 sm:h-13 lg:w-16 lg:h-16 object-contain ml-2 sm:ml-3 align-middle select-none transition-transform hover:scale-105"
               />
             </span>
           </h1>
