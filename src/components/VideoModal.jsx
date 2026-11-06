@@ -56,7 +56,7 @@ export const VideoModal = ({ isOpen, onClose }) => {
         className="w-full max-w-7xl mx-auto flex-1 my-2 sm:my-4 flex items-center justify-center relative z-10 min-h-0"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="w-full h-full max-h-[82vh] aspect-video rounded-2xl sm:rounded-3xl overflow-hidden bg-[#060D17] border border-white/10 shadow-2xl shadow-black relative flex items-center justify-center">
+        <div className="w-full aspect-square sm:aspect-video sm:h-full max-h-[82vh] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#060D17] border border-white/10 shadow-2xl shadow-black relative flex items-center justify-center">
           {SITE_CONFIG.videoUrl ? (
             SITE_CONFIG.videoUrl.endsWith('.mp4') || SITE_CONFIG.videoUrl.startsWith('/') ? (
               <video
