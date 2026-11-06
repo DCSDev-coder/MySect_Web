@@ -34,18 +34,18 @@ export const FeaturesSection = () => {
     {
       id: 'security',
       title: 'Safe & Secure Storage',
-      description: 'Your confidential company documents are kept safely with bank-grade encryption, privacy controls, and 24/7 protected access.',
+      description: 'Your confidential company documents are kept safely with bank grade encryption, privacy controls, and 24/7 protected access.',
       icon: <ShieldCheck className="w-5 h-5 stroke-[2] text-white" />
     },
     {
       id: 'digital-signing',
-      title: 'Digital Resolutions & E-Signing',
+      title: 'Digital Resolutions & Online Signing',
       description: 'Review, circulate, and sign board resolutions (DCR) digitally from any device without printing, scanning, or courier delays.',
       icon: <PenLine className="w-5 h-5 stroke-[2] text-white" />
     },
     {
       id: 'tracking-alerts',
-      title: 'Real-Time Tracking & Alerts',
+      title: 'Live Tracking & Alerts',
       description: 'Track the status of your requests and receive automated deadline reminders for annual returns and statutory compliance.',
       icon: <Bell className="w-5 h-5 stroke-[2] text-white" />
     }
@@ -63,7 +63,7 @@ export const FeaturesSection = () => {
             Simple, Powerful Tools for Your Company Matters
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto tracking-normal">
-            From uploading files and asking for stamping to chatting with our smart AI assistant—everything is organized and kept securely in one place.
+            From uploading files and asking for stamping to chatting with our smart AI assistant, everything is organized and kept securely in one place.
           </p>
         </ScrollReveal>
 

@@ -8,13 +8,13 @@ export const WhyMySect = () => {
     {
       id: 'firm-client-views',
       title: 'Connected Firm and Client Views',
-      description: 'Shared, role-tailored interfaces providing seamless real-time visibility for both licensed secretarial firms and corporate clients.',
+      description: 'Shared, tailored interfaces providing seamless live visibility for both licensed secretarial firms and corporate clients.',
       icon: <Users className="w-7 h-7 stroke-[2]" />
     },
     {
       id: 'cosec-workflows',
       title: 'Designed Around Cosec Workflows',
-      description: 'Purpose-built to mirror Malaysian secretarial practices, Companies Act 2016 lodgements, and statutory compliance lifecycles.',
+      description: 'Built specifically to mirror Malaysian secretarial practices, Companies Act 2016 lodgements, and statutory compliance lifecycles.',
       icon: <Workflow className="w-7 h-7 stroke-[2]" />
     },
     {
@@ -37,7 +37,7 @@ export const WhyMySect = () => {
             Connecting cosec and corporate client in one platform.
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto tracking-normal">
-            Where deep Malaysian statutory knowledge meets modern cloud technology. Purpose-built to keep licensed corporate secretaries and company directors always connected.
+            Where deep Malaysian statutory knowledge meets modern cloud technology. Built to keep licensed corporate secretaries and company directors always connected.
           </p>
         </ScrollReveal>
 

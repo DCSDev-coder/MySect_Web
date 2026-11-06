@@ -100,7 +100,7 @@ export const PricingSection = () => {
           </h3>
 
           <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-lg mx-auto tracking-normal">
-            We are fine-tuning our flexible tier options for solo founders, growing SMEs, and multi-entity secretarial firms.
+            We are finalizing our flexible tier options for solo founders, growing SMEs, and multi-entity secretarial firms.
           </p>
 
           {/* Teaser Feature Checkmarks */}

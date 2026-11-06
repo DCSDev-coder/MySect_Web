@@ -39,11 +39,11 @@ export const Footer = () => {
               href="#home"
               onClick={scrollToTop}
               className="inline-block group cursor-pointer"
-              title="MySect - Back to Home"
+              title="MySect: Back to Home"
             >
               <img
                 src="/mysect_logo.png"
-                alt="MySect - Your Secretary Company"
+                alt="MySect: Your Secretary Company"
                 className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </a>

@@ -81,7 +81,7 @@ export const Navbar = () => {
             <a
               href="#home"
               onClick={scrollToTop}
-              title="MySect - Back to Home"
+              title="MySect: Back to Home"
               className="flex items-center group cursor-pointer"
             >
               <img
