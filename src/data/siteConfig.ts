@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   phoneDisplay: '+60 12-694 6907',
 
   // Contact email requested by user (placeholder until user provides exact address)
-  contactEmail: 'contact@mysect.my',
+  contactEmail: 'info@mysect.my',
 
   // Location
   location: 'Semenyih, Malaysia',
