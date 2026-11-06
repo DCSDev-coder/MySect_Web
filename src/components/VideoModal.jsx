@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Play, Maximize2 } from 'lucide-react';
+import { X, Play } from 'lucide-react';
 import { SITE_CONFIG } from '../data/siteConfig';
 
 
@@ -31,8 +31,8 @@ export const VideoModal = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-[#0038A8] text-white flex items-center justify-center shadow-lg shadow-[#0038A8]/30">
-            <Maximize2 className="w-4 h-4" />
+          <div className="w-8 h-8 aspect-square rounded-lg bg-[#0038A8] text-white flex items-center justify-center shrink-0 shadow-lg shadow-[#0038A8]/30">
+            <Play className="w-3.5 h-3.5 fill-white ml-0.5" />
           </div>
           <div>
             <h3 className="text-sm sm:text-base font-bold text-white tracking-normal">
