@@ -30,7 +30,7 @@ export const Hero = ({ onOpenVideo }) => {
               <img
                 src="/verified_document_icon.png"
                 alt="Verified Document"
-                className="inline-block w-9 h-9 sm:w-13 sm:h-13 lg:w-16 lg:h-16 object-contain ml-2 sm:ml-3 align-middle select-none animate-icon-pop transition-transform hover:scale-105"
+                className="inline-block w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain ml-2 sm:ml-3.5 align-middle select-none animate-icon-pop transition-transform hover:scale-105"
               />
             </span>
           </h1>
