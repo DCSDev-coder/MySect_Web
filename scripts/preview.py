@@ -96,14 +96,7 @@ def run_server(port: int = DEFAULT_PORT, directory: str = DEFAULT_DIR, open_brow
 
     with socketserver.TCPServer(("0.0.0.0", actual_port), handler) as httpd:
         url = f"http://localhost:{actual_port}"
-        print("=" * 64)
-        print("  MySect Landing Page - Local Static Preview Server")
-        print("=" * 64)
-        print(f"  * Serving directory : {target_path}")
-        print(f"  * Local preview URL : {url}")
-        print(f"  * Network interface : http://0.0.0.0:{actual_port}")
-        print("  * Press Ctrl+C to terminate the server at any time")
-        print("=" * 64)
+        print(f"[+] Preview Server live: {url} serving {target_path}")
 
         if open_browser:
             webbrowser.open(url)
@@ -130,4 +123,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# ===========================================================================================================================================================================================================================================================================
+
+# =========================================================================================================================================================================================================================================
