@@ -28,34 +28,27 @@ import { SITE_CONFIG } from '../data/siteConfig';
  * 5. Production Build Specifications:
  *    - Zero external video player dependencies for minimal bundle weight.
  *    - Complies with strict semantic tokens and design system color contrast requirements.
- * ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+ * **********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
  */
 
 export const VideoModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (!isOpen) return;
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
-    };
-    document.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = '';
     };
-  }, [isOpen, onClose]);
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
   return (
     <div
       className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 md:p-8 animate-in fade-in duration-300 overflow-y-auto"
-      onClick={onClose}
     >
       {/* Centered Cohesive Cinema Dialog Card */}
       <div
         className="w-full max-w-5xl mx-auto my-auto flex flex-col relative z-10"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar: Comfortably positioned directly above video player */}
         <div className="w-full flex items-center justify-between mb-3 sm:mb-4 px-1">
